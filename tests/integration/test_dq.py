@@ -101,7 +101,7 @@ def test_quarantined_stays_are_held_back_and_explained(warehouse):
     reasons = dict(warehouse.execute("SELECT stay_id, reasons FROM rpt.dq_quarantine WHERE stay_id >= ?",
                                      BASE).fetchall())
     assert "E340_DEPARTURE_NOT_AFTER_ARRIVAL" in reasons[sid(2)]
-    assert set(reasons) == {sid(n) for n in (2, 4, 5, 6, 7, 8)}  # the orphan triage has no stay to hold back
+    assert set(reasons) == {sid(n) for n in (2, 4, 5, 6, 7, 8, 11)}  # 11: orphan triage, listed so nobody publishes it
 
 
 def test_published_stays_carry_the_measures(warehouse):

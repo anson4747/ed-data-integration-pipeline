@@ -159,3 +159,13 @@ def test_lookup_endpoints_return_the_result_list():
     client = make_client()[0]
     assert client.suppressions()[0]["suppression_code"] == "X01"
     assert client.caveats()[0]["caveat_code"] == "X01"
+
+
+@responses.activate
+def test_category_measures_and_units_reporting():
+    responses.get(f"{BASE_URL}/measure-categories/MYH-ED/measures", json={"result": [{"measure_code": "MYH0035"}]})
+    responses.get(f"{BASE_URL}/measures/MYH0035/reporting-units-available",
+                  json={"result": [{"reporting_unit_code": "H0358"}, {"reporting_unit_code": "Vic"}]})
+    client = make_client()[0]
+    assert client.category_measures("MYH-ED") == ["MYH0035"]
+    assert client.units_reporting("MYH0035") == {"H0358", "Vic"}

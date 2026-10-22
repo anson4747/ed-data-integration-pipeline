@@ -4,7 +4,15 @@ from pathlib import Path
 
 import pytest
 
-from edpipe.aihw_ingest import UNIT_COLUMNS, flag_rows, flatten_unit, rows_to_json, select_scope, state_of
+from edpipe.aihw_ingest import (
+    UNIT_COLUMNS,
+    flag_rows,
+    flatten_unit,
+    plan_slices,
+    rows_to_json,
+    select_scope,
+    state_of,
+)
 from edpipe.sources.aihw_replay import ReplayClient
 
 SAMPLE = Path(__file__).parent.parent / "fixtures" / "aihw" / "myhospitals-sample.json.gz"
@@ -85,3 +93,8 @@ def test_replay_of_an_unrecorded_unit_is_empty_like_the_real_api(sample):
 def test_rows_to_json_is_compact_and_round_trips():
     text = rows_to_json([{"a": 1, "b": "é"}])
     assert text == '[{"a":1,"b":"é"}]'
+
+
+def test_plan_slices_keeps_only_units_the_api_lists_and_keeps_scope_order():
+    plan = plan_slices(["H1", "H2", "LHN1", "Vic"], {"A": {"Vic", "H2"}, "B": set(), "C": {"H1", "LHN1", "X"}})
+    assert plan == {"A": ["H2", "Vic"], "B": [], "C": ["H1", "LHN1"]}

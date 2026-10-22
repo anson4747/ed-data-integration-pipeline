@@ -170,6 +170,15 @@ class AihwClient:
     def caveats(self) -> list[dict[str, Any]]:
         return self.get("caveats")["result"]
 
+    def category_measures(self, category: str) -> list[str]:
+        """Measure codes that belong to a measure category."""
+        return [m["measure_code"] for m in self.get(f"measure-categories/{category}/measures")["result"]]
+
+    def units_reporting(self, measure_code: str) -> set[str]:
+        """Codes of every reporting unit that has data for a measure, in one call."""
+        body = self.get(f"measures/{measure_code}/reporting-units-available")
+        return {u["reporting_unit_code"] for u in body["result"]}
+
     def flat_extract(self, category: str, reporting_unit_code: str | None = None,
                      page_size: int = MAX_PAGE_SIZE) -> Extract:
         """Every row of a measure category, optionally for one reporting unit, as an exact extract.

@@ -51,6 +51,8 @@ class Client(Protocol):
     def reporting_units(self) -> tuple[list[dict[str, Any]], ApiRelease]: ...
     def suppressions(self) -> list[dict[str, Any]]: ...
     def caveats(self) -> list[dict[str, Any]]: ...
+    def category_measures(self, category: str) -> list[str]: ...
+    def units_reporting(self, measure_code: str) -> set[str]: ...
     def flat_extract(self, category: str, reporting_unit_code: str | None = None, page_size: int = ...) -> Extract: ...
 
 
@@ -91,6 +93,11 @@ def select_scope(units: list[dict[str, Any]], state: str = DEFAULT_STATE) -> lis
     by_code = {u["reporting_unit_code"] for u in units}
     wanted = [h["reporting_unit_code"] for h in hospitals] + sorted(networks) + [state, NATIONAL]
     return [code for code in dict.fromkeys(wanted) if code in by_code]
+
+
+def plan_slices(scope: list[str], available: dict[str, set[str]]) -> dict[str, list[str]]:
+    """Per category, the in-scope units that the API says have data for it (order of scope kept)."""
+    return {category: [code for code in scope if code in units] for category, units in available.items()}
 
 
 def flatten_unit(unit: dict[str, Any], data_version: int, run_id: int) -> tuple:
@@ -187,11 +194,22 @@ def run(settings: Settings, client: Client | None = None, force: bool = False, s
             result.units = len(scope)
             step.note(f"{len(units)} reporting units, {len(flags)} flag codes; {len(scope)} units in scope for {state}")
 
+        with pipeline.step("plan extracts") as step:
+            # One call per ED measure tells us every unit that has data for it. Asking per unit instead
+            # (or asking everyone) would spend most requests on units with no emergency department.
+            available = {c: set().union(*(client.units_reporting(m) for m in client.category_measures(c)))
+                         for c in categories}
+            plan = plan_slices(scope, available)
+            planned = sum(len(units) for units in plan.values())
+            step.note(f"{planned} of {len(scope) * len(categories)} unit-category requests needed "
+                      f"({', '.join(f'{c}: {len(u)}' for c, u in plan.items())})")
+            print(f"[aihw] plan: {planned} of {len(scope) * len(categories)} unit-category requests needed")
+
         for category in categories:
             with pipeline.step(f"extract {category}") as step:
                 landed = empty = 0
                 started = time.monotonic()
-                for code in scope:
+                for code in plan[category]:
                     extract = client.flat_extract(category, code)
                     if extract.release.data_version != release.data_version:
                         raise AihwApiError(f"release changed from {release.data_version} to "
@@ -200,13 +218,19 @@ def run(settings: Settings, client: Client | None = None, force: bool = False, s
                     empty += 0 if extract.rows else 1
                     result.slices += 1
                 if landed == 0:
-                    raise AihwApiError(f"{category}: no rows for any of {len(scope)} reporting units; "
+                    raise AihwApiError(f"{category}: no rows for any of {len(plan[category])} reporting units; "
                                        "an empty answer for everything is a failure, not a quiet period")
                 result.rows_landed += landed
                 step.counts(rows_read=landed, rows_inserted=landed)
-                step.note(f"{len(scope)} units ({empty} with no data), {landed:,} rows in "
-                          f"{time.monotonic() - started:.0f}s")
-                print(f"[aihw] {category:<13} {landed:>7,} rows from {len(scope) - empty} of {len(scope)} units")
+                detail = f"{len(plan[category])} units, {landed:,} rows in {time.monotonic() - started:.0f}s"
+                if empty:
+                    # The API listed the unit as having data and then returned none: worth a human look.
+                    detail += f"; {empty} unit(s) listed as available returned no rows"
+                    pipeline.alert("Warning", "AvailableButEmpty", f"{category}: {empty} unit(s) listed as "
+                                   "available by the API returned no rows")
+                step.note(detail, warning=bool(empty))
+                print(f"[aihw] {category:<13} {landed:>7,} rows from {len(plan[category]) - empty} of "
+                      f"{len(plan[category])} planned units")
 
         with pipeline.step("apply release") as step:
             applied = warehouse.execute(

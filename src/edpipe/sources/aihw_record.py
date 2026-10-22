@@ -21,9 +21,14 @@ from pathlib import Path
 from edpipe.aihw_ingest import CATEGORIES
 from edpipe.sources.aihw import AihwClient
 
-# The Alfred, Sandringham, Caulfield, Frankston, Rosebud; the Women's at Sandringham (public, usually no ED
-# data); the three networks involved; Victoria; national.
-RECORD_UNITS = ["H0358", "H0344", "H0345", "H0350", "H0343", "H0749", "LHN268", "LHN270", "LHN224", "Vic", "NAT"]
+# Bayside Health from 1 Jan 2026 = Alfred Health + Peninsula Health + Bass Coast Health + Gippsland Southern
+# Health Service + Kooweerup Regional Health Service. Every hospital of those five networks, the five networks,
+# plus the Women's at Sandringham and its network (public, no ED), Victoria and national.
+RECORD_UNITS = [
+    "H0358", "H0344", "H0345", "H0350", "H0343", "H0356", "H0357", "H1056",  # Alfred Health, Peninsula Health
+    "H0320", "H0324", "H0325", "H0346",                                      # Bass Coast, Gippsland Southern, Kooweerup
+    "H0749", "LHN268", "LHN270", "LHN253", "LHN254", "LHN271", "LHN224", "Vic", "NAT",
+]
 # Present in the unit list only, to prove the scope filter drops them: NSW public, Vic closed, Vic private.
 KEEP_ONLY_UNITS = ["H0021", "H0355", "H5203"]
 
@@ -37,7 +42,14 @@ def record(out: Path, units: list[str], keep_only: list[str]) -> None:
     if missing:
         raise SystemExit(f"reporting units not found in the API: {sorted(missing)}")
     extracts: dict[str, dict[str, dict]] = {}
+    availability: dict[str, dict] = {}
     for category in CATEGORIES:
+        measures = client.category_measures(category)
+        availability[category] = {
+            "measures": measures,
+            # Only the recorded units are kept: the live answer covers about 400 units per measure.
+            "units": {m: sorted(client.units_reporting(m) & set(units)) for m in measures},
+        }
         extracts[category] = {}
         for code in units:
             extract = client.flat_extract(category, code)
@@ -52,6 +64,7 @@ def record(out: Path, units: list[str], keep_only: list[str]) -> None:
         "suppressions": client.suppressions(),
         "caveats": client.caveats(),
         "reporting_units": [u for u in all_units if u["reporting_unit_code"] in wanted],
+        "availability": availability,
         "extracts": extracts,
     }
     out.parent.mkdir(parents=True, exist_ok=True)

@@ -47,6 +47,15 @@ class ReplayClient:
     def caveats(self) -> list[dict[str, Any]]:
         return self.sample["caveats"]
 
+    def category_measures(self, category: str) -> list[str]:
+        return list(self.sample["availability"][category]["measures"])
+
+    def units_reporting(self, measure_code: str) -> set[str]:
+        for category in self.sample["availability"].values():
+            if measure_code in category["measures"]:
+                return set(category["units"][measure_code])
+        return set()
+
     def flat_extract(self, category: str, reporting_unit_code: str | None = None, page_size: int = 1000) -> Extract:
         recorded = self.sample["extracts"].get(category, {}).get(reporting_unit_code or "", {"rows": []})
         rows = recorded["rows"]

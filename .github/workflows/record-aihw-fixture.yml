@@ -20,8 +20,12 @@ jobs:
           cache: pip
       - run: pip install -e .
       - name: Record
-        run: python -m edpipe.sources.aihw_record --out out/myhospitals-sample.json.gz
+        run: |
+          mkdir -p out
+          set -o pipefail
+          python -m edpipe.sources.aihw_record --out out/myhospitals-sample.json.gz 2>&1 | tee out/record.log
       - name: Publish to aihw-fixture branch
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -29,7 +33,7 @@ jobs:
           git switch --orphan aihw-fixture
           git rm -rq --cached . || true
           find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
-          cp /tmp/out/myhospitals-sample.json.gz .
+          cp /tmp/out/* .
           git add -A
           git commit -qm "AIHW sample $(date -u +%Y-%m-%dT%H:%MZ)"
           git push -f origin aihw-fixture

@@ -1,0 +1,37 @@
+name: Profile source data
+
+# Manual run: download the source extracts, verify checksums, profile every column and
+# commit the report to the data-profile branch so it can be reviewed before modelling.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  profile:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install -e .
+      - name: Fetch and verify
+        run: python -m edpipe.sources.fetch
+      - name: Profile
+        run: |
+          mkdir -p profile
+          python -m edpipe.profile_csv $(find data/raw -name "*.csv.gz" | sort) --out profile/data-profile.md
+      - name: Publish report to data-profile branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          cp profile/data-profile.md /tmp/data-profile.md
+          git switch --orphan data-profile
+          git rm -rq --cached . || true
+          find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          cp /tmp/data-profile.md data-profile.md
+          git add data-profile.md
+          git commit -qm "Source data profile $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push -f origin data-profile

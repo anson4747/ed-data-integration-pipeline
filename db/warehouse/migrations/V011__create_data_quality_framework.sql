@@ -55,10 +55,16 @@ GO
 CREATE TABLE ref.pain_value_map (
     raw_value  varchar(50) NOT NULL CONSTRAINT PK_pain_value_map PRIMARY KEY,
     treatment  varchar(20) NOT NULL,
-    CONSTRAINT CK_pain_value_map_treatment CHECK (treatment IN ('UnableToAssess'))
+    CONSTRAINT CK_pain_value_map_treatment CHECK (treatment IN ('UnableToAssess', 'Asleep', 'SedatedOrIntubated', 'Denies'))
 );
 GO
-INSERT INTO ref.pain_value_map (raw_value, treatment) VALUES ('uta', 'UnableToAssess');
+/* Seeded from the values the demo data really contains. Genuinely ambiguous strings (for example 'u') and one-off
+   observations ('sitting', 'NAD') are left out on purpose, so PAIN_UNPARSEABLE keeps flagging them for a person. */
+INSERT INTO ref.pain_value_map (raw_value, treatment) VALUES
+ ('uta', 'UnableToAssess'), ('ua', 'UnableToAssess'), ('unable', 'UnableToAssess'),
+ ('asleep', 'Asleep'), ('sleeping', 'Asleep'), ('sleep', 'Asleep'), ('sleepin', 'Asleep'),
+ ('sedated', 'SedatedOrIntubated'), ('intubated', 'SedatedOrIntubated'), ('ett', 'SedatedOrIntubated'),
+ ('denies', 'Denies');
 GO
 
 /* Agreed standard names for heart rhythm. Variants map to one standard value. */
@@ -70,7 +76,8 @@ GO
 INSERT INTO ref.rhythm_map (raw_value, standard_value) VALUES
  ('Sinus Rhythm', 'Sinus Rhythm'), ('sr', 'Sinus Rhythm'),
  ('Sinus Tachycardia', 'Sinus Tachycardia'), ('Sinus Bradycardia', 'Sinus Bradycardia'),
- ('Atrial Fibrillation', 'Atrial Fibrillation'), ('Atrial Flutter', 'Atrial Flutter');
+ ('Atrial Fibrillation', 'Atrial Fibrillation'), ('afib', 'Atrial Fibrillation'),
+ ('Atrial Flutter', 'Atrial Flutter'), ('Normal Sinus Rhythm', 'Sinus Rhythm'), ('Paced Rhythm', 'Paced Rhythm');
 GO
 
 INSERT INTO dq.quality_rule (rule_code, severity, target_table, description, reference, check_sql)

@@ -48,7 +48,8 @@ def crafted_stays(settings):
 
     with connect(settings, settings.warehouse_db, autocommit=True) as wh:
         _clean(wh)
-        add_stay(wh, 1, vitals=[(T0 + timedelta(minutes=30), 98, "5", "sr")])  # clean
+        add_stay(wh, 1, vitals=[(T0 + timedelta(minutes=30), 98, "5", "sr"),
+                                (T0 + timedelta(minutes=40), 96, "asleep", "afib")])  # clean
         add_stay(wh, 2, outtime=T0 - timedelta(hours=1))  # departs before arriving
         add_stay(wh, 3, subject=sid(34))  # duplicate pair: first
         add_stay(wh, 4, subject=sid(34))  # duplicate pair: second
@@ -114,9 +115,9 @@ def test_published_stays_carry_the_measures(warehouse):
 
 
 def test_reporting_view_standardises_pain_and_rhythm(warehouse):
-    clean = warehouse.execute("SELECT rhythm, pain_score, pain_status FROM rpt.ed_vitalsign WHERE stay_id = ?",
-                              sid(1)).fetchone()
-    assert tuple(clean) == ("Sinus Rhythm", 5, "Score")
+    clean = warehouse.execute("SELECT rhythm, pain_score, pain_status FROM rpt.ed_vitalsign WHERE stay_id = ? "
+                              "ORDER BY charttime", sid(1)).fetchall()
+    assert [tuple(r) for r in clean] == [("Sinus Rhythm", 5, "Score"), ("Atrial Fibrillation", None, "Asleep")]
     messy = warehouse.execute("SELECT rhythm, pain_score, pain_status FROM rpt.ed_vitalsign WHERE stay_id = ?",
                               sid(9)).fetchone()
     assert tuple(messy) == (None, None, "Unmapped")

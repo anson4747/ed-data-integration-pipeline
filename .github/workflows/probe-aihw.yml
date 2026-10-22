@@ -1,0 +1,49 @@
+name: Probe AIHW API
+
+# Manual run: call the live MyHospitals API from a GitHub runner, record the raw responses and
+# publish them to the aihw-probe branch. Used to design the client and to refresh test fixtures.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - name: Call the API
+        run: |
+          mkdir -p probe
+          base=https://myhospitalsapi.aihw.gov.au/api/v1
+          get() {
+            out="probe/$1.json"; shift
+            code=$(curl -sS -m 60 --retry 3 -H 'Accept: application/json' -o "$out" -w '%{http_code}' "$@" || echo curlfail)
+            echo "$out -> $code ($(wc -c < "$out" 2>/dev/null || echo 0) bytes)" | tee -a probe/_status.txt
+          }
+          get measures "$base/measures"
+          get datasets "$base/datasets"
+          get reporting_units "$base/reporting-units?top=20"
+          get reporting_units_alfred "$base/reporting-units/H0358"
+          get measure_myh0005 "$base/measures/MYH0005"
+          get measure_categories "$base/measure-categories"
+          get reported_measurements_alfred "$base/reporting-units/H0358/reported-measurements?top=50"
+          get reported_measurements_paged "$base/reported-measurements?top=5&skip=0"
+          get reported_measurements_myh0005 "$base/reported-measurements?measure_code=MYH0005&top=20"
+          get data_versions "$base/data-versions"
+          get flat "$base/flat-data-extract"
+          get openapi "https://myhospitalsapi.aihw.gov.au/swagger/v1/swagger.json"
+          get openapi2 "https://myhospitalsapi.aihw.gov.au/api/v1/swagger.json"
+      - name: Publish
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          cp -r probe /tmp/probe
+          git switch --orphan aihw-probe
+          git rm -rq --cached . || true
+          find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          cp -r /tmp/probe/. .
+          git add -A
+          git commit -qm "AIHW API probe $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push -f origin aihw-probe

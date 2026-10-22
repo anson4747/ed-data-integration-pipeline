@@ -18,11 +18,14 @@ jobs:
           base=https://myhospitalsapi.aihw.gov.au/api/v1
           ua="ed-data-integration-pipeline/0.1 (probe)"
           get() { out="probe/$1.json"; shift; code=$(curl -sS -m 60 -A "$ua" -H 'Accept: application/json' -o "$out" -w '%{http_code}' "$@" || echo fail); echo "$out -> $code $(wc -c < "$out") bytes" | tee -a probe/_status.txt; }
-          get ma_alfred "$base/reporting-units/H0358/measures-available"
-          get ma_caulfield "$base/reporting-units/H0345/measures-available"
-          get ma_vic "$base/reporting-units/Vic/measures-available"
-          get ma_lhn "$base/reporting-units/LHN268/measures-available"
-          get zenodo_record "https://zenodo.org/api/records/23123800"
+          get rua_myh0005 "$base/measures/MYH0005/reporting-units-available"
+          get cat_ed "$base/measure-categories/MYH-ED/measures"
+          get cat_waits "$base/measure-categories/MYH-ED-WAITS/measures"
+          get cat_time "$base/measure-categories/MYH-ED-TIME/measures"
+          curl -sS -m 60 -L -o probe/data.csv "https://zenodo.org/api/records/23123800/files/data.csv/content"
+          curl -sS -m 60 -L -o probe/schema.json "https://zenodo.org/api/records/23123800/files/schema.json/content"
+          curl -sS -m 60 -L -o probe/publicdata.json "https://zenodo.org/api/records/23123800/files/publicdata.json/content"
+          ls -la probe | tee -a probe/_status.txt
       - name: Publish
         run: |
           git config user.name "github-actions[bot]"

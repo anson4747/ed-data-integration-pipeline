@@ -192,9 +192,11 @@ def test_a_measurement_for_an_unknown_unit_fails_the_fact_load_and_leaves_the_fa
     warehouse.execute(
         "INSERT INTO ods.aihw_measurement (measure_category_code, measure_code, measure_name, reported_measure_code, "
         "reported_measure_name, reported_measure_category_code, reported_measure_category_name, reporting_unit_code, "
-        "reporting_start_date, reporting_end_date, value, result_status, data_version, _loaded_run_id) VALUES "
-        "('MYH-ED-TIME', 'MYH0005', N'x', 'MYH-RM0001', N'All patients', 'ED_All', N'All', 'ZZZ9', "
-        "'2024-07-01', '2025-06-30', 50, 'Reported', 1, 1)")
+        "reporting_start_date, reporting_end_date, value, result_status, data_version, _loaded_run_id) "
+        "SELECT TOP (1) measure_category_code, measure_code, measure_name, reported_measure_code, "
+        "reported_measure_name, reported_measure_category_code, reported_measure_category_name, 'ZZZ9', "
+        "reporting_start_date, reporting_end_date, 50, 'Reported', data_version, _loaded_run_id "
+        "FROM ods.aihw_measurement WHERE measure_code = 'MYH0005'")
     with pytest.raises(Exception, match="no dimension version"):
         dw_build.run(settings, date(2027, 8, 15), triggered_by="pytest")
     assert _one(warehouse, "SELECT COUNT(*) FROM dw.fact_ed_measure") == facts

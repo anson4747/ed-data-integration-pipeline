@@ -118,6 +118,15 @@ jobs:
                   print(r.rule_code, r.stay_id, r.detail)
           PY
 
+      - name: Show the data quality report on the run summary
+        if: always()
+        run: |
+          for f in logs/dq-demo.log logs/dq-report.log; do
+            [ -f "$f" ] || continue
+            msg=$(sed 's/%/%25/g' "$f" | awk '{printf "%s%%0A", $0}')
+            echo "::notice title=$(basename "$f")::$msg"
+          done
+
       - name: Surface failure details as annotations
         if: failure()
         run: |

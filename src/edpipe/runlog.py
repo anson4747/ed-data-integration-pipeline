@@ -32,6 +32,12 @@ class StepHandle:
     metrics: dict[str, int | None] = field(default_factory=dict)
     detail: str | None = None
     warning: bool = False
+    skipped: bool = False
+
+    def skip(self, detail: str) -> None:
+        """Mark the step as deliberately not run (for example: no new source release)."""
+        self.detail = detail
+        self.skipped = True
 
     def counts(self, **metrics: int | None) -> None:
         self.metrics.update(metrics)
@@ -105,7 +111,7 @@ class PipelineRun:
             "UPDATE etl.step_run SET status = ?, ended_at_utc = SYSUTCDATETIME(), rows_read = ?, "
             "rows_inserted = ?, rows_updated = ?, rows_deleted = ?, rows_rejected = ?, detail = ? "
             "WHERE step_run_id = ?",
-            "SucceededWithWarnings" if handle.warning else "Succeeded",
+            "Skipped" if handle.skipped else "SucceededWithWarnings" if handle.warning else "Succeeded",
             m.get("rows_read"), m.get("rows_inserted"), m.get("rows_updated"), m.get("rows_deleted"),
             m.get("rows_rejected"), handle.detail, step_id,
         )

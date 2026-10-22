@@ -1,0 +1,35 @@
+name: Record AIHW sample
+
+# Manual run: call the live MyHospitals API through the pipeline's own client for a few reporting
+# units, and publish the recording to the aihw-fixture branch. Also a live test of the client:
+# retries, paging and reconciliation all run against the real service.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  record:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -e .
+      - name: Record
+        run: python -m edpipe.sources.aihw_record --out out/myhospitals-sample.json.gz
+      - name: Publish to aihw-fixture branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          cp -r out /tmp/out
+          git switch --orphan aihw-fixture
+          git rm -rq --cached . || true
+          find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          cp /tmp/out/myhospitals-sample.json.gz .
+          git add -A
+          git commit -qm "AIHW sample $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push -f origin aihw-fixture

@@ -31,6 +31,20 @@ def connect(settings: Settings, database: str = "master", autocommit: bool = Fal
         conn.close()
 
 
+@contextmanager
+def transaction(conn) -> Iterator:
+    """Run a block as one transaction on an autocommit connection, then restore autocommit."""
+    conn.autocommit = False
+    try:
+        yield conn
+        conn.commit()
+    except Exception:
+        conn.rollback()
+        raise
+    finally:
+        conn.autocommit = True
+
+
 def wait_for_server(settings: Settings, timeout_seconds: int = 120, interval_seconds: float = 3.0) -> None:
     """Block until SQL Server accepts connections. Used by CI while the container starts."""
     deadline = time.monotonic() + timeout_seconds

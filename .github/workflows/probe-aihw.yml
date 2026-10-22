@@ -1,7 +1,6 @@
 name: Probe AIHW API
 
-# Manual run: call the live MyHospitals API from a GitHub runner, record the raw responses and
-# publish them to the aihw-probe branch. Used to design the client and to refresh test fixtures.
+# Manual run: find out which request headers the API gateway accepts. Results go to the aihw-probe branch.
 on:
   workflow_dispatch:
 
@@ -13,31 +12,28 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v5
-      - name: Call the API
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - name: Try user agents
         run: |
           mkdir -p probe
-          base=https://myhospitalsapi.aihw.gov.au/api/v1
-          get() {
-            out="probe/$1.json"; shift
-            code=$(curl -sS -m 60 --retry 3 -H 'Accept: application/json' -o "$out" -w '%{http_code}' "$@" || echo curlfail)
-            echo "$out -> $code ($(wc -c < "$out" 2>/dev/null || echo 0) bytes)" | tee -a probe/_status.txt
-          }
-          for cat in MYH-ED-TIME MYH-ED MYH-ED-WAITS; do
-            n=0; skip=0
-            while :; do
-              get "page_${cat}_${skip}" "$base/flat-data-extract/$cat?skip=$skip&top=1000"
-              c=$(python3 -c "import json;print(len(json.load(open('probe/page_${cat}_${skip}.json'))['result']['data']))" 2>/dev/null || echo 0)
-              n=$((n+c)); echo "$cat skip=$skip rows=$c" | tee -a probe/_status.txt
-              [ "$c" -lt 1000 ] && break
-              skip=$((skip+1000))
-            done
-            echo "TOTAL $cat $n" | tee -a probe/_status.txt
-          done
-          get alfred_ed_time "$base/flat-data-extract/MYH-ED-TIME?skip=0&top=1000&reporting_unit_code=H0358"
-          get alfred_ed "$base/flat-data-extract/MYH-ED?skip=0&top=1000&reporting_unit_code=H0358"
-          get alfred_ed_waits "$base/flat-data-extract/MYH-ED-WAITS?skip=0&top=1000&reporting_unit_code=H0358"
-          get beyond_end "$base/flat-data-extract/MYH-ED-TIME?skip=9999999&top=10"
-          get bad_category "$base/flat-data-extract/NOPE?skip=0&top=10"
+          url=https://myhospitalsapi.aihw.gov.au/api/v1/measure-categories
+          try() { code=$(curl -s -o /dev/null -m 30 -w '%{http_code}' -H "Accept: $2" -A "$1" "$url"); echo "$code | UA=$1 | Accept=$2" | tee -a probe/status.txt; }
+          try "curl/8.5.0" "*/*"
+          try "curl/8.5.0" "application/json"
+          try "ed-data-integration-pipeline/0.1 (portfolio project; polite client)" "application/json"
+          try "ed-data-integration-pipeline/0.1" "application/json"
+          try "ed-data-integration-pipeline/0.1" "*/*"
+          try "python-requests/2.32.0" "*/*"
+          try "Mozilla/5.0 (compatible; ed-data-integration-pipeline/0.1; +https://github.com/anson4747/ed-data-integration-pipeline)" "application/json"
+          try "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/124.0 Safari/537.36" "application/json"
+          python - <<'PY' | tee -a probe/status.txt
+          import requests
+          r = requests.get("https://myhospitalsapi.aihw.gov.au/api/v1/measure-categories", timeout=30)
+          print(r.status_code, "| requests default headers:", dict(r.request.headers))
+          PY
       - name: Publish
         run: |
           git config user.name "github-actions[bot]"
@@ -48,5 +44,5 @@ jobs:
           find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
           cp -r /tmp/probe/. .
           git add -A
-          git commit -qm "AIHW API probe $(date -u +%Y-%m-%dT%H:%MZ)"
+          git commit -qm "AIHW gateway probe"
           git push -f origin aihw-probe

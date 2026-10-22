@@ -106,7 +106,7 @@ CREATE TABLE ods.emr_hosp_transfers (
     intime       datetime2(0) NULL,
     outtime      datetime2(0) NULL,
     _ct_version  bigint NULL,
-    _replicated_at_utcdatetime2(3) NOT NULL CONSTRAINT DF_ods_emr_hosp_transfers_repl DEFAULT SYSUTCDATETIME(),
+    _replicated_at_utc datetime2(3) NOT NULL CONSTRAINT DF_ods_emr_hosp_transfers_repl DEFAULT SYSUTCDATETIME(),
     CONSTRAINT PK_ods_emr_hosp_transfers PRIMARY KEY (transfer_id)
 );
 GO
@@ -129,7 +129,7 @@ CREATE TABLE ods.emr_hosp_diagnoses_icd (
     icd_version  tinyint NOT NULL,
     subject_id   int NULL,
     _ct_version  bigint NULL,
-    _replicated_at_utcdatetime2(3) NOT NULL CONSTRAINT DF_ods_emr_hosp_diagnoses_icd_repl DEFAULT SYSUTCDATETIME(),
+    _replicated_at_utc datetime2(3) NOT NULL CONSTRAINT DF_ods_emr_hosp_diagnoses_icd_repl DEFAULT SYSUTCDATETIME(),
     CONSTRAINT PK_ods_emr_hosp_diagnoses_icd PRIMARY KEY (hadm_id, seq_num, icd_code, icd_version)
 );
 GO
@@ -148,7 +148,7 @@ CREATE TABLE ods.emr_hosp_d_icd_diagnoses (
     icd_version  tinyint NOT NULL,
     long_title   varchar(500) NULL,
     _ct_version  bigint NULL,
-    _replicated_at_utcdatetime2(3) NOT NULL CONSTRAINT DF_ods_emr_hosp_d_icd_diagnoses_repl DEFAULT SYSUTCDATETIME(),
+    _replicated_at_utc datetime2(3) NOT NULL CONSTRAINT DF_ods_emr_hosp_d_icd_diagnoses_repl DEFAULT SYSUTCDATETIME(),
     CONSTRAINT PK_ods_emr_hosp_d_icd_diagnoses PRIMARY KEY (icd_code, icd_version)
 );
 GO
@@ -214,7 +214,7 @@ CREATE TABLE ods.emr_ed_triage (
     acuity          decimal(3, 1) NULL,
     chiefcomplaint  varchar(1000) NULL,
     _ct_version     bigint NULL,
-    _replicated_at_utcdatetime2(3) NOT NULL CONSTRAINT DF_ods_emr_ed_triage_repl DEFAULT SYSUTCDATETIME(),
+    _replicated_at_utc datetime2(3) NOT NULL CONSTRAINT DF_ods_emr_ed_triage_repl DEFAULT SYSUTCDATETIME(),
     CONSTRAINT PK_ods_emr_ed_triage PRIMARY KEY (stay_id)
 );
 GO
@@ -251,7 +251,7 @@ CREATE TABLE ods.emr_ed_vitalsign (
     rhythm        varchar(100) NULL,
     pain          varchar(50) NULL,
     _ct_version   bigint NULL,
-    _replicated_at_utcdatetime2(3) NOT NULL CONSTRAINT DF_ods_emr_ed_vitalsign_repl DEFAULT SYSUTCDATETIME(),
+    _replicated_at_utc datetime2(3) NOT NULL CONSTRAINT DF_ods_emr_ed_vitalsign_repl DEFAULT SYSUTCDATETIME(),
     CONSTRAINT PK_ods_emr_ed_vitalsign PRIMARY KEY (vitalsign_id)
 );
 GO
@@ -276,7 +276,7 @@ CREATE TABLE ods.emr_ed_diagnosis (
     icd_version  tinyint NULL,
     icd_title    varchar(500) NULL,
     _ct_version  bigint NULL,
-    _replicated_at_utcdatetime2(3) NOT NULL CONSTRAINT DF_ods_emr_ed_diagnosis_repl DEFAULT SYSUTCDATETIME(),
+    _replicated_at_utc datetime2(3) NOT NULL CONSTRAINT DF_ods_emr_ed_diagnosis_repl DEFAULT SYSUTCDATETIME(),
     CONSTRAINT PK_ods_emr_ed_diagnosis PRIMARY KEY (stay_id, seq_num)
 );
 GO

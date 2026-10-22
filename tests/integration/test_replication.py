@@ -40,19 +40,27 @@ def fresh_source(settings):
     yield
 
 
-def test_first_run_is_a_full_load(settings, warehouse):
-    emr_sim.replay(settings, 300)
+def test_first_run_is_a_full_load(settings, warehouse, source):
+    # Replay until at least one patient is still in the ED (arrived, not yet departed), so the
+    # next test can prove the departure arrives later as an UPDATE.
+    for _ in range(200):
+        emr_sim.replay(settings, 25)
+        open_stays = source.execute("SELECT COUNT(*) FROM ed.edstays WHERE outtime IS NULL").fetchone()[0]
+        if open_stays:
+            break
+    assert open_stays, "replay never produced an open ED stay"
     results = {r.table: r for r in replicate.run(settings, triggered_by="pytest")}
     if all(r.from_version is None for r in results.values()):
         assert {r.mode for r in results.values()} == {"FULL"}
     _assert_reconciled(settings, warehouse)
+    assert warehouse.execute("SELECT COUNT(*) FROM ods.emr_ed_edstays WHERE outtime IS NULL").fetchone()[0] > 0
 
 
 def test_incremental_catch_up_applies_inserts_and_updates(settings, warehouse):
     emr_sim.replay(settings, None)
     results = {r.table: r for r in replicate.run(settings, triggered_by="pytest")}
     assert results["ed.edstays"].mode == "INCR"
-    # Stays that arrived in the first replay window departed later: those are updates.
+    # The stays that were open at the first run have since departed: those arrive as updates.
     assert results["ed.edstays"].rows_updated > 0
     _assert_reconciled(settings, warehouse)
     still_in_ed = warehouse.execute("SELECT COUNT(*) FROM ods.emr_ed_edstays WHERE outtime IS NULL").fetchone()[0]

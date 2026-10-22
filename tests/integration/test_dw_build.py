@@ -97,7 +97,7 @@ def test_dimension_has_no_gaps_overlaps_or_missing_current_version(warehouse):
                            "ON b.reporting_unit_code = a.reporting_unit_code AND b.valid_from > a.valid_from "
                            "AND b.valid_from = (SELECT MIN(c.valid_from) FROM dw.dim_reporting_unit AS c "
                            "WHERE c.reporting_unit_code = a.reporting_unit_code AND c.valid_from > a.valid_from) "
-                           "WHERE b.valid_from <> DATEADD(day, 1, a.valid_to)") == 0
+                           "WHERE a.valid_to <> DATEADD(day, -1, b.valid_from)") == 0
 
 
 def test_every_fact_points_at_the_unit_version_valid_in_its_period(warehouse):

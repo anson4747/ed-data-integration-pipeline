@@ -1,6 +1,6 @@
 name: Probe AIHW API
 
-# Manual run: find out which request headers the API gateway accepts. Results go to the aihw-probe branch.
+# Manual run: probe endpoints and external sources, publish results to the aihw-probe branch.
 on:
   workflow_dispatch:
 
@@ -12,28 +12,17 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v5
-      - uses: actions/setup-python@v6
-        with:
-          python-version: "3.12"
-      - run: pip install requests
-      - name: Try user agents
+      - name: Probe
         run: |
           mkdir -p probe
-          url=https://myhospitalsapi.aihw.gov.au/api/v1/measure-categories
-          try() { code=$(curl -s -o /dev/null -m 30 -w '%{http_code}' -H "Accept: $2" -A "$1" "$url"); echo "$code | UA=$1 | Accept=$2" | tee -a probe/status.txt; }
-          try "curl/8.5.0" "*/*"
-          try "curl/8.5.0" "application/json"
-          try "ed-data-integration-pipeline/0.1 (portfolio project; polite client)" "application/json"
-          try "ed-data-integration-pipeline/0.1" "application/json"
-          try "ed-data-integration-pipeline/0.1" "*/*"
-          try "python-requests/2.32.0" "*/*"
-          try "Mozilla/5.0 (compatible; ed-data-integration-pipeline/0.1; +https://github.com/anson4747/ed-data-integration-pipeline)" "application/json"
-          try "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/124.0 Safari/537.36" "application/json"
-          python - <<'PY' | tee -a probe/status.txt
-          import requests
-          r = requests.get("https://myhospitalsapi.aihw.gov.au/api/v1/measure-categories", timeout=30)
-          print(r.status_code, "| requests default headers:", dict(r.request.headers))
-          PY
+          base=https://myhospitalsapi.aihw.gov.au/api/v1
+          ua="ed-data-integration-pipeline/0.1 (probe)"
+          get() { out="probe/$1.json"; shift; code=$(curl -sS -m 60 -A "$ua" -H 'Accept: application/json' -o "$out" -w '%{http_code}' "$@" || echo fail); echo "$out -> $code $(wc -c < "$out") bytes" | tee -a probe/_status.txt; }
+          get ma_alfred "$base/reporting-units/H0358/measures-available"
+          get ma_caulfield "$base/reporting-units/H0345/measures-available"
+          get ma_vic "$base/reporting-units/Vic/measures-available"
+          get ma_lhn "$base/reporting-units/LHN268/measures-available"
+          get zenodo_record "https://zenodo.org/api/records/23123800"
       - name: Publish
         run: |
           git config user.name "github-actions[bot]"
@@ -44,5 +33,5 @@ jobs:
           find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
           cp -r /tmp/probe/. .
           git add -A
-          git commit -qm "AIHW gateway probe"
+          git commit -qm "probe"
           git push -f origin aihw-probe

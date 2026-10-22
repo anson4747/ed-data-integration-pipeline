@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 470" width="1050" height="470" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <title>ED Data Integration Pipeline architecture</title>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+    <style>
+      .t { font-size: 15px; font-weight: 600; fill: #0f172a; }
+      .s { font-size: 12.5px; fill: #334155; }
+      .l { font-size: 12px; fill: #475569; font-style: italic; }
+      .h { font-size: 13px; font-weight: 700; fill: #475569; letter-spacing: .06em; }
+      .e { stroke: #475569; stroke-width: 1.6; fill: none; marker-end: url(#a); }
+    </style>
+  </defs>
+
+  <rect width="1050" height="470" rx="14" fill="#ffffff"/>
+
+  <text class="h" x="24" y="36">SOURCES</text>
+  <text class="h" x="276" y="36">SQL SERVER WAREHOUSE</text>
+  <text class="h" x="862" y="36">CONTROL AND USE</text>
+
+  <!-- sources -->
+  <rect x="20" y="78" width="214" height="104" rx="10" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text class="t" x="36" y="106">Mock hospital EMR</text>
+  <text class="s" x="36" y="128">SQL Server, Change Tracking</text>
+  <text class="s" x="36" y="147">MIMIC-IV-ED demo data</text>
+  <text class="s" x="36" y="166">Sends: changes since last run</text>
+
+  <rect x="20" y="294" width="214" height="104" rx="10" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text class="t" x="36" y="322">AIHW MyHospitals API</text>
+  <text class="s" x="36" y="344">Public REST API, live</text>
+  <text class="s" x="36" y="363">Pulled one hospital at a time,</text>
+  <text class="s" x="36" y="382">only when a new release exists</text>
+
+  <!-- warehouse panel -->
+  <rect x="262" y="52" width="566" height="380" rx="14" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6 4"/>
+
+  <!-- row 1: land, copy, check -->
+  <rect x="280" y="88" width="166" height="84" rx="9" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+  <text class="t" x="294" y="114">stg</text>
+  <text class="s" x="294" y="135">landing, as received:</text>
+  <text class="s" x="294" y="154">change sets, raw JSON</text>
+
+  <rect x="466" y="88" width="166" height="84" rx="9" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+  <text class="t" x="480" y="114">ods</text>
+  <text class="s" x="480" y="135">current state of every</text>
+  <text class="s" x="480" y="154">source record</text>
+
+  <rect x="652" y="88" width="160" height="84" rx="9" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text class="t" x="666" y="114">dq</text>
+  <text class="s" x="666" y="135">18 rules stored as data</text>
+  <text class="s" x="666" y="154">quarantine, exceptions</text>
+
+  <!-- row 2: reference, model, report -->
+  <rect x="280" y="304" width="166" height="84" rx="9" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text class="t" x="294" y="330">ref</text>
+  <text class="s" x="294" y="351">Bayside merger dates,</text>
+  <text class="s" x="294" y="370">pain and rhythm maps</text>
+
+  <rect x="466" y="304" width="166" height="84" rx="9" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text class="t" x="480" y="330">dw</text>
+  <text class="s" x="480" y="351">SCD Type 2 hospitals</text>
+  <text class="s" x="480" y="370">ED stay, measure facts</text>
+
+  <rect x="652" y="304" width="160" height="84" rx="9" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text class="t" x="666" y="330">rpt</text>
+  <text class="s" x="666" y="351">reporting, data quality,</text>
+  <text class="s" x="666" y="370">pipeline health views</text>
+
+  <!-- right column -->
+  <rect x="852" y="78" width="180" height="104" rx="10" fill="#f1f5f9" stroke="#64748b" stroke-width="1.5"/>
+  <text class="t" x="868" y="106">etl control</text>
+  <text class="s" x="868" y="128">runs, steps, row counts,</text>
+  <text class="s" x="868" y="147">watermarks, alerts</text>
+  <text class="s" x="868" y="166">Every step logged</text>
+
+  <rect x="852" y="304" width="180" height="84" rx="10" fill="#f1f5f9" stroke="#64748b" stroke-width="1.5"/>
+  <text class="t" x="868" y="330">Power BI, analysts</text>
+  <text class="s" x="868" y="351">read the rpt views,</text>
+  <text class="s" x="868" y="370">nothing else</text>
+
+  <!-- sources into stg -->
+  <path class="e" d="M234,130 L278,130"/>
+  <path class="e" d="M234,346 C258,346 254,156 278,156"/>
+
+  <!-- warehouse flow -->
+  <path class="e" d="M446,130 L464,130"/>
+  <path class="e" d="M632,130 L650,130"/>
+  <path class="e" d="M732,172 C732,240 600,236 600,302"/>
+  <path class="e" d="M510,172 L510,302"/>
+  <text class="l" x="518" y="242">AIHW measures</text>
+  <text class="l" x="742" y="206">clean ED stays only</text>
+  <path class="e" d="M446,346 L464,346"/>
+  <path class="e" d="M632,346 L650,346"/>
+  <path class="e" d="M812,346 L850,346"/>
+
+  <!-- logging -->
+  <path d="M828,130 L850,130" stroke="#64748b" stroke-width="1.6" stroke-dasharray="5 4" fill="none" marker-end="url(#a)"/>
+
+  <text class="s" x="280" y="418">One transaction per batch · every run idempotent · versioned, checksummed migrations</text>
+</svg>

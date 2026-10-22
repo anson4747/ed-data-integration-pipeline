@@ -63,34 +63,9 @@ real job:
 
 ## Architecture
 
-```mermaid
-flowchart TB
-    EMR[("Mock hospital EMR<br/>SQL Server, Change Tracking on<br/>MIMIC-IV-ED demo data")]
-    API["AIHW MyHospitals REST API<br/>live, published releases"]
-
-    subgraph EDW["SQL Server warehouse"]
-        direction TB
-        STG["stg: landing<br/>change sets and raw API JSON, as received"]
-        ODS["ods: operational copy<br/>current state of every source record"]
-        DQ["dq: 18 quality rules<br/>exceptions, quarantine"]
-        REF["ref: reference data<br/>Bayside merger, value maps"]
-        DW["dw: dimensional model<br/>SCD2 hospitals, ED facts"]
-        RPT["rpt: reporting views<br/>results, data quality, pipeline health"]
-        STG -->|"atomic apply"| ODS
-        ODS --> DQ
-        DQ -->|"clean records only"| DW
-        REF --> DW
-        DW --> RPT
-    end
-
-    ETL["etl: control tables<br/>runs, steps, watermarks, alerts"]
-    BI["Power BI and analysts"]
-
-    EMR -->|"changes since last version"| STG
-    API -->|"one hospital at a time, new release only"| STG
-    RPT --> BI
-    EDW -.->|"every step logged"| ETL
-```
+<p align="center">
+  <img src="docs/architecture.svg" alt="Architecture: a mock EMR and the AIHW API feed a SQL Server warehouse through stg, ods, dq, dw and rpt layers, with etl control tables logging every step and Power BI reading the rpt views" width="100%">
+</p>
 
 | Layer | Holds | Rule |
 |---|---|---|

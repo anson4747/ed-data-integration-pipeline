@@ -3,7 +3,9 @@
 All notable changes are recorded here. Database changes always ship as a new numbered
 migration; an applied migration is never edited.
 
-## [Unreleased]
+## [1.0.0] 2026-10-22
+
+First complete release: replication, API ingest, dimensional model, data quality, operations.
 
 ### Added
 - Repository foundation: versioned migration runner with checksum drift detection,
@@ -32,3 +34,5 @@ migration; an applied migration is never edited.
   non-zero; `rpt.pipeline_health` (warehouse V014) gives one row per pipeline with a Healthy, Attention,
   Failing or Running status; `docs/runbook.md` covers alerts, common failures and acknowledging alerts.
   CI runs the runner end to end and checks that it fails fast.
+- Documentation: README rewritten as a full project overview (architecture, technology choices, challenges
+  and fixes, results, limitations); `DATA_LICENCES.md` with attribution for every source.

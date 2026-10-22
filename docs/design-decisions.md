@@ -53,4 +53,4 @@ the code, and `result_status = Withheld`. Rollups ignore them and say how many h
 * Recorded AIHW data ends at 2024-25; no real period yet falls after the Bayside Health merger (1 January 2026).
   Tests simulate a 2025-26 release to prove the behaviour.
 * The combined Bayside figure is not like for like across years: Bass Coast Hospital enters in 2019-20.
-* MIMIC-IV-ED demo dates are shifted into the 2100s and its triage scale is the US ESI, not the Australian ATS.
+* MIMIC-IV-ED demo dates are shifted into the 2100s and its triage scale is the US ESI, not the Australasian Triage Scale (ATS).

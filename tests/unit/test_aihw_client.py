@@ -29,6 +29,16 @@ def rows(n: int, start: int = 0) -> list[dict]:
 
 
 @responses.activate
+def test_requests_identify_the_pipeline_not_python_requests():
+    # The API gateway returns 403 to the default python-requests User-Agent (found against the live API).
+    responses.get(FLAT, json=page(rows(1), 1))
+    make_client()[0].flat_extract("MYH-ED-TIME")
+    sent = responses.calls[0].request.headers
+    assert sent["User-Agent"].startswith("ed-data-integration-pipeline/")
+    assert sent["Accept"] == "application/json"
+
+
+@responses.activate
 def test_release_reads_the_data_version():
     responses.get(f"{BASE_URL}/measure-categories", json=page([], 0) | {"result": []})
     release = make_client()[0].release()

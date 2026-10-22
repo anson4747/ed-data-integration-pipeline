@@ -78,8 +78,10 @@ class AihwClient:
     ) -> None:
         self.base_url = base_url.rstrip("/")
         self.session = session or requests.Session()
-        self.session.headers.setdefault("Accept", "application/json")
-        self.session.headers.setdefault("User-Agent", USER_AGENT)
+        # Assigned, not setdefault: a Session already carries a "python-requests/x" User-Agent, and the
+        # API's gateway answers that one with 403 Forbidden. An identifying agent is accepted.
+        self.session.headers["Accept"] = "application/json"
+        self.session.headers["User-Agent"] = USER_AGENT
         self.timeout = timeout
         self.max_attempts = max_attempts
         self.backoff_seconds = backoff_seconds

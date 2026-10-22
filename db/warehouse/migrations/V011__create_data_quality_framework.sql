@@ -1,7 +1,7 @@
 /*
     Data quality framework.
 
-    dq.rule        the catalogue. Each rule is a SELECT that returns the rows that BREAK it as
+    dq.quality_rule        the catalogue. Each rule is a SELECT that returns the rows that BREAK it as
                    (stay_id, entity_key, detail). Rules are data, added by migration, so the history of what
                    was checked and when is in version control.
     dq.exception   one row per (rule, entity) with a lifecycle: Open when first found, Resolved when a later
@@ -19,7 +19,7 @@
     the runner executes check_sql with sp_executesql.
 */
 
-CREATE TABLE dq.rule (
+CREATE TABLE dq.quality_rule (
     rule_code    varchar(40)    NOT NULL CONSTRAINT PK_dq_rule PRIMARY KEY,
     severity     varchar(10)    NOT NULL,
     target_table varchar(60)    NOT NULL,
@@ -33,7 +33,7 @@ GO
 
 CREATE TABLE dq.exception (
     exception_id      bigint IDENTITY(1,1) NOT NULL CONSTRAINT PK_dq_exception PRIMARY KEY,
-    rule_code         varchar(40)   NOT NULL CONSTRAINT FK_dq_exception_rule REFERENCES dq.rule (rule_code),
+    rule_code         varchar(40)   NOT NULL CONSTRAINT FK_dq_exception_rule REFERENCES dq.quality_rule (rule_code),
     entity_key        nvarchar(100) NOT NULL,
     stay_id           int           NULL,
     detail            nvarchar(500) NULL,
@@ -73,7 +73,7 @@ INSERT INTO ref.rhythm_map (raw_value, standard_value) VALUES
  ('Atrial Fibrillation', 'Atrial Fibrillation'), ('Atrial Flutter', 'Atrial Flutter');
 GO
 
-INSERT INTO dq.rule (rule_code, severity, target_table, description, reference, check_sql)
+INSERT INTO dq.quality_rule (rule_code, severity, target_table, description, reference, check_sql)
 VALUES ('E025_DUPLICATE_PRESENTATION', 'Error', N'ed.edstays',
  N'Two ED presentations for the same patient at the same arrival time.',
  N'Modelled on VEMD 2026-27 validation E025 (duplicate record)',
@@ -82,7 +82,7 @@ FROM ods.emr_ed_edstays AS e
 JOIN ods.emr_ed_edstays AS f ON f.subject_id = e.subject_id AND f.intime = e.intime AND f.stay_id < e.stay_id');
 GO
 
-INSERT INTO dq.rule (rule_code, severity, target_table, description, reference, check_sql)
+INSERT INTO dq.quality_rule (rule_code, severity, target_table, description, reference, check_sql)
 VALUES ('E340_DEPARTURE_NOT_AFTER_ARRIVAL', 'Error', N'ed.edstays',
  N'Departure time is not after arrival time.',
  N'Modelled on VEMD 2026-27 validation E340 (departure not after arrival)',
@@ -90,7 +90,7 @@ VALUES ('E340_DEPARTURE_NOT_AFTER_ARRIVAL', 'Error', N'ed.edstays',
 FROM ods.emr_ed_edstays WHERE outtime IS NOT NULL AND outtime <= intime');
 GO
 
-INSERT INTO dq.rule (rule_code, severity, target_table, description, reference, check_sql)
+INSERT INTO dq.quality_rule (rule_code, severity, target_table, description, reference, check_sql)
 VALUES ('E167_VITALS_BEFORE_ARRIVAL', 'Error', N'ed.vitalsign',
  N'Vital signs charted before the patient arrived.',
  N'Modelled on VEMD 2026-27 validation E167 (triage before arrival), applied to charting times',
@@ -100,7 +100,7 @@ JOIN ods.emr_ed_vitalsign AS v ON v.stay_id = e.stay_id AND v.charttime < e.inti
 GROUP BY e.stay_id');
 GO
 
-INSERT INTO dq.rule (rule_code, severity, target_table, description, reference, check_sql)
+INSERT INTO dq.quality_rule (rule_code, severity, target_table, description, reference, check_sql)
 VALUES ('E219_LENGTH_OF_STAY_OVER_7_DAYS', 'Error', N'ed.edstays',
  N'ED stay longer than 7 days.',
  N'Modelled on VEMD 2026-27 validation E219/E350 (length of stay), upper bound',
@@ -108,7 +108,7 @@ VALUES ('E219_LENGTH_OF_STAY_OVER_7_DAYS', 'Error', N'ed.edstays',
 FROM ods.emr_ed_edstays WHERE outtime IS NOT NULL AND DATEDIFF(MINUTE, intime, outtime) > 10080');
 GO
 
-INSERT INTO dq.rule (rule_code, severity, target_table, description, reference, check_sql)
+INSERT INTO dq.quality_rule (rule_code, severity, target_table, description, reference, check_sql)
 VALUES ('LENGTH_OF_STAY_OVER_72H', 'Warning', N'ed.edstays',
  N'ED stay between 72 hours and 7 days: possible, but check.',
  N'Modelled on VEMD 2026-27 validation E219/E350 (length of stay), soft bound',
@@ -117,7 +117,7 @@ FROM ods.emr_ed_edstays WHERE outtime IS NOT NULL
   AND DATEDIFF(MINUTE, intime, outtime) > 4320 AND DATEDIFF(MINUTE, intime, outtime) <= 10080');
 GO
 
-INSERT INTO dq.rule (rule_code, severity, target_table, description, reference, check_sql)
+INSERT INTO dq.quality_rule (rule_code, severity, target_table, description, reference, check_sql)
 VALUES ('ORPHAN_TRIAGE', 'Error', N'ed.triage',
  N'Triage record whose ED stay does not exist.',
  N'Referential integrity',
@@ -125,7 +125,7 @@ VALUES ('ORPHAN_TRIAGE', 'Error', N'ed.triage',
 FROM ods.emr_ed_triage AS t WHERE NOT EXISTS (SELECT 1 FROM ods.emr_ed_edstays AS e WHERE e.stay_id = t.stay_id)');
 GO
 
-INSERT INTO dq.rule (rule_code, severity, target_table, description, reference, check_sql)
+INSERT INTO dq.quality_rule (rule_code, severity, target_table, description, reference, check_sql)
 VALUES ('ORPHAN_VITALSIGN', 'Error', N'ed.vitalsign',
  N'Vital sign reading whose ED stay does not exist.',
  N'Referential integrity',
@@ -133,7 +133,7 @@ VALUES ('ORPHAN_VITALSIGN', 'Error', N'ed.vitalsign',
 FROM ods.emr_ed_vitalsign AS v WHERE NOT EXISTS (SELECT 1 FROM ods.emr_ed_edstays AS e WHERE e.stay_id = v.stay_id)');
 GO
 
-INSERT INTO dq.rule (rule_code, severity, target_table, description, reference, check_sql)
+INSERT INTO dq.quality_rule (rule_code, severity, target_table, description, reference, check_sql)
 VALUES ('ACUITY_NOT_ESI_LEVEL', 'Error', N'ed.triage',
  N'Triage acuity present but not an ESI level from 1 to 5.',
  N'MIMIC-IV-ED uses the US Emergency Severity Index, not the Australian ATS',
@@ -141,7 +141,7 @@ VALUES ('ACUITY_NOT_ESI_LEVEL', 'Error', N'ed.triage',
 FROM ods.emr_ed_triage WHERE acuity IS NOT NULL AND acuity NOT IN (1, 2, 3, 4, 5)');
 GO
 
-INSERT INTO dq.rule (rule_code, severity, target_table, description, reference, check_sql)
+INSERT INTO dq.quality_rule (rule_code, severity, target_table, description, reference, check_sql)
 VALUES ('ADMITTED_WITHOUT_ADMISSION', 'Error', N'ed.edstays',
  N'Disposition is admitted but there is no hospital admission record for the stay.',
  N'Referential integrity',
@@ -152,7 +152,7 @@ WHERE e.disposition = ''ADMITTED''
   AND (e.hadm_id IS NULL OR NOT EXISTS (SELECT 1 FROM ods.emr_hosp_admissions AS a WHERE a.hadm_id = e.hadm_id))');
 GO
 
-INSERT INTO dq.rule (rule_code, severity, target_table, description, reference, check_sql)
+INSERT INTO dq.quality_rule (rule_code, severity, target_table, description, reference, check_sql)
 VALUES ('ADMISSION_DISCHARGE_BEFORE_ADMIT', 'Error', N'hosp.admissions',
  N'Hospital discharge is before admission for an admission that began in ED.',
  N'Modelled on VEMD 2026-27 validation E340 logic applied to admissions',
@@ -161,7 +161,7 @@ FROM ods.emr_hosp_admissions AS a JOIN ods.emr_ed_edstays AS e ON e.hadm_id = a.
 WHERE a.dischtime IS NOT NULL AND a.dischtime < a.admittime');
 GO
 
-INSERT INTO dq.rule (rule_code, severity, target_table, description, reference, check_sql)
+INSERT INTO dq.quality_rule (rule_code, severity, target_table, description, reference, check_sql)
 VALUES ('TRIAGE_ACUITY_MISSING', 'Warning', N'ed.triage',
  N'Stay with no triage record, or triage without an acuity.',
  N'Acuity drives benchmarking; 15 of 222 stays in the demo data have none',
@@ -171,7 +171,7 @@ FROM ods.emr_ed_edstays AS e LEFT JOIN ods.emr_ed_triage AS t ON t.stay_id = e.s
 WHERE t.stay_id IS NULL OR t.acuity IS NULL');
 GO
 
-INSERT INTO dq.rule (rule_code, severity, target_table, description, reference, check_sql)
+INSERT INTO dq.quality_rule (rule_code, severity, target_table, description, reference, check_sql)
 VALUES ('O2SAT_IMPLAUSIBLE', 'Warning', N'ed.triage, ed.vitalsign',
  N'Oxygen saturation below 70% or above 100%.',
  N'Found in the demo data: a reading of 10%',
@@ -184,7 +184,7 @@ VALUES ('O2SAT_IMPLAUSIBLE', 'Warning', N'ed.triage, ed.vitalsign',
 SELECT stay_id, k, CONCAT(N''SpO2 '', o2sat) FROM r WHERE o2sat < 70 OR o2sat > 100');
 GO
 
-INSERT INTO dq.rule (rule_code, severity, target_table, description, reference, check_sql)
+INSERT INTO dq.quality_rule (rule_code, severity, target_table, description, reference, check_sql)
 VALUES ('HEARTRATE_IMPLAUSIBLE', 'Warning', N'ed.triage, ed.vitalsign',
  N'Heart rate below 20 or above 250.',
  N'Physiological range check',
@@ -197,7 +197,7 @@ VALUES ('HEARTRATE_IMPLAUSIBLE', 'Warning', N'ed.triage, ed.vitalsign',
 SELECT stay_id, k, CONCAT(N''Heart rate '', heartrate) FROM r WHERE heartrate < 20 OR heartrate > 250');
 GO
 
-INSERT INTO dq.rule (rule_code, severity, target_table, description, reference, check_sql)
+INSERT INTO dq.quality_rule (rule_code, severity, target_table, description, reference, check_sql)
 VALUES ('TEMPERATURE_IMPLAUSIBLE_F', 'Warning', N'ed.triage, ed.vitalsign',
  N'Temperature outside 85 to 108 degrees Fahrenheit (MIMIC records Fahrenheit).',
  N'Physiological range check, unit check',
@@ -210,7 +210,7 @@ VALUES ('TEMPERATURE_IMPLAUSIBLE_F', 'Warning', N'ed.triage, ed.vitalsign',
 SELECT stay_id, k, CONCAT(N''Temperature '', temperature) FROM r WHERE temperature < 85 OR temperature > 108');
 GO
 
-INSERT INTO dq.rule (rule_code, severity, target_table, description, reference, check_sql)
+INSERT INTO dq.quality_rule (rule_code, severity, target_table, description, reference, check_sql)
 VALUES ('DIASTOLIC_ABOVE_SYSTOLIC', 'Warning', N'ed.triage, ed.vitalsign',
  N'Diastolic blood pressure above systolic.',
  N'Usually transposed values',
@@ -223,7 +223,7 @@ VALUES ('DIASTOLIC_ABOVE_SYSTOLIC', 'Warning', N'ed.triage, ed.vitalsign',
 SELECT stay_id, k, CONCAT(N''BP '', sbp, N''/'', dbp) FROM r WHERE dbp > sbp');
 GO
 
-INSERT INTO dq.rule (rule_code, severity, target_table, description, reference, check_sql)
+INSERT INTO dq.quality_rule (rule_code, severity, target_table, description, reference, check_sql)
 VALUES ('PAIN_UNPARSEABLE', 'Warning', N'ed.triage, ed.vitalsign',
  N'Pain is neither a 0 to 10 score nor a value in ref.pain_value_map.',
  N'Pain is free text in the source: scores, ''uta'' (unable to assess) and other strings',
@@ -239,7 +239,7 @@ WHERE pain IS NOT NULL
   AND (TRY_CAST(pain AS decimal(5, 2)) IS NULL OR TRY_CAST(pain AS decimal(5, 2)) NOT BETWEEN 0 AND 10)');
 GO
 
-INSERT INTO dq.rule (rule_code, severity, target_table, description, reference, check_sql)
+INSERT INTO dq.quality_rule (rule_code, severity, target_table, description, reference, check_sql)
 VALUES ('RHYTHM_NOT_IN_VOCABULARY', 'Warning', N'ed.vitalsign',
  N'Heart rhythm text not listed in ref.rhythm_map.',
  N'The source mixes codes and phrases for the same rhythm (''sr'', ''Sinus Rhythm'')',
@@ -248,7 +248,7 @@ FROM ods.emr_ed_vitalsign AS v
 WHERE v.rhythm IS NOT NULL AND NOT EXISTS (SELECT 1 FROM ref.rhythm_map AS m WHERE m.raw_value = v.rhythm)');
 GO
 
-INSERT INTO dq.rule (rule_code, severity, target_table, description, reference, check_sql)
+INSERT INTO dq.quality_rule (rule_code, severity, target_table, description, reference, check_sql)
 VALUES ('LANGUAGE_UNKNOWN', 'Warning', N'hosp.admissions',
  N'Preferred language recorded as ''?''.',
  N'Found in the demo data; placeholders must not reach reports as a language',

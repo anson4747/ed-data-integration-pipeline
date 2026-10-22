@@ -26,7 +26,7 @@ def _clean(wh):
         wh.execute(f"DELETE FROM ods.{table} WHERE stay_id >= ?", BASE)
     wh.execute("DELETE FROM ods.emr_hosp_admissions WHERE hadm_id >= ?", BASE)
     wh.execute("DELETE FROM dw.fact_ed_stay WHERE stay_id >= ?", BASE)
-    wh.execute("DELETE FROM dq.rule WHERE rule_code = 'ZZ_BAD_RULE'")
+    wh.execute("DELETE FROM dq.quality_rule WHERE rule_code = 'ZZ_BAD_RULE'")
 
 
 def add_stay(wh, n, intime=T0, outtime=T0 + timedelta(hours=2), disposition="HOME", hadm=None, subject=None,
@@ -66,7 +66,7 @@ def crafted_stays(settings):
 
 def _open(wh, severity):
     rows = wh.execute("SELECT x.rule_code, x.stay_id FROM dq.exception AS x "
-                      "JOIN dq.rule AS r ON r.rule_code = x.rule_code "
+                      "JOIN dq.quality_rule AS r ON r.rule_code = x.rule_code "
                       "WHERE x.status = 'Open' AND r.severity = ? AND x.stay_id >= ?", severity, BASE).fetchall()
     found: dict[str, set[int]] = {}
     for code, stay in rows:
@@ -159,7 +159,8 @@ def test_a_single_rule_can_be_run_on_its_own(settings):
 
 
 def test_a_rule_that_cannot_run_fails_the_run_loudly(settings, warehouse):
-    warehouse.execute("INSERT INTO dq.rule (rule_code, severity, target_table, description, reference, check_sql) "
+    warehouse.execute("INSERT INTO dq.quality_rule "
+                      "(rule_code, severity, target_table, description, reference, check_sql) "
                       "VALUES ('ZZ_BAD_RULE', 'Warning', 'none', N'broken on purpose', N'test', "
                       "N'SELECT 1/0, N''x'', N''y''')")
     with pytest.raises(Exception, match="Divide by zero"):

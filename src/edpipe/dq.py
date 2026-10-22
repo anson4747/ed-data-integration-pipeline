@@ -47,7 +47,7 @@ def run(settings: Settings, only_rule: str | None = None, triggered_by: str | No
     with connect(settings, settings.warehouse_db, autocommit=True) as warehouse, \
             PipelineRun(warehouse, PIPELINE_NAME, settings.environment, triggered_by) as pipeline:
         rules = [(r[0], r[1]) for r in warehouse.execute(
-            "SELECT rule_code, severity FROM dq.rule WHERE is_active = 1 AND (? IS NULL OR rule_code = ?) "
+            "SELECT rule_code, severity FROM dq.quality_rule WHERE is_active = 1 AND (? IS NULL OR rule_code = ?) "
             "ORDER BY CASE severity WHEN 'Error' THEN 0 ELSE 1 END, rule_code", only_rule, only_rule).fetchall()]
         if not rules:
             raise RuntimeError(f"no active rule matches {only_rule!r}" if only_rule else "no active rules")

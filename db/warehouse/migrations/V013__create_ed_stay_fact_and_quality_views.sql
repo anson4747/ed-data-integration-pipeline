@@ -43,7 +43,7 @@ BEGIN
            CASE WHEN t.acuity IN (1, 2, 3, 4, 5) THEN CAST(t.acuity AS tinyint) END,
            e.arrival_transport, e.disposition,
            CASE WHEN e.disposition = 'ADMITTED' THEN 1 ELSE 0 END,
-           (SELECT COUNT(*) FROM dq.exception AS x JOIN dq.rule AS r ON r.rule_code = x.rule_code
+           (SELECT COUNT(*) FROM dq.exception AS x JOIN dq.quality_rule AS r ON r.rule_code = x.rule_code
             WHERE x.stay_id = e.stay_id AND x.status = 'Open' AND r.severity = 'Warning'),
            @run_id
     FROM ods.emr_ed_edstays AS e
@@ -60,14 +60,14 @@ CREATE OR ALTER VIEW rpt.dq_rule_summary AS
 SELECT r.rule_code, r.severity, r.target_table, r.description, r.reference, r.is_active,
        COUNT(CASE WHEN x.status = 'Open' THEN 1 END) AS open_exceptions,
        COUNT(CASE WHEN x.status = 'Resolved' THEN 1 END) AS resolved_exceptions
-FROM dq.rule AS r LEFT JOIN dq.exception AS x ON x.rule_code = r.rule_code
+FROM dq.quality_rule AS r LEFT JOIN dq.exception AS x ON x.rule_code = r.rule_code
 GROUP BY r.rule_code, r.severity, r.target_table, r.description, r.reference, r.is_active;
 GO
 
 CREATE OR ALTER VIEW rpt.dq_open_exception AS
 SELECT x.exception_id, x.rule_code, r.severity, r.target_table, x.entity_key, x.stay_id, x.detail,
        x.first_seen_utc, x.first_seen_run_id, x.last_seen_run_id
-FROM dq.exception AS x JOIN dq.rule AS r ON r.rule_code = x.rule_code
+FROM dq.exception AS x JOIN dq.quality_rule AS r ON r.rule_code = x.rule_code
 WHERE x.status = 'Open';
 GO
 

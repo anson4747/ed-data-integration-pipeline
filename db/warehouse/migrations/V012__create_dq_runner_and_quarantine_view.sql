@@ -20,7 +20,7 @@ AS
 BEGIN
     SET NOCOUNT, XACT_ABORT ON;
 
-    DECLARE @sql nvarchar(max) = (SELECT check_sql FROM dq.rule WHERE rule_code = @rule_code AND is_active = 1);
+    DECLARE @sql nvarchar(max) = (SELECT check_sql FROM dq.quality_rule WHERE rule_code = @rule_code AND is_active = 1);
     IF @sql IS NULL
         THROW 50040, 'Unknown or inactive data quality rule.', 1;
 
@@ -68,7 +68,7 @@ GO
 /* A stay is quarantined while any Error rule has an Open exception against it. */
 CREATE OR ALTER VIEW dq.v_quarantined_stay AS
 SELECT x.stay_id, STRING_AGG(x.rule_code, ', ') WITHIN GROUP (ORDER BY x.rule_code) AS reasons, COUNT(*) AS open_errors
-FROM dq.exception AS x JOIN dq.rule AS r ON r.rule_code = x.rule_code
+FROM dq.exception AS x JOIN dq.quality_rule AS r ON r.rule_code = x.rule_code
 WHERE x.status = 'Open' AND r.severity = 'Error' AND x.stay_id IS NOT NULL
 GROUP BY x.stay_id;
 GO

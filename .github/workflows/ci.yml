@@ -157,6 +157,8 @@ jobs:
           if ($LASTEXITCODE -ne 1) { throw "Expected exit code 1, got $LASTEXITCODE" }
           if ($out -notmatch 'FAILED Ingest AIHW') { throw 'The failing step was not reported' }
           if ($out -match 'START  Build dimension') { throw 'A later step ran after a failure' }
+          # The expected failure left exit code 1 behind, and the step wrapper would exit with it.
+          $global:LASTEXITCODE = 0
 
       - name: Surface failure details as annotations
         if: failure()

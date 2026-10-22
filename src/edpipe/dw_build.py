@@ -27,6 +27,7 @@ class BuildResult:
     versions_added: int
     versions_closed: int
     versions_corrected: int
+    unmatched_reorganisations: int
     measures: int
     facts: int
 
@@ -38,10 +39,16 @@ def run(settings: Settings, as_of: date | None = None, triggered_by: str | None 
         with pipeline.step("dim_reporting_unit") as step:
             r = warehouse.execute("EXEC etl.usp_load_dim_reporting_unit @run_id = ?, @as_of = ?",
                                   pipeline.run_id, as_of).fetchone()
-            new_units, added, closed, corrected, type1 = (int(v) for v in r)
+            new_units, added, closed, corrected, type1, unmatched = (int(v) for v in r)
             step.counts(rows_inserted=added, rows_updated=closed + corrected + type1)
-            step.note(f"as of {as_of}: {new_units} new units, {added} versions added, {closed} closed, "
-                      f"{corrected} corrected in place, {type1} type 1 updates")
+            note = (f"as of {as_of}: {new_units} new units, {added} versions added, {closed} closed, "
+                    f"{corrected} corrected in place, {type1} type 1 updates")
+            if unmatched:
+                # A reorganisation that matches no hospital does nothing, which looks exactly like success.
+                note += f"; {unmatched} reorganisation row(s) matched no hospital"
+                pipeline.alert("Warning", "ReorganisationUnmatched",
+                               f"{unmatched} row(s) in ref.lhn_reorganisation match no hospital's network code")
+            step.note(note, warning=bool(unmatched))
         with pipeline.step("fact_ed_measure") as step:
             measures, facts = (int(v) for v in warehouse.execute(
                 "EXEC etl.usp_load_ed_fact @run_id = ?", pipeline.run_id).fetchone())
@@ -49,7 +56,7 @@ def run(settings: Settings, as_of: date | None = None, triggered_by: str | None 
             step.note(f"{measures} measures, {facts:,} fact rows")
         print(f"[dw] dimension: {new_units} new units, {added} versions added, {closed} closed; "
               f"fact: {facts:,} rows, {measures} measures")
-    return BuildResult(new_units, added, closed, corrected, measures, facts)
+    return BuildResult(new_units, added, closed, corrected, unmatched, measures, facts)
 
 
 def main(argv: list[str] | None = None) -> int:

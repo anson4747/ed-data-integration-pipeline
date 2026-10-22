@@ -187,6 +187,20 @@ def test_a_future_dated_reorganisation_waits_for_its_date_then_starts_on_it(sett
         (date(1900, 1, 1), date(2027, 6, 30), "LHN224"), (date(2027, 7, 1), date(9999, 12, 31), "FUTURE")]
 
 
+def test_a_reorganisation_that_matches_no_hospital_raises_a_warning(settings, warehouse):
+    warehouse.execute(
+        "INSERT INTO ref.lhn_reorganisation (from_lhn_code, from_lhn_name, to_network_code, to_network_name, "
+        "effective_date, source_url) VALUES ('LHN999', N'Typo Network', 'FUTURE', N'Future Network', "
+        "'2027-07-01', N'https://example.invalid/test')")
+    try:
+        result = dw_build.run(settings, date(2027, 8, 15), triggered_by="pytest")
+    finally:
+        warehouse.execute("DELETE FROM ref.lhn_reorganisation WHERE from_lhn_code = 'LHN999'")
+    assert result.unmatched_reorganisations == 1
+    alert = warehouse.execute("SELECT TOP (1) severity, alert_type FROM etl.alert ORDER BY alert_id DESC").fetchone()
+    assert tuple(alert) == ("Warning", "ReorganisationUnmatched")
+
+
 def test_a_measurement_for_an_unknown_unit_fails_the_fact_load_and_leaves_the_fact_alone(settings, warehouse):
     facts = _one(warehouse, "SELECT COUNT(*) FROM dw.fact_ed_measure")
     warehouse.execute(

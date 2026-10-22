@@ -22,19 +22,20 @@ jobs:
             code=$(curl -sS -m 60 --retry 3 -H 'Accept: application/json' -o "$out" -w '%{http_code}' "$@" || echo curlfail)
             echo "$out -> $code ($(wc -c < "$out" 2>/dev/null || echo 0) bytes)" | tee -a probe/_status.txt
           }
-          get measures "$base/measures"
-          get datasets "$base/datasets"
-          get reporting_units "$base/reporting-units?top=20"
-          get reporting_units_alfred "$base/reporting-units/H0358"
-          get measure_myh0005 "$base/measures/MYH0005"
           get measure_categories "$base/measure-categories"
-          get reported_measurements_alfred "$base/reporting-units/H0358/reported-measurements?top=50"
-          get reported_measurements_paged "$base/reported-measurements?top=5&skip=0"
-          get reported_measurements_myh0005 "$base/reported-measurements?measure_code=MYH0005&top=20"
-          get data_versions "$base/data-versions"
-          get flat "$base/flat-data-extract"
-          get openapi "https://myhospitalsapi.aihw.gov.au/swagger/v1/swagger.json"
-          get openapi2 "https://myhospitalsapi.aihw.gov.au/api/v1/swagger.json"
+          get suppressions "$base/suppressions"
+          get caveats "$base/caveats"
+          get reporting_unit_types "$base/reporting-unit-types"
+          get flat_ed_time_p1 "$base/flat-data-extract/MYH-ED-TIME?skip=0&top=5"
+          get flat_ed_time_p2 "$base/flat-data-extract/MYH-ED-TIME?skip=5&top=5"
+          get flat_ed_time_alfred "$base/flat-data-extract/MYH-ED-TIME?reporting_unit_code=H0358&top=1000"
+          get flat_ed_time_all "$base/flat-data-extract/MYH-ED-TIME?top=1000"
+          get flat_ed_time_big "$base/flat-data-extract/MYH-ED-TIME?top=5000"
+          get flat_ed_time_cat "$base/flat-data-extract/MYH-ED-TIME?measure_code=MYH0005&reporting_unit_code=H0358"
+          get flat_formatted "$base/flat-formatted-data-extract/MYH-ED-TIME?top=5"
+          get measure_downloads "$base/measure-downloads/measure-download-codes"
+          get ed_measures "$base/measure-categories/MYH-ED-TIME/measures"
+          get flat_ed_wait "$base/flat-data-extract/MYH-ED-WAIT?top=3"
       - name: Publish
         run: |
           git config user.name "github-actions[bot]"

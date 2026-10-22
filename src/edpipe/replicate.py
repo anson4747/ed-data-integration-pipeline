@@ -77,10 +77,12 @@ def read_watermark(warehouse, table: str) -> int | None:
 def extract(source, table: str, watermark: int | None) -> tuple[str, int, list[str], list[tuple]]:
     """Return (mode, to_version, columns, rows) where each row is (operation, version, *columns)."""
     cols, keys = _columns(source, table)
+    # The isolation level must be set before the transaction starts, so set it while still in
+    # autocommit mode, then open the transaction.
+    source.execute("SET TRANSACTION ISOLATION LEVEL SNAPSHOT;")
     source.autocommit = False
     try:
         cursor = source.cursor()
-        cursor.execute("SET TRANSACTION ISOLATION LEVEL SNAPSHOT;")
         current, min_valid = cursor.execute(
             "SELECT CHANGE_TRACKING_CURRENT_VERSION(), CHANGE_TRACKING_MIN_VALID_VERSION(OBJECT_ID(?))",
             table).fetchone()
@@ -106,6 +108,7 @@ def extract(source, table: str, watermark: int | None) -> tuple[str, int, list[s
         raise
     finally:
         source.autocommit = True
+        source.execute("SET TRANSACTION ISOLATION LEVEL READ COMMITTED;")
     return mode, current, cols, [tuple(r) for r in rows]
 
 

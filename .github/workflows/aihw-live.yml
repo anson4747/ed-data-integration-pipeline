@@ -1,0 +1,76 @@
+name: AIHW live load
+
+# Weekly and on demand: deploy to a throwaway SQL Server, then load the real MyHospitals API end to end.
+# CI proves the logic against a recorded sample; this proves the real service still behaves the same way
+# (field names, paging, gateway rules, volumes). A failure here means AIHW changed something.
+on:
+  schedule:
+    - cron: "17 19 * * 0"
+  workflow_dispatch:
+
+jobs:
+  live:
+    runs-on: ubuntu-24.04
+    env:
+      EDP_ENV: ci
+    services:
+      mssql:
+        image: mcr.microsoft.com/mssql/server:2022-latest
+        env:
+          ACCEPT_EULA: "Y"
+          MSSQL_PID: Developer
+          MSSQL_SA_PASSWORD: CiOnly!Throwaway_2026
+        ports:
+          - 1433:1433
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install Microsoft ODBC Driver 18
+        run: |
+          if ! odbcinst -q -d 2>/dev/null | grep -q "ODBC Driver 18 for SQL Server"; then
+            curl -sSL -o /tmp/packages-microsoft-prod.deb \
+              "https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/packages-microsoft-prod.deb"
+            sudo dpkg -i /tmp/packages-microsoft-prod.deb
+            sudo apt-get update -q
+            sudo ACCEPT_EULA=Y apt-get install -y -q msodbcsql18 unixodbc-dev
+          fi
+      - run: pip install -e ".[dev]"
+      - run: python -m edpipe.db
+      - name: Deploy
+        shell: pwsh
+        run: ./scripts/deploy.ps1 -Environment ci
+      - name: Load the live API
+        run: |
+          mkdir -p logs
+          set -o pipefail
+          python -m edpipe.aihw_ingest 2>&1 | tee logs/live-load.log
+      - name: Second run must find nothing new
+        run: python -m edpipe.aihw_ingest 2>&1 | tee logs/live-rerun.log
+      - name: Summary
+        if: always()
+        run: |
+          python - <<'PY' | tee logs/summary.log
+          from edpipe.config import Settings
+          from edpipe.db import connect
+          s = Settings.load()
+          with connect(s, s.warehouse_db, autocommit=True) as c:
+              for q in ("SELECT run_id, status, DATEDIFF(second, started_at_utc, ended_at_utc) AS secs FROM etl.pipeline_run",
+                        "SELECT step_name, status, rows_read, rows_inserted, LEFT(detail, 200) FROM etl.step_run",
+                        "SELECT result_status, COUNT(*) FROM ods.aihw_measurement GROUP BY result_status",
+                        "SELECT TOP 5 u.reporting_unit_name, m.measure_code, m.reporting_end_date, m.value, m.result_status "
+                        "FROM ods.aihw_measurement m JOIN ods.aihw_reporting_unit u ON u.reporting_unit_code = m.reporting_unit_code "
+                        "WHERE m.reporting_unit_code = 'H0358' AND m.measure_code = 'MYH0005' AND m.reported_measure_name = 'All patients' "
+                        "ORDER BY m.reporting_end_date DESC"):
+                  print(q[:60], *[tuple(r) for r in c.execute(q).fetchall()], sep="\n  ")
+          PY
+      - name: Surface logs as annotations
+        if: always()
+        run: |
+          for f in logs/*.log; do
+            [ -f "$f" ] || continue
+            msg=$(tail -n 60 "$f" | sed 's/%/%25/g' | awk '{printf "%s%%0A", $0}')
+            echo "::notice title=$(basename "$f")::$msg"
+          done

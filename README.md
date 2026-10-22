@@ -186,8 +186,9 @@ Warning  DIASTOLIC_ABOVE_SYSTOLIC          2
 Warning  LENGTH_OF_STAY_OVER_72H           2
 Warning  O2SAT_IMPLAUSIBLE                 1
 
-Pain values left for a person to review (not 0 to 10, not in ref.pain_value_map):
-'NAD' 2 | 'Critical' 2 | 'grimace with palpation' 1 | 'laying down' 1 | '0/10' 1 | 'uncooperative' 1 | ...
+Pain values left for a person to review (not a 0 to 10 score, not in the map):
+'NAD' 2 | 'Critical' 2 | 'grimace with palpation' 1
+'laying down' 1 | '0/10' 1 | 'uncooperative' 1 | ...
 
 Open Error exceptions (sample):
 E167_VITALS_BEFORE_ARRIVAL  stay 36185653  1 vital sign reading charted before arrival

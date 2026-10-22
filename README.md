@@ -64,35 +64,32 @@ real job:
 ## Architecture
 
 ```mermaid
-flowchart LR
-    subgraph SRC["Sources"]
-        EMR[("Mock EMR<br/>SQL Server<br/>Change Tracking on")]
-        API["AIHW MyHospitals<br/>REST API"]
+flowchart TB
+    EMR[("Mock hospital EMR<br/>SQL Server, Change Tracking on<br/>MIMIC-IV-ED demo data")]
+    API["AIHW MyHospitals REST API<br/>live, published releases"]
+
+    subgraph EDW["SQL Server warehouse"]
+        direction TB
+        STG["stg: landing<br/>change sets and raw API JSON, as received"]
+        ODS["ods: operational copy<br/>current state of every source record"]
+        DQ["dq: 18 quality rules<br/>exceptions, quarantine"]
+        REF["ref: reference data<br/>Bayside merger, value maps"]
+        DW["dw: dimensional model<br/>SCD2 hospitals, ED facts"]
+        RPT["rpt: reporting views<br/>results, data quality, pipeline health"]
+        STG -->|"atomic apply"| ODS
+        ODS --> DQ
+        DQ -->|"clean records only"| DW
+        REF --> DW
+        DW --> RPT
     end
 
-    subgraph EDW["Warehouse (SQL Server)"]
-        STG["stg<br/>landing"]
-        ODS["ods<br/>operational copy"]
-        REF["ref<br/>reorganisations,<br/>value maps"]
-        DQ["dq<br/>18 rules,<br/>exceptions"]
-        DW["dw<br/>SCD2 dimension,<br/>facts"]
-        RPT["rpt<br/>reporting views"]
-    end
+    ETL["etl: control tables<br/>runs, steps, watermarks, alerts"]
+    BI["Power BI and analysts"]
 
-    ETL["etl<br/>runs, steps,<br/>watermarks, alerts"]
-    BI["Power BI /<br/>analysts"]
-
-    EMR -->|"changes since<br/>last version"| STG
-    API -->|"one unit at a time,<br/>new release only"| STG
-    STG -->|"atomic apply"| ODS
-    ODS --> DQ
-    DQ -->|"clean stays only"| DW
-    REF --> DW
-    ODS --> DW
-    DW --> RPT
-    DQ --> RPT
+    EMR -->|"changes since last version"| STG
+    API -->|"one hospital at a time, new release only"| STG
     RPT --> BI
-    ETL -.- EDW
+    EDW -.->|"every step logged"| ETL
 ```
 
 | Layer | Holds | Rule |

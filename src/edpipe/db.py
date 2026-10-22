@@ -13,6 +13,12 @@ def _pyodbc():
     # Imported lazily so unit tests run on machines without an ODBC driver.
     import pyodbc
 
+    # ODBC connection pooling hands back physical connections with session state left over from
+    # the previous user. A connection last used with autocommit off came back with implicit
+    # transactions still on: later "autocommit" work ran inside an open transaction and was
+    # rolled back when the connection closed. A batch pipeline opens few connections, so pooling
+    # buys nothing here and is switched off.
+    pyodbc.pooling = False
     return pyodbc
 
 

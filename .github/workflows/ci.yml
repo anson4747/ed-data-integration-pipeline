@@ -87,6 +87,37 @@ jobs:
           set -o pipefail
           pytest -m integration -x 2>&1 | tee logs/integration.log
 
+      - name: Data quality on the replicated demo data
+        run: |
+          set -o pipefail
+          python -m edpipe.sources.emr_sim reset
+          python -m edpipe.sources.emr_sim replay --all
+          python -m edpipe.replicate
+          python -m edpipe.dq 2>&1 | tee logs/dq-demo.log
+          python - <<'PY' | tee logs/dq-report.log
+          from edpipe.config import Settings
+          from edpipe.db import connect
+          s = Settings.load()
+          with connect(s, s.warehouse_db, autocommit=True) as c:
+              print("== Rule summary ==")
+              for r in c.execute("SELECT rule_code, severity, open_exceptions FROM rpt.dq_rule_summary ORDER BY severity, rule_code"):
+                  print(f"{r.severity:<8} {r.rule_code:<36} {r.open_exceptions}")
+              print("== Stays: loaded vs quarantined ==")
+              print(tuple(c.execute("SELECT (SELECT COUNT(*) FROM dw.fact_ed_stay), (SELECT COUNT(*) FROM rpt.dq_quarantine)").fetchone()))
+              print("== Pain values not in the map and not 0 to 10 ==")
+              for r in c.execute("SELECT v.pain, COUNT(*) n FROM ods.emr_ed_vitalsign v JOIN dw.fact_ed_stay s ON s.stay_id = v.stay_id "
+                                 "WHERE v.pain IS NOT NULL AND NOT EXISTS (SELECT 1 FROM ref.pain_value_map m WHERE m.raw_value = v.pain) "
+                                 "AND TRY_CAST(v.pain AS decimal(5,2)) IS NULL GROUP BY v.pain ORDER BY n DESC"):
+                  print(f"{r.pain!r:<30} {r.n}")
+              print("== Rhythm values not in the map ==")
+              for r in c.execute("SELECT v.rhythm, COUNT(*) n FROM ods.emr_ed_vitalsign v WHERE v.rhythm IS NOT NULL AND NOT EXISTS "
+                                 "(SELECT 1 FROM ref.rhythm_map m WHERE m.raw_value = v.rhythm) GROUP BY v.rhythm ORDER BY n DESC"):
+                  print(f"{r.rhythm!r:<30} {r.n}")
+              print("== Sample of open Error exceptions ==")
+              for r in c.execute("SELECT TOP (15) rule_code, stay_id, detail FROM rpt.dq_open_exception WHERE severity = 'Error' ORDER BY rule_code, stay_id"):
+                  print(r.rule_code, r.stay_id, r.detail)
+          PY
+
       - name: Surface failure details as annotations
         if: failure()
         run: |

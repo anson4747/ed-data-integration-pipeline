@@ -26,8 +26,9 @@ def sample() -> ReplayClient:
 def test_scope_is_public_open_hospitals_of_the_state_their_networks_state_and_national(sample):
     units, _ = sample.reporting_units()
     scope = select_scope(units, "Vic")
-    assert set(scope) == {"H0343", "H0344", "H0345", "H0350", "H0358", "H0749",
-                          "LHN224", "LHN268", "LHN270", "Vic", "NAT"}
+    assert set(scope) == {
+        "H0320", "H0324", "H0325", "H0343", "H0344", "H0345", "H0346", "H0350", "H0356", "H0357", "H0358",
+        "H0749", "H1056", "LHN224", "LHN253", "LHN254", "LHN268", "LHN270", "LHN271", "Vic", "NAT"}
 
 
 def test_scope_leaves_out_other_states_closed_and_private_units(sample):
@@ -98,3 +99,9 @@ def test_rows_to_json_is_compact_and_round_trips():
 def test_plan_slices_keeps_only_units_the_api_lists_and_keeps_scope_order():
     plan = plan_slices(["H1", "H2", "LHN1", "Vic"], {"A": {"Vic", "H2"}, "B": set(), "C": {"H1", "LHN1", "X"}})
     assert plan == {"A": ["H2", "Vic"], "B": [], "C": ["H1", "LHN1"]}
+
+
+def test_availability_in_the_sample_predicts_exactly_which_units_have_rows(sample):
+    for category, availability in sample.sample["availability"].items():
+        listed = set().union(*(set(units) for units in availability["units"].values()))
+        assert listed == set(sample.sample["extracts"][category])

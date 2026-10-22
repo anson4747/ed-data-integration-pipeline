@@ -16,7 +16,7 @@ from edpipe.sources.aihw_replay import ReplayClient
 pytestmark = pytest.mark.integration
 
 SAMPLE = "tests/fixtures/aihw/myhospitals-sample.json.gz"
-SCOPE_UNITS = 11  # six hospitals, three networks, Victoria, national (unit tests prove the selection)
+SCOPE_UNITS = 21  # 13 hospitals, 6 networks, Victoria, national (unit tests prove the selection)
 
 
 @pytest.fixture(scope="module")

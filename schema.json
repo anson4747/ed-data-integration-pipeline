@@ -1,0 +1,64 @@
+{
+  "fields": [
+    {
+      "name": "code",
+      "type": "string",
+      "title": "Code",
+      "description": "Code"
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "title": "Name",
+      "description": "Name"
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "title": "Type",
+      "description": "Type"
+    },
+    {
+      "name": "latitude",
+      "type": "number",
+      "title": "Latitude",
+      "description": "Latitude"
+    },
+    {
+      "name": "longitude",
+      "type": "number",
+      "title": "Longitude",
+      "description": "Longitude"
+    },
+    {
+      "name": "sector",
+      "type": "string",
+      "title": "Sector",
+      "description": "Sector"
+    },
+    {
+      "name": "open_closed",
+      "type": "string",
+      "title": "Open/Closed",
+      "description": "Open/Closed"
+    },
+    {
+      "name": "state",
+      "type": "string",
+      "title": "State",
+      "description": "State"
+    },
+    {
+      "name": "local_hospital_network",
+      "type": "string",
+      "title": "Local Hospital Network (LHN)",
+      "description": "Local Hospital Network (LHN)"
+    },
+    {
+      "name": "primary_health_network",
+      "type": "string",
+      "title": "Primary Health Network area (PHN)",
+      "description": "Primary Health Network area (PHN)"
+    }
+  ]
+}

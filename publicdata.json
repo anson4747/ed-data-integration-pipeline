@@ -1,0 +1,54 @@
+{
+  "dataset": "au-hospitals-myhospitals",
+  "title": "Hospitals, Local Hospital Networks and Primary Health Networks in MyHospitals, Australia",
+  "version": "2026-10-03",
+  "version_url": "https://publicdata.au/d/au-hospitals-myhospitals/v/2026-10-03/",
+  "dataset_page": "https://publicdata.au/d/au-hospitals-myhospitals/",
+  "publisher": {
+    "name": "Australian Institute of Health and Welfare",
+    "url": "https://www.aihw.gov.au/"
+  },
+  "licence": {
+    "id": "CC-BY-4.0",
+    "title": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "attribution": "Based on Australian Institute of Health and Welfare material. Australian Institute of Health and Welfare, Australian Government, MyHospitals Data API, mapping details extract, sourced 3 October 2026, https://myhospitalsapi.aihw.gov.au/, licensed under CC BY 4.0.",
+  "cite": "Based on Australian Institute of Health and Welfare material. Australian Institute of Health and Welfare, Australian Government, MyHospitals Data API, mapping details extract, sourced 3 October 2026, https://myhospitalsapi.aihw.gov.au/, licensed under CC BY 4.0. Serialised and versioned by National Digital at publicdata.au, https://publicdata.au/d/au-hospitals-myhospitals/v/2026-10-03/",
+  "not_endorsed": "This is an independent republication. The publisher has not endorsed this site.",
+  "manifest": {
+    "dataset": "au-hospitals-myhospitals",
+    "version": "2026-10-03",
+    "as_at": "",
+    "fetched_at": "2026-10-03T03:15:28+00:00",
+    "sha256": "dcbe87cb208464e7b5fb82ebae3357117da9d0af2818f05b6b8b15beb0d914a2",
+    "bytes": 140302,
+    "filename": "au-hospitals-myhospitals.xlsx",
+    "encoding": "xlsx",
+    "source": {
+      "url": "https://myhospitalsapi.aihw.gov.au/api/v1/reporting-units-downloads/mappings",
+      "etag": "",
+      "http_last_modified": ""
+    },
+    "licence": {
+      "id": "CC-BY-4.0",
+      "stated": "has been released under a Creative Commons BY 4.0 (CC-BY 4.0) licence",
+      "normalised": "CC-BY-4.0",
+      "title": "CC BY 4.0",
+      "url": "https://www.aihw.gov.au/copyright",
+      "read_from": "https://www.aihw.gov.au/copyright",
+      "read_at": "2026-10-03T03:15:27+00:00"
+    },
+    "backfilled": false,
+    "tombstone": null,
+    "notes": [
+      "The publisher's server states no change date, so this version is dated by the fetch."
+    ],
+    "rows_sha256": "fd340a9c8d2d762b28e548efe6b86e51e96f7acf1164a84062c1f89145e8609a",
+    "rows": 1366,
+    "fields": 10,
+    "unknown_upstream_columns": [],
+    "suppressed_cells": 0,
+    "url": "https://publicdata.au/d/au-hospitals-myhospitals/v/2026-10-03/"
+  }
+}

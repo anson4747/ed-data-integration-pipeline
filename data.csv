@@ -1,0 +1,1367 @@
+"code","name","type","latitude","longitude","sector","open_closed","state","local_hospital_network","primary_health_network"
+"H0012","State Forensic Mental Health Service","Hospital",-31.960937,115.788431,"Public","Open","Western Australia","North Metropolitan Health Service (WA)","Perth North"
+"H0013","Justice Health Services","Hospital",-33.96907,151.243206,"Public","Open","New South Wales","Justice Health & Forensic Mental Health","Central and Eastern Sydney"
+"H0014","The Children's Hospital at Westmead","Hospital",-33.801554,150.991759,"Public","Open","New South Wales","Sydney Children's Hospitals Network","Western Sydney"
+"H0015","Sydney Children's Hospital","Hospital",-33.917179,151.238334,"Public","Open","New South Wales","Sydney Children's Hospitals Network","Central and Eastern Sydney"
+"H0016","Sacred Heart Health Service","Hospital",-33.880525,151.219237,"Public","Open","New South Wales","Unknown","Central and Eastern Sydney"
+"H0017","St Vincent's Hospital [Darlinghurst]","Hospital",-33.879692,151.221125,"Public","Open","New South Wales","St Vincent's Health Network","Central and Eastern Sydney"
+"H0018","St Joseph's Hospital","Hospital",-33.848659,151.028339,"Public","Open","New South Wales","St Vincent's Health Network","Western Sydney"
+"H0019","Balmain Hospital","Hospital",-33.859469,151.181469,"Public","Open","New South Wales","Sydney","Central and Eastern Sydney"
+"H0020","Canterbury Hospital","Hospital",-33.919592,151.098275,"Public","Open","New South Wales","Sydney","Central and Eastern Sydney"
+"H0021","Royal Prince Alfred Hospital","Hospital",-33.889251,151.182926,"Public","Open","New South Wales","Sydney","Central and Eastern Sydney"
+"H0022","Tresillian Care Centres","Hospital",-33.918732,151.097526,"Public","Open","New South Wales","Sydney","Central and Eastern Sydney"
+"H0023","Concord Repatriation Hospital","Hospital",-33.837288,151.092664,"Public","Open","New South Wales","Sydney","Central and Eastern Sydney"
+"H0024","Royal Prince Alfred Institute of Rheumatology & Orthopaedics","Hospital",-33.88828,151.180707,"Public","Open","New South Wales","Sydney","Central and Eastern Sydney"
+"H0025","Karitane","Hospital",-33.879777,150.965763,"Public","Open","New South Wales","South Western Sydney","South Western Sydney"
+"H0026","Camden Hospital","Hospital",-34.062702,150.693297,"Public","Open","New South Wales","South Western Sydney","South Western Sydney"
+"H0027","Fairfield Hospital","Hospital",-33.860117,150.904339,"Public","Open","New South Wales","South Western Sydney","South Western Sydney"
+"H0028","Liverpool Hospital","Hospital",-33.919966,150.930776,"Public","Open","New South Wales","South Western Sydney","South Western Sydney"
+"H0029","Campbelltown Hospital","Hospital",-34.077651,150.806321,"Public","Open","New South Wales","South Western Sydney","South Western Sydney"
+"H0030","Bankstown Lidcombe Hospital","Hospital",-33.933088,151.020823,"Public","Open","New South Wales","South Western Sydney","South Western Sydney"
+"H0031","Braeside Hospital","Hospital",-33.861917,150.902192,"Public","Open","New South Wales","South Western Sydney","South Western Sydney"
+"H0032","Bowral Hospital","Hospital",-34.485043,150.423796,"Public","Open","New South Wales","South Western Sydney","South Western Sydney"
+"H0033","Sydney Hospital / Sydney Eye Hospital","Hospital",-33.867929,151.212575,"Public","Open","New South Wales","South Eastern Sydney","Central and Eastern Sydney"
+"H0034","Calvary Health Care - Sydney","Hospital",-33.976132,151.136206,"Public","Open","New South Wales","South Eastern Sydney","Central and Eastern Sydney"
+"H0035","Gower Wilson Multi Purpose Service","Hospital",-31.535603,159.071307,"Public","Open","New South Wales","South Eastern Sydney","Central and Eastern Sydney"
+"H0036","War Memorial Hospital","Hospital",-33.897496,151.253816,"Public","Open","New South Wales","South Eastern Sydney","Central and Eastern Sydney"
+"H0037","Prince of Wales Hospital","Hospital",-33.918492,151.23938,"Public","Open","New South Wales","South Eastern Sydney","Central and Eastern Sydney"
+"H0038","St George Hospital NSW","Hospital",-33.966969,151.133776,"Public","Open","New South Wales","South Eastern Sydney","Central and Eastern Sydney"
+"H0039","Sutherland Hospital","Hospital",-34.037288,151.115151,"Public","Open","New South Wales","South Eastern Sydney","Central and Eastern Sydney"
+"H0040","Royal Hospital for Women","Hospital",-33.919035,151.237938,"Public","Open","New South Wales","South Eastern Sydney","Central and Eastern Sydney"
+"H0041","Bulli Hospital","Hospital",-34.336667,150.907344,"Public","Open","New South Wales","Illawarra Shoalhaven","South Eastern NSW"
+"H0042","Coledale Hospital","Hospital",-34.283797,150.950796,"Public","Open","New South Wales","Illawarra Shoalhaven","South Eastern NSW"
+"H0043","Kiama Hospital","Hospital",-34.682937,150.850514,"Public","Open","New South Wales","Illawarra Shoalhaven","South Eastern NSW"
+"H0044","Milton Ulladulla Hospital","Hospital",-35.317313,150.438918,"Public","Open","New South Wales","Illawarra Shoalhaven","South Eastern NSW"
+"H0045","Port Kembla Hospital","Hospital",-34.485923,150.881778,"Public","Open","New South Wales","Illawarra Shoalhaven","South Eastern NSW"
+"H0046","Shoalhaven Hospital","Hospital",-34.868767,150.595736,"Public","Open","New South Wales","Illawarra Shoalhaven","South Eastern NSW"
+"H0047","Wollongong Hospital","Hospital",-34.424938,150.883451,"Public","Open","New South Wales","Illawarra Shoalhaven","South Eastern NSW"
+"H0048","Shellharbour Hospital","Hospital",-34.558987,150.840947,"Public","Open","New South Wales","Illawarra Shoalhaven","South Eastern NSW"
+"H0049","Illawarra Mental Health Services","Hospital",-34.42623,150.891252,"Public","Open","New South Wales","Illawarra Shoalhaven","South Eastern NSW"
+"H0050","David Berry Hospital","Hospital",-34.775909,150.712819,"Public","Open","New South Wales","Illawarra Shoalhaven","South Eastern NSW"
+"H0051","Auburn Hospital","Hospital",-33.859867,151.033204,"Public","Open","New South Wales","Western Sydney","Western Sydney"
+"H0052","Blacktown Hospital","Hospital",-33.775552,150.917537,"Public","Open","New South Wales","Western Sydney","Western Sydney"
+"H0053","Mount Druitt Hospital","Hospital",-33.765929,150.829646,"Public","Open","New South Wales","Western Sydney","Western Sydney"
+"H0054","Westmead Hospital","Hospital",-33.804362,150.987811,"Public","Open","New South Wales","Western Sydney","Western Sydney"
+"H0055","Blue Mountains Hospital","Hospital",-33.705329,150.32111,"Public","Open","New South Wales","Nepean Blue Mountains","Nepean Blue Mountains"
+"H0056","Nepean Hospital","Hospital",-33.759865,150.712627,"Public","Open","New South Wales","Nepean Blue Mountains","Nepean Blue Mountains"
+"H0057","Springwood Hospital","Hospital",-33.690486,150.571129,"Public","Open","New South Wales","Nepean Blue Mountains","Nepean Blue Mountains"
+"H0058","Hawkesbury Hospital","Hospital",-33.610712,150.820804,"Public","Open","New South Wales","Nepean Blue Mountains","Nepean Blue Mountains"
+"H0059","Tresillian Family Care Centre, Kingswood","Hospital",-33.758161,150.714392,"Public","Open","New South Wales","Unknown","Nepean Blue Mountains"
+"H0060","Wentworth Psychiatric Services","Hospital",-33.760249,150.712613,"Public","Open","New South Wales","Nepean Blue Mountains","Nepean Blue Mountains"
+"H0061","Lithgow Hospital","Hospital",-33.498751,150.127701,"Public","Open","New South Wales","Nepean Blue Mountains","Nepean Blue Mountains"
+"H0062","Portland Tabulam Health Centre","Hospital",-33.358415,149.978565,"Public","Open","New South Wales","Nepean Blue Mountains","Nepean Blue Mountains"
+"H0063","Greenwich Hospital","Hospital",-33.827329,151.183376,"Public","Open","New South Wales","Northern Sydney","Northern Sydney"
+"H0064","Neringah Hospital","Hospital",-33.717856,151.114556,"Public","Open","New South Wales","Northern Sydney","Northern Sydney"
+"H0065","Hornsby Ku-ring-gai Hospital","Hospital",-33.701448,151.112941,"Public","Open","New South Wales","Northern Sydney","Northern Sydney"
+"H0066","Manly Hospital","Hospital",,,"Public","Closed","New South Wales",,"Northern Sydney"
+"H0067","Mona Vale Hospital","Hospital",-33.685353,151.306618,"Public","Open","New South Wales","Northern Sydney","Northern Sydney"
+"H0068","Royal North Shore Hospital","Hospital",-33.821312,151.189735,"Public","Open","New South Wales","Northern Sydney","Northern Sydney"
+"H0069","Royal Rehabilitation Hospital","Hospital",-33.821772,151.107845,"Public","Open","New South Wales","Northern Sydney","Northern Sydney"
+"H0070","Ryde Hospital","Hospital",-33.795482,151.089756,"Public","Open","New South Wales","Northern Sydney","Northern Sydney"
+"H0071","Gosford Hospital","Hospital",-33.419451,151.340328,"Public","Open","New South Wales","Central Coast","Hunter New England and Central Coast"
+"H0072","Woy Woy Hospital","Hospital",-33.496716,151.320952,"Public","Open","New South Wales","Central Coast","Hunter New England and Central Coast"
+"H0073","Long Jetty Health Care Centre","Hospital",-33.369012,151.468538,"Public","Open","New South Wales","Central Coast","Hunter New England and Central Coast"
+"H0074","Wyong Hospital","Hospital",-33.261113,151.480761,"Public","Open","New South Wales","Central Coast","Hunter New England and Central Coast"
+"H0075","Armidale Hospital","Hospital",-30.512726,151.655629,"Public","Open","New South Wales","Hunter New England","Hunter New England and Central Coast"
+"H0076","Barraba Multi Purpose Service","Hospital",-30.382482,150.605778,"Public","Open","New South Wales","Hunter New England","Hunter New England and Central Coast"
+"H0077","Bingara Multi Purpose Service","Hospital",-29.864055,150.579235,"Public","Open","New South Wales","Hunter New England","Hunter New England and Central Coast"
+"H0078","Boggabri Multi Purpose Service","Hospital",-30.711502,150.040014,"Public","Open","New South Wales","Hunter New England","Hunter New England and Central Coast"
+"H0079","Glen Innes Hospital","Hospital",-29.733293,151.731673,"Public","Open","New South Wales","Hunter New England","Hunter New England and Central Coast"
+"H0080","Gunnedah Hospital","Hospital",-30.983146,150.251339,"Public","Open","New South Wales","Hunter New England","Hunter New England and Central Coast"
+"H0081","Guyra Multi Purpose Service","Hospital",-30.213889,151.679112,"Public","Open","New South Wales","Hunter New England","Hunter New England and Central Coast"
+"H0082","Inverell Hospital","Hospital",-29.770728,151.130139,"Public","Open","New South Wales","Hunter New England","Hunter New England and Central Coast"
+"H0083","Manilla Hospital","Hospital",-30.745717,150.732249,"Public","Open","New South Wales","Hunter New England","Hunter New England and Central Coast"
+"H0084","Moree Hospital","Hospital",-29.470678,149.839648,"Public","Open","New South Wales","Hunter New England","Hunter New England and Central Coast"
+"H0085","Narrabri Hospital","Hospital",-30.325869,149.777108,"Public","Open","New South Wales","Hunter New England","Hunter New England and Central Coast"
+"H0086","Tenterfield Hospital","Hospital",-29.045083,152.013552,"Public","Open","New South Wales","Hunter New England","Hunter New England and Central Coast"
+"H0087","Quirindi Hospital","Hospital",-31.500345,150.676621,"Public","Open","New South Wales","Hunter New England","Hunter New England and Central Coast"
+"H0088","Tamworth Hospital","Hospital",-31.074079,150.924199,"Public","Open","New South Wales","Hunter New England","Hunter New England and Central Coast"
+"H0089","Tingha Multi Purpose Service","Hospital",-29.950779,151.206732,"Public","Open","New South Wales","Hunter New England","Hunter New England and Central Coast"
+"H0090","Vegetable Creek Multi Purpose Service Emmaville","Hospital",-29.450547,151.599204,"Public","Open","New South Wales","Hunter New England","Hunter New England and Central Coast"
+"H0091","Walcha Multi Purpose Service","Hospital",-30.987818,151.591415,"Public","Open","New South Wales","Hunter New England","Hunter New England and Central Coast"
+"H0092","Warialda Multi Purpose Service","Hospital",-29.538835,150.579567,"Public","Open","New South Wales","Hunter New England","Hunter New England and Central Coast"
+"H0093","Wee Waa Hospital","Hospital",-30.225439,149.448287,"Public","Open","New South Wales","Hunter New England","Hunter New England and Central Coast"
+"H0094","Werris Creek Hospital","Hospital",-31.346691,150.652513,"Public","Open","New South Wales","Hunter New England","Hunter New England and Central Coast"
+"H0095","Bulahdelah Hospital","Hospital",-32.403949,152.210029,"Public","Open","New South Wales","Hunter New England","Hunter New England and Central Coast"
+"H0096","Gloucester Soldiers' Memorial Hospital","Hospital",-32.014787,151.958556,"Public","Open","New South Wales","Hunter New England","Hunter New England and Central Coast"
+"H0097","Manning Hospital","Hospital",-31.910418,152.454485,"Public","Open","New South Wales","Hunter New England","Hunter New England and Central Coast"
+"H0098","Wingham Hospital","Hospital",-31.878104,152.365179,"Public","Open","New South Wales","Hunter New England","Hunter New England and Central Coast"
+"H0099","Cessnock Hospital","Hospital",-32.827754,151.348396,"Public","Open","New South Wales","Hunter New England","Hunter New England and Central Coast"
+"H0100","Dungog Hospital","Hospital",-32.401948,151.746157,"Public","Open","New South Wales","Hunter New England","Hunter New England and Central Coast"
+"H0101","Kurri Kurri Hospital","Hospital",-32.825017,151.463018,"Public","Open","New South Wales","Hunter New England","Hunter New England and Central Coast"
+"H0102","Maitland Hospital","Hospital",-32.726723,151.545887,"Public","Open","New South Wales","Hunter New England","Hunter New England and Central Coast"
+"H0103","Merriwa Multi Purpose Service","Hospital",-32.142714,150.361316,"Public","Open","New South Wales","Hunter New England","Hunter New England and Central Coast"
+"H0104","Muswellbrook Hospital","Hospital",-32.264545,150.900263,"Public","Open","New South Wales","Hunter New England","Hunter New England and Central Coast"
+"H0105","Denman Multi Purpose Service","Hospital",-32.389483,150.684453,"Public","Open","New South Wales","Hunter New England","Hunter New England and Central Coast"
+"H0106","Calvary Mater Newcastle","Hospital",-32.899371,151.720858,"Public","Open","New South Wales","Hunter New England","Hunter New England and Central Coast"
+"H0107","Belmont Hospital","Hospital",-33.024631,151.648181,"Public","Open","New South Wales","Hunter New England","Hunter New England and Central Coast"
+"H0108","Scott Memorial Hospital, Scone","Hospital",-32.051525,150.876864,"Public","Open","New South Wales","Hunter New England","Hunter New England and Central Coast"
+"H0109","Singleton Hospital","Hospital",-32.567087,151.185736,"Public","Open","New South Wales","Hunter New England","Hunter New England and Central Coast"
+"H0110","Wilson Memorial Community Hospital, Murrurundi","Hospital",-31.770408,150.834764,"Public","Open","New South Wales","Hunter New England","Hunter New England and Central Coast"
+"H0111","Tomaree Community Hospital","Hospital",-32.720053,152.158858,"Public","Open","New South Wales","Hunter New England","Hunter New England and Central Coast"
+"H0112","John Hunter Hospital","Hospital",-32.922177,151.692438,"Public","Open","New South Wales","Hunter New England","Hunter New England and Central Coast"
+"H0113","Ballina District Hospital","Hospital",-28.863525,153.564013,"Public","Open","New South Wales","Northern NSW","North Coast"
+"H0114","Byron Bay Hospital","Hospital",,,"Public","Closed","New South Wales",,"North Coast"
+"H0115","Coraki Hospital","Hospital",,,"Public","Closed","New South Wales",,"North Coast"
+"H0116","Casino and District Memorial Hospital","Hospital",-28.859839,153.035827,"Public","Open","New South Wales","Northern NSW","North Coast"
+"H0117","Bonalbo Hospital","Hospital",-28.733777,152.622789,"Public","Open","New South Wales","Northern NSW","North Coast"
+"H0118","Grafton Base Hospital","Hospital",-29.674807,152.941274,"Public","Open","New South Wales","Northern NSW","North Coast"
+"H0119","Kyogle Multi Purpose Service","Hospital",-28.627124,153.001742,"Public","Open","New South Wales","Northern NSW","North Coast"
+"H0120","Lismore Base Hospital","Hospital",-28.809191,153.291045,"Public","Open","New South Wales","Northern NSW","North Coast"
+"H0121","Nimbin Multi Purpose Service","Hospital",-28.597371,153.223185,"Public","Open","New South Wales","Northern NSW","North Coast"
+"H0122","Maclean District Hospital","Hospital",-29.454219,153.201094,"Public","Open","New South Wales","Northern NSW","North Coast"
+"H0123","Mullumbimby Hospital","Hospital",,,"Public","Closed","New South Wales",,"North Coast"
+"H0124","Murwillumbah District Hospital","Hospital",-28.323417,153.400811,"Public","Open","New South Wales","Northern NSW","North Coast"
+"H0125","The Tweed Hospital","Hospital",-28.177216,153.545458,"Public","Open","New South Wales","Northern NSW","North Coast"
+"H0126","Urbenville Multi Purpose Service","Hospital",-28.471511,152.543029,"Public","Open","New South Wales","Northern NSW","North Coast"
+"H0127","Riverlands Drug and Alcohol Centre","Hospital",-28.80834,153.29112,"Public","Open","New South Wales","Northern NSW","North Coast"
+"H0128","Bellinger River District Hospital","Hospital",-30.457256,152.893209,"Public","Open","New South Wales","Mid North Coast","North Coast"
+"H0129","Coffs Harbour Hospital","Hospital",-30.317579,153.093667,"Public","Open","New South Wales","Mid North Coast","North Coast"
+"H0130","Dorrigo Multi Purpose Service","Hospital",-30.340625,152.713882,"Public","Open","New South Wales","Mid North Coast","North Coast"
+"H0131","Kempsey District Hospital","Hospital",-31.067841,152.820038,"Public","Open","New South Wales","Mid North Coast","North Coast"
+"H0132","Macksville District Hospital","Hospital",-30.713725,152.919838,"Public","Open","New South Wales","Mid North Coast","North Coast"
+"H0133","Wauchope District Memorial Hospital","Hospital",-31.457239,152.728131,"Public","Open","New South Wales","Mid North Coast","North Coast"
+"H0134","Port Macquarie Base Hospital","Hospital",-31.452336,152.878304,"Public","Open","New South Wales","Mid North Coast","North Coast"
+"H0135","Batemans Bay Hospital","Hospital",-35.714055,150.182375,"Public","Open","New South Wales","Southern NSW","South Eastern NSW"
+"H0136","South East Regional Hospital","Hospital",-36.68905,149.858549,"Public","Open","New South Wales","Southern NSW","South Eastern NSW"
+"H0137","Bombala Multi Purpose Service","Hospital",-36.917513,149.235372,"Public","Open","New South Wales","Southern NSW","South Eastern NSW"
+"H0138","Braidwood Multi Purpose Service","Hospital",-35.443216,149.805302,"Public","Open","New South Wales","Southern NSW","South Eastern NSW"
+"H0139","Cooma Hospital and Health Service","Hospital",-36.241389,149.130499,"Public","Open","New South Wales","Southern NSW","South Eastern NSW"
+"H0140","Crookwell District Hospital","Hospital",-34.464222,149.467427,"Public","Open","New South Wales","Southern NSW","South Eastern NSW"
+"H0141","Delegate Multi Purpose Service","Hospital",-37.04496,148.945958,"Public","Open","New South Wales","Southern NSW","South Eastern NSW"
+"H0142","Goulburn Base Hospital","Hospital",-34.747527,149.712806,"Public","Open","New South Wales","Southern NSW","South Eastern NSW"
+"H0143","Moruya Hospital","Hospital",-35.904137,150.070774,"Public","Open","New South Wales","Southern NSW","South Eastern NSW"
+"H0144","Pambula Hospital","Hospital",-36.926316,149.879232,"Public","Open","New South Wales","Southern NSW","South Eastern NSW"
+"H0145","Queanbeyan Hospital","Hospital",-35.347685,149.232294,"Public","Open","New South Wales","Southern NSW","South Eastern NSW"
+"H0146","Bourke Street Health Service","Hospital",-34.748721,149.719321,"Public","Open","New South Wales","Southern NSW","South Eastern NSW"
+"H0147","Yass District Hospital","Hospital",-34.844072,148.906427,"Public","Open","New South Wales","Southern NSW","South Eastern NSW"
+"H0149","Lake Cargelligo Multi Purpose Service","Hospital",-33.292027,146.374304,"Public","Open","New South Wales","Murrumbidgee","Murrumbidgee"
+"H0150","Wyalong Hospital","Hospital",-33.916373,147.196483,"Public","Open","New South Wales","Murrumbidgee","Murrumbidgee"
+"H0151","Barham Hospital","Hospital",-35.623823,144.133479,"Public","Open","New South Wales","Murrumbidgee","Murrumbidgee"
+"H0152","Berrigan Multi Purpose Service","Hospital",-35.662312,145.813035,"Public","Open","New South Wales","Murrumbidgee","Murrumbidgee"
+"H0153","Culcairn Multi Purpose Service","Hospital",-35.667399,147.042104,"Public","Open","New South Wales","Murrumbidgee","Murrumbidgee"
+"H0154","Corowa Health Service","Hospital",-35.993528,146.383541,"Public","Open","New South Wales","Murrumbidgee","Murrumbidgee"
+"H0155","Deniliquin Hospital","Hospital",-35.524044,144.963301,"Public","Open","New South Wales","Murrumbidgee","Murrumbidgee"
+"H0156","Finley Hospital","Hospital",-35.641725,145.568139,"Public","Open","New South Wales","Murrumbidgee","Murrumbidgee"
+"H0157","Henty Multi Purpose Service","Hospital",-35.515801,147.031847,"Public","Open","New South Wales","Murrumbidgee","Murrumbidgee"
+"H0158","Holbrook Hospital","Hospital",-35.723991,147.320276,"Public","Open","New South Wales","Murrumbidgee","Murrumbidgee"
+"H0159","Jerilderie Multi Purpose Service","Hospital",-35.356628,145.720596,"Public","Open","New South Wales","Murrumbidgee","Murrumbidgee"
+"H0160","Mercy Care Hospital - Albury","Hospital",-36.069221,146.916764,"Public","Open","New South Wales","Murrumbidgee","Murray"
+"H0161","Urana Multi Purpose Service","Hospital",-35.325419,146.267316,"Public","Open","New South Wales","Murrumbidgee","Murrumbidgee"
+"H0162","Tocumwal Hospital","Hospital",-35.815407,145.568996,"Public","Open","New South Wales","Murrumbidgee","Murrumbidgee"
+"H0163","Tumbarumba Multi Purpose Service","Hospital",-35.778706,148.006203,"Public","Open","New South Wales","Murrumbidgee","Murrumbidgee"
+"H0164","Boorowa Multi Purpose Service","Hospital",-34.442822,148.727073,"Public","Open","New South Wales","Murrumbidgee","Murrumbidgee"
+"H0165","Mercy Care Hospital - Young","Hospital",-34.321003,148.288693,"Public","Open","New South Wales","Murrumbidgee","Murrumbidgee"
+"H0166","Murrumburrah-Harden Hospital","Hospital",-34.555254,148.360186,"Public","Open","New South Wales","Murrumbidgee","Murrumbidgee"
+"H0167","Young Hospital","Hospital",-34.320383,148.288457,"Public","Open","New South Wales","Murrumbidgee","Murrumbidgee"
+"H0168","Batlow/Adelong Multi Purpose Service","Hospital",-35.521951,148.147891,"Public","Open","New South Wales","Murrumbidgee","Murrumbidgee"
+"H0169","Griffith Base Hospital","Hospital",-34.282121,146.043774,"Public","Open","New South Wales","Murrumbidgee","Murrumbidgee"
+"H0170","Gundagai Hospital","Hospital",-35.051394,148.101764,"Public","Open","New South Wales","Murrumbidgee","Murrumbidgee"
+"H0171","Hay Hospital","Hospital",-34.500349,144.851433,"Public","Open","New South Wales","Murrumbidgee","Murrumbidgee"
+"H0172","Hillston Hospital","Hospital",-33.478793,145.539032,"Public","Open","New South Wales","Murrumbidgee","Murrumbidgee"
+"H0173","Junee Multi Purpose Service","Hospital",-34.866914,147.581314,"Public","Open","New South Wales","Murrumbidgee","Murrumbidgee"
+"H0174","Coolamon-Ganmain Multi Purpose Service","Hospital",-34.819885,147.199329,"Public","Open","New South Wales","Murrumbidgee","Murrumbidgee"
+"H0175","Leeton Hospital","Hospital",-34.545222,146.408831,"Public","Open","New South Wales","Murrumbidgee","Murrumbidgee"
+"H0176","Lockhart Hospital","Hospital",-35.222378,146.719064,"Public","Open","New South Wales","Murrumbidgee","Murrumbidgee"
+"H0177","Narrandera Hospital","Hospital",-34.743181,146.547661,"Public","Open","New South Wales","Murrumbidgee","Murrumbidgee"
+"H0178","Temora Hospital","Hospital",-34.443942,147.542616,"Public","Open","New South Wales","Murrumbidgee","Murrumbidgee"
+"H0179","Tumut Hospital","Hospital",-35.307265,148.219552,"Public","Open","New South Wales","Murrumbidgee","Murrumbidgee"
+"H0180","Wagga Wagga Hospital","Hospital",-35.118083,147.356915,"Public","Open","New South Wales","Murrumbidgee","Murrumbidgee"
+"H0181","Cootamundra Hospital","Hospital",-34.634386,148.012796,"Public","Open","New South Wales","Murrumbidgee","Murrumbidgee"
+"H0182","Bourke Multi Purpose Service","Hospital",-30.092823,145.947983,"Public","Open","New South Wales","Western NSW","Western NSW"
+"H0183","Brewarrina Multi Purpose Service","Hospital",-29.961627,146.863796,"Public","Open","New South Wales","Western NSW","Western NSW"
+"H0184","Cobar Health Service","Hospital",-31.509026,145.825266,"Public","Open","New South Wales","Western NSW","Western NSW"
+"H0185","Collarenebri Multi Purpose Service","Hospital",-29.544889,148.581901,"Public","Open","New South Wales","Western NSW","Western NSW"
+"H0186","Coolah Multi Purpose Service","Hospital",-31.821473,149.710049,"Public","Open","New South Wales","Western NSW","Western NSW"
+"H0187","Coonabarabran Health Service","Hospital",-31.274791,149.284779,"Public","Open","New South Wales","Western NSW","Western NSW"
+"H0188","Baradine Multi Purpose Service","Hospital",-30.945316,149.066189,"Public","Open","New South Wales","Western NSW","Western NSW"
+"H0189","Coonamble Multi Purpose Service","Hospital",-30.964803,148.387527,"Public","Open","New South Wales","Western NSW","Western NSW"
+"H0190","Gulargambone Multi Purpose Service","Hospital",-31.329812,148.469216,"Public","Open","New South Wales","Western NSW","Western NSW"
+"H0191","Dubbo Hospital","Hospital",-32.239339,148.620772,"Public","Open","New South Wales","Western NSW","Western NSW"
+"H0192","Dunedoo Multi Purpose Service","Hospital",-32.017204,149.397366,"Public","Open","New South Wales","Western NSW","Western NSW"
+"H0193","Gilgandra Multi Purpose Service","Hospital",-31.704565,148.664889,"Public","Open","New South Wales","Western NSW","Western NSW"
+"H0194","Gulgong Multi Purpose Service","Hospital",-32.366871,149.521893,"Public","Open","New South Wales","Western NSW","Western NSW"
+"H0195","Mudgee Health Service","Hospital",-32.603229,149.588179,"Public","Open","New South Wales","Western NSW","Western NSW"
+"H0196","Narromine Health Service","Hospital",-32.24261,148.239201,"Public","Open","New South Wales","Western NSW","Western NSW"
+"H0197","Nyngan Multi Purpose Service","Hospital",-31.560024,147.208772,"Public","Open","New South Wales","Western NSW","Western NSW"
+"H0198","Trangie Multi Purpose Service","Hospital",-32.030813,147.976355,"Public","Open","New South Wales","Western NSW","Western NSW"
+"H0199","Walgett Multipurpose Service","Hospital",-30.030646,148.115959,"Public","Open","New South Wales","Western NSW","Western NSW"
+"H0200","Warren Multi Purpose Service","Hospital",-31.693958,147.835679,"Public","Open","New South Wales","Western NSW","Western NSW"
+"H0201","Wellington Health Service","Hospital",-32.549741,148.951977,"Public","Open","New South Wales","Western NSW","Western NSW"
+"H0202","Lightning Ridge Multi Purpose Service","Hospital",-29.429973,147.981869,"Public","Open","New South Wales","Western NSW","Western NSW"
+"H0203","Lourdes Hospital Dubbo","Hospital",-32.238511,148.627361,"Public","Open","New South Wales","Western NSW","Western NSW"
+"H0204","Bathurst Base Hospital","Hospital",-33.406512,149.572699,"Public","Open","New South Wales","Western NSW","Western NSW"
+"H0205","Blayney Multi Purpose Service","Hospital",-33.537728,149.248988,"Public","Open","New South Wales","Western NSW","Western NSW"
+"H0206","Canowindra Soldiers Memorial Hospital","Hospital",-33.557204,148.676576,"Public","Open","New South Wales","Western NSW","Western NSW"
+"H0207","Condobolin Health Service","Hospital",-33.082332,147.154161,"Public","Open","New South Wales","Western NSW","Western NSW"
+"H0208","Cowra Health Service","Hospital",-33.832137,148.692376,"Public","Open","New South Wales","Western NSW","Western NSW"
+"H0209","Eugowra Memorial Multipurpose Service","Hospital",-33.424421,148.366799,"Public","Open","New South Wales","Western NSW","Western NSW"
+"H0210","Lachlan Health Service - Forbes","Hospital",-33.396281,148.013831,"Public","Open","New South Wales","Western NSW","Western NSW"
+"H0211","Grenfell Multi Purpose Service","Hospital",-33.894286,148.167843,"Public","Open","New South Wales","Western NSW","Western NSW"
+"H0212","Molong Health Service","Hospital",-33.087622,148.859724,"Public","Open","New South Wales","Western NSW","Western NSW"
+"H0213","Oberon Multi Purpose Service","Hospital",-33.705249,149.853596,"Public","Open","New South Wales","Western NSW","Western NSW"
+"H0214","Orange Health Service","Hospital",-33.317316,149.093953,"Public","Open","New South Wales","Western NSW","Western NSW"
+"H0215","Lachlan Health Service - Parkes","Hospital",-33.151507,148.169757,"Public","Open","New South Wales","Western NSW","Western NSW"
+"H0216","Peak Hill Multipurpose Service","Hospital",-32.735907,148.199615,"Public","Open","New South Wales","Western NSW","Western NSW"
+"H0217","Trundle Multi Purpose Health Service","Hospital",-32.921078,147.704315,"Public","Open","New South Wales","Western NSW","Western NSW"
+"H0218","Rylstone Multi Purpose Service","Hospital",-32.804085,149.975652,"Public","Open","New South Wales","Western NSW","Western NSW"
+"H0219","Tottenham Multipurpose Service","Hospital",-32.242711,147.358031,"Public","Open","New South Wales","Western NSW","Western NSW"
+"H0220","Tullamore Multi Purpose Health Service","Hospital",-32.635114,147.568997,"Public","Open","New South Wales","Western NSW","Western NSW"
+"H0221","Balranald Multi Purpose Service","Hospital",-34.644549,143.568413,"Public","Open","New South Wales","Far West","Western NSW"
+"H0222","Wentworth Hospital","Hospital",-34.109983,141.922481,"Public","Open","New South Wales","Far West","Western NSW"
+"H0223","Broken Hill Hospital","Hospital",-31.947609,141.454703,"Public","Open","New South Wales","Far West","Western NSW"
+"H0224","Wilcannia Multi Purpose Service","Hospital",-31.557638,143.385336,"Public","Open","New South Wales","Far West","Western NSW"
+"H0225","Thomas Walker Hospital","Hospital",-33.832336,151.097897,"Public","Open","New South Wales","Sydney","Central and Eastern Sydney"
+"H0226","Cumberland Hospital","Hospital",-33.80159,150.995246,"Public","Open","New South Wales","Western Sydney","Western Sydney"
+"H0227","Macquarie Hospital","Hospital",-33.802312,151.124818,"Public","Open","New South Wales","Northern Sydney","Northern Sydney"
+"H0228","Coral Tree Family Centre","Hospital",-33.804256,151.126212,"Public","Open","New South Wales","Northern Sydney","Northern Sydney"
+"H0229","Morisset Hospital","Hospital",-33.128549,151.512816,"Public","Open","New South Wales","Hunter New England","Hunter New England and Central Coast"
+"H0230","Hunter New England Mental Health Service","Hospital",-32.897873,151.720669,"Public","Open","New South Wales","Hunter New England","Hunter New England and Central Coast"
+"H0231","Kenmore Hospital","Hospital",-34.721253,149.751344,"Public","Open","New South Wales","Southern NSW","South Eastern NSW"
+"H0233","Western District Health Service [Hamilton]","Hospital",-37.736495,142.030606,"Public","Open","Victoria","Western District Health Service (Vic)","Western Victoria"
+"H0234","Western District Health Service [Penshurst]","Hospital",-37.877275,142.282487,"Public","Open","Victoria","Western District Health Service (Vic)","Western Victoria"
+"H0235","Colac Area Health","Hospital",-38.341201,143.582854,"Public","Open","Victoria","Colac Area Health","Western Victoria"
+"H0236","Hesse Rural Health Service [Winchelsea]","Hospital",-38.243369,143.985357,"Public","Open","Victoria","Hesse Rural Health Service (Winchelsea)","Western Victoria"
+"H0237","Otway Health & Community Services [Apollo Bay]","Hospital",-38.753853,143.664264,"Public","Open","Victoria","Great Ocean Road Health","Western Victoria"
+"H0238","University Hospital Geelong","Hospital",-38.151533,144.364964,"Public","Open","Victoria","Barwon Health","Western Victoria"
+"H0239","Casterton Memorial Hospital","Hospital",-37.589989,141.392283,"Public","Open","Victoria","Casterton Memorial Hospital","Western Victoria"
+"H0240","Western District Health Service [Coleraine]","Hospital",-37.599913,141.692018,"Public","Open","Victoria","Western District Health Service (Vic)","Western Victoria"
+"H0241","South West Healthcare [Warrnambool]","Hospital",-38.380085,142.472977,"Public","Open","Victoria","South West Healthcare (Vic)","Western Victoria"
+"H0242","Beaufort & Skipton Health Service [Skipton]","Hospital",-37.683998,143.367547,"Public","Open","Victoria","Beaufort and Skipton Health Service","Western Victoria"
+"H0243","Heywood Rural Health","Hospital",-38.137788,141.624256,"Public","Open","Victoria","Heywood Rural Health","Western Victoria"
+"H0244","Timboon & District Healthcare Service","Hospital",-38.486231,142.976717,"Public","Open","Victoria","Timboon and District Healthcare Service","Western Victoria"
+"H0245","Moyne Health Services [Port Fairy]","Hospital",-38.381599,142.227523,"Public","Open","Victoria","Moyne Health Services (Port Fairy)","Western Victoria"
+"H0246","Portland District Health","Hospital",-38.340713,141.606087,"Public","Open","Victoria","Portland District Health","Western Victoria"
+"H0247","Lorne Community Hospital","Hospital",-38.545513,143.980743,"Public","Open","Victoria","Great Ocean Road Health","Western Victoria"
+"H0248","The McKellar Centre","Hospital",-38.118795,144.335728,"Public","Open","Victoria","Barwon Health","Western Victoria"
+"H0249","South West Healthcare [Camperdown]","Hospital",-38.237101,143.137714,"Public","Open","Victoria","South West Healthcare (Vic)","Western Victoria"
+"H0250","Terang & Mortlake Health Service [Terang]","Hospital",-38.239388,142.902119,"Public","Open","Victoria","Terang and Mortlake Health Service (Terang)","Western Victoria"
+"H0251","East Grampians Health Service [Ararat]","Hospital",-37.278816,142.932858,"Public","Open","Victoria","East Grampians Health Service","Western Victoria"
+"H0252","East Grampians Health Service [Willaura]","Hospital",-37.544798,142.74587,"Public","Open","Victoria","East Grampians Health Service","Western Victoria"
+"H0253","Rural Northwest Health [Warracknabeal]","Hospital",-36.252614,142.381609,"Public","Open","Victoria","Rural Northwest Health (Vic)","Western Victoria"
+"H0254","Rural Northwest Health [Hopetoun]","Hospital",-35.732201,142.366411,"Public","Open","Victoria","Rural Northwest Health (Vic)","Western Victoria"
+"H0255","Ballarat Health Services [Base Hospital]","Hospital",-37.559658,143.847041,"Public","Open","Victoria","Grampians Health","Western Victoria"
+"H0256","Ballarat Health Services [Queen Elizabeth Campus]","Hospital",-37.564276,143.843264,"Public","Open","Victoria","Grampians Health","Western Victoria"
+"H0257","Wimmera Base Hospital [Horsham]","Hospital",-36.712441,142.208522,"Public","Open","Victoria","Grampians Health","Western Victoria"
+"H0258","West Wimmera Health Service [Rupanyup]","Hospital",-36.636571,142.631849,"Public","Open","Victoria","West Wimmera Health Service","Western Victoria"
+"H0259","Stawell Regional Health","Hospital",-37.059577,142.781603,"Public","Open","Victoria","Grampians Health","Western Victoria"
+"H0260","West Wimmera Health Service [Nhill]","Hospital",-36.334003,141.655579,"Public","Open","Victoria","West Wimmera Health Service","Western Victoria"
+"H0261","West Wimmera Health Service [Kaniva]","Hospital",-36.381386,141.246006,"Public","Open","Victoria","West Wimmera Health Service","Western Victoria"
+"H0262","West Wimmera Health Service [Jeparit]","Hospital",-36.141132,141.984686,"Public","Open","Victoria","West Wimmera Health Service","Western Victoria"
+"H0263","West Wimmera Health Service [Rainbow]","Hospital",-35.903874,141.995112,"Public","Open","Victoria","West Wimmera Health Service","Western Victoria"
+"H0264","East Wimmera Health Service [St Arnaud]","Hospital",-36.609275,143.246676,"Public","Open","Victoria","East Wimmera Health Service","Western Victoria"
+"H0265","Djerriwarrh Health Service [Bacchus Marsh]","Hospital",-37.678267,144.433264,"Public","Open","Victoria","Western Health (Vic)","North Western Melbourne"
+"H0266","Beaufort & Skipton Health Service [Beaufort]","Hospital",-37.431028,143.382284,"Public","Open","Victoria","Beaufort and Skipton Health Service","Western Victoria"
+"H0267","Dimboola District Hospital","Hospital",-36.449887,142.024286,"Public","Open","Victoria","Grampians Health","Western Victoria"
+"H0268","Edenhope and District Memorial Hospital","Hospital",-37.035323,141.288829,"Public","Open","Victoria","Grampians Health","Western Victoria"
+"H0269","Melton Health","Hospital",-37.686449,144.558284,"Public","Open","Victoria","Western Health (Vic)","North Western Melbourne"
+"H0270","Daylesford District Hospital","Hospital",-37.337365,144.145774,"Public","Open","Victoria","Central Highlands Rural Health","Western Victoria"
+"H0271","Creswick District Hospital","Hospital",-37.421192,143.891533,"Public","Open","Victoria","Central Highlands Rural Health","Western Victoria"
+"H0272","The Bendigo Hospital","Hospital",-36.748727,144.283372,"Public","Open","Victoria","Bendigo Health Care Group","Murray"
+"H0273","Bendigo Health Care Group [Anne Caudle]","Hospital",-36.750919,144.280399,"Public","Open","Victoria","Bendigo Health Care Group","Murray"
+"H0274","Goulburn Valley Health [Waranga]","Hospital",-36.587827,145.008593,"Public","Open","Victoria","Goulburn Valley Health","Murray"
+"H0275","Kyabram & District Health Service","Hospital",-36.315539,145.042705,"Public","Open","Victoria","Kyabram and District Health Service","Murray"
+"H0276","Kyneton District Health Service","Hospital",-37.254431,144.469742,"Public","Open","Victoria","Central Highlands Rural Health","Murray"
+"H0277","Heathcote Health","Hospital",-36.925786,144.709499,"Public","Open","Victoria","Heathcote Health","Murray"
+"H0278","Maryborough District Health Service [Maryborough]","Hospital",-37.044781,143.737692,"Public","Open","Victoria","Maryborough District Health Service","Western Victoria"
+"H0279","Maryborough District Health Service [Dunolly]","Hospital",-36.855269,143.735139,"Public","Open","Victoria","Maryborough District Health Service","Western Victoria"
+"H0280","Swan Hill District Health [Swan Hill]","Hospital",-35.340588,143.556514,"Public","Open","Victoria","Swan Hill District Health","Murray"
+"H0281","Swan Hill District Health [Nyah]","Hospital",-35.186052,143.355428,"Public","Open","Victoria","Swan Hill District Health","Murray"
+"H0282","East Wimmera Health Service [Wycheproof]","Hospital",-36.078447,143.233779,"Public","Open","Victoria","East Wimmera Health Service","Murray"
+"H0283","Cohuna District Hospital","Hospital",-35.800063,144.214911,"Public","Open","Victoria","Cohuna District Hospital","Murray"
+"H0284","Echuca Regional Health","Hospital",-36.138186,144.748369,"Public","Open","Victoria","Echuca Regional Health","Murray"
+"H0285","Kerang District Health","Hospital",-35.724287,143.916563,"Public","Open","Victoria","Kerang District Health","Murray"
+"H0286","Mildura Base Hospital","Hospital",-34.185634,142.143348,"Public","Open","Victoria","Mildura Base Hospital","Murray"
+"H0287","Mallee Track Health & Community Service [Ouyen]","Hospital",-35.074349,142.312345,"Public","Open","Victoria","Mallee Track Health and Community Service","Murray"
+"H0288","Maldon Hospital","Hospital",-36.992672,144.063677,"Public","Open","Victoria","Dhelkaya Health","Murray"
+"H0289","Manangatang & District Hospital","Hospital",-35.050955,142.880512,"Public","Open","Victoria","Robinvale District Health Services","Murray"
+"H0290","Boort District Health","Hospital",-36.111703,143.727285,"Public","Open","Victoria","Boort District Health","Murray"
+"H0291","Robinvale District Health Services","Hospital",-34.584146,142.781367,"Public","Open","Victoria","Robinvale District Health Services","Murray"
+"H0292","Rochester & Elmore District Health Service","Hospital",-36.366579,144.697751,"Public","Open","Victoria","Rochester and Elmore District Health Service","Murray"
+"H0293","East Wimmera Health Service [Donald]","Hospital",-36.366895,142.976583,"Public","Open","Victoria","East Wimmera Health Service","Murray"
+"H0294","Inglewood & District Health Service","Hospital",-36.572147,143.873755,"Public","Open","Victoria","Inglewood and District Health Service","Murray"
+"H0295","East Wimmera Health Service [Birchip]","Hospital",-35.980167,142.915891,"Public","Open","Victoria","East Wimmera Health Service","Murray"
+"H0296","East Wimmera Health Service [Charlton]","Hospital",-36.271037,143.345889,"Public","Open","Victoria","East Wimmera Health Service","Murray"
+"H0297","Castlemaine Health","Hospital",-37.052539,144.212315,"Public","Open","Victoria","Dhelkaya Health","Murray"
+"H0298","Goulburn Valley Health [Shepparton]","Hospital",-36.363625,145.404911,"Public","Open","Victoria","Goulburn Valley Health","Murray"
+"H0299","Goulburn Valley Health [Tatura]","Hospital",-36.439082,145.225535,"Public","Open","Victoria","Goulburn Valley Health","Murray"
+"H0300","Northeast Health Wangaratta","Hospital",-36.354035,146.313889,"Public","Open","Victoria","Northeast Health Wangaratta","Murray"
+"H0301","Tallangatta Health Service","Hospital",-36.213705,147.183709,"Public","Open","Victoria","Tallangatta Health Service","Murray"
+"H0302","Albury Wodonga Health [Wodonga Campus]","Hospital",-36.131791,146.879417,"Public","Open","Victoria","Albury Wodonga Health","Murray"
+"H0303","Yarrawonga Health","Hospital",-36.011547,146.006584,"Public","Open","Victoria","Yarrawonga District Health Service","Murray"
+"H0304","Alpine Health [Myrtleford]","Hospital",-36.554525,146.728795,"Public","Open","Victoria","Alpine Health (Vic)","Murray"
+"H0305","Alpine Health [Bright]","Hospital",-36.732701,146.965924,"Public","Open","Victoria","Alpine Health (Vic)","Murray"
+"H0306","Alpine Health [Mount Beauty]","Hospital",-36.743354,147.169359,"Public","Open","Victoria","Alpine Health (Vic)","Murray"
+"H0307","Corryong Health","Hospital",-36.198711,147.902798,"Public","Open","Victoria","Upper Murray Health and Community Services (Corryong)","Murray"
+"H0308","Seymour District Memorial Hospital","Hospital",-37.018384,145.138771,"Public","Open","Victoria","Seymour District Memorial Hospital","Murray"
+"H0309","Mansfield District Hospital","Hospital",-37.057574,146.086149,"Public","Open","Victoria","Mansfield District Hospital","Murray"
+"H0310","Alexandra District Hospital","Hospital",-37.195065,145.716143,"Public","Open","Victoria","Alexandra District Hospital","Murray"
+"H0311","Numurkah & District Health Service","Hospital",-36.100001,145.443695,"Public","Open","Victoria","NCN Health","Murray"
+"H0312","The Kilmore & District Hospital","Hospital",-37.301794,144.957915,"Public","Open","Victoria","Northern Health (Vic)","Murray"
+"H0313","Yea & District Memorial Hospital","Hospital",-37.213634,145.430724,"Public","Open","Victoria","Yea and District Memorial Hospital","Murray"
+"H0314","Nathalia District Hospital","Hospital",-36.054754,145.204324,"Public","Open","Victoria","NCN Health","Murray"
+"H0315","Benalla & District Memorial Hospital","Hospital",-36.555239,145.994675,"Public","Open","Victoria","Benalla and District Memorial Hospital","Murray"
+"H0316","Beechworth Health Service","Hospital",-36.349359,146.690739,"Public","Open","Victoria","Beechworth Health Service","Murray"
+"H0317","Cobram District Health","Hospital",-35.916273,145.651029,"Public","Open","Victoria","NCN Health","Murray"
+"H0318","Bairnsdale Regional Health Service","Hospital",-37.830814,147.607905,"Public","Open","Victoria","Bairnsdale Regional Health Service","Gippsland"
+"H0319","West Gippsland Healthcare Group [Warragul]","Hospital",-38.173009,145.926804,"Public","Open","Victoria","West Gippsland Healthcare Group","Gippsland"
+"H0320","Bass Coast Health","Hospital",-38.608747,145.580906,"Public","Open","Victoria","Bass Coast Regional Health","Gippsland"
+"H0321","Yarram & District Health Service","Hospital",-38.556975,146.678316,"Public","Open","Victoria","Yarram and District Health Service","Gippsland"
+"H0322","Omeo District Health","Hospital",-37.098142,147.597321,"Public","Open","Victoria","Omeo District Health","Gippsland"
+"H0323","Central Gippsland Health Service [Sale]","Hospital",-38.108408,147.080637,"Public","Open","Victoria","Central Gippsland Health Service","Gippsland"
+"H0324","Gippsland Southern Health Service - Korumburra","Hospital",-38.430328,145.828249,"Public","Open","Victoria","Gippsland Southern Health Service","Gippsland"
+"H0325","Gippsland Southern Health Service - Leongatha","Hospital",-38.487171,145.950343,"Public","Open","Victoria","Gippsland Southern Health Service","Gippsland"
+"H0326","Latrobe Regional Hospital [Traralgon]","Hospital",-38.218475,146.471335,"Public","Open","Victoria","Latrobe Regional Hospital","Gippsland"
+"H0327","Central Gippsland Health Service [Maffra]","Hospital",-37.961032,146.983487,"Public","Open","Victoria","Central Gippsland Health Service","Gippsland"
+"H0328","South Gippsland Hospital [Foster]","Hospital",-38.658319,146.207031,"Public","Open","Victoria","South Gippsland Hospital (Foster)","Gippsland"
+"H0329","Orbost Regional Health","Hospital",-37.701844,148.464957,"Public","Open","Victoria","Orbost Regional Health","Gippsland"
+"H0330","Box Hill Hospital","Hospital",-37.813682,145.119094,"Public","Open","Victoria","Eastern Health (Vic)","Eastern Melbourne"
+"H0331","Monash Medical Centre [Clayton]","Hospital",-37.92757,145.158729,"Public","Open","Victoria","Monash Health","Eastern Melbourne"
+"H0332","Maroondah Hospital [East Ringwood]","Hospital",-37.806884,145.254535,"Public","Open","Victoria","Eastern Health (Vic)","Eastern Melbourne"
+"H0333","Angliss Hospital","Hospital",-37.898663,145.314166,"Public","Open","Victoria","Eastern Health (Vic)","Eastern Melbourne"
+"H0334","St George's Health Service- Aged Care","Hospital",-37.809085,145.052585,"Public","Open","Victoria","St Vincent's Hospital (Melbourne) Limited","Eastern Melbourne"
+"H0335","Caritas Christi Hospice [Kew]","Hospital",-37.804706,145.015557,"Public","Open","Victoria","St Vincent's Hospital (Melbourne) Limited","Eastern Melbourne"
+"H0336","Mercy Health - O'Connell Family Centre","Hospital",-37.816688,145.061729,"Public","Open","Victoria","Mercy Public Hospital Inc. (Vic)","Eastern Melbourne"
+"H0337","The Peter James Centre [East Burwood]","Hospital",-37.852712,145.164542,"Public","Open","Victoria","Eastern Health (Vic)","Eastern Melbourne"
+"H0338","Wantirna Health","Hospital",-37.848525,145.225902,"Public","Open","Victoria","Eastern Health (Vic)","Eastern Melbourne"
+"H0339","Royal Talbot Rehabilitation Centre [Kew]","Hospital",-37.789522,145.023715,"Public","Open","Victoria","Austin Health (Vic)","Eastern Melbourne"
+"H0340","Healesville Hospital and Yarra Valley Health","Hospital",-37.646879,145.529032,"Public","Open","Victoria","Eastern Health (Vic)","Eastern Melbourne"
+"H0341","Yarra Ranges Health","Hospital",-37.756319,145.351204,"Public","Open","Victoria","Eastern Health (Vic)","Eastern Melbourne"
+"H0342","Monash Medical Centre [Moorabbin]","Hospital",-37.920697,145.063197,"Public","Open","Victoria","Monash Health","South Eastern Melbourne"
+"H0343","Rosebud Hospital","Hospital",-38.362168,144.884899,"Public","Open","Victoria","Peninsula Health (Vic)","South Eastern Melbourne"
+"H0344","Sandringham Hospital","Hospital",-37.961049,145.018157,"Public","Open","Victoria","Alfred Health (Vic)","South Eastern Melbourne"
+"H0345","Caulfield Hospital","Hospital",-37.882707,145.016892,"Public","Open","Victoria","Alfred Health (Vic)","South Eastern Melbourne"
+"H0346","Kooweerup Regional Health Service","Hospital",-38.200653,145.484433,"Public","Open","Victoria","Kooweerup Regional Health Service","South Eastern Melbourne"
+"H0347","Kingston Centre [Cheltenham]","Hospital",-37.955018,145.078969,"Public","Open","Victoria","Monash Health","South Eastern Melbourne"
+"H0348","Dandenong Hospital","Hospital",-37.976459,145.218529,"Public","Open","Victoria","Monash Health","South Eastern Melbourne"
+"H0349","Cranbourne Integrated Care Centre","Hospital",-38.113312,145.280832,"Public","Open","Victoria","Monash Health","South Eastern Melbourne"
+"H0350","Frankston Hospital","Hospital",-38.150791,145.128428,"Public","Open","Victoria","Peninsula Health (Vic)","South Eastern Melbourne"
+"H0351","Calvary Health Care Bethlehem","Hospital",-37.896962,145.013415,"Public","Open","Victoria","Calvary Health Care Bethlehem Limited","South Eastern Melbourne"
+"H0352","Queen Elizabeth Centre [Noble Park]","Hospital",-37.972053,145.178285,"Public","Open","Victoria","Victoria Virtual Local Hospital Network","South Eastern Melbourne"
+"H0353","Casey Hospital","Hospital",-38.045325,145.347181,"Public","Open","Victoria","Monash Health","South Eastern Melbourne"
+"H0354","Mount Eliza Aged Care & Rehabilitation Service","Hospital",,,"Public","Closed","Victoria",,"South Eastern Melbourne"
+"H0355","Rosebud Rehabilitation Unit","Hospital",,,"Public","Closed","Victoria",,"South Eastern Melbourne"
+"H0356","Golf Links Road Rehabilitation Centre","Hospital",-38.173447,145.149769,"Public","Open","Victoria","Peninsula Health (Vic)","South Eastern Melbourne"
+"H0357","The Mornington Centre","Hospital",-38.230174,145.041697,"Public","Open","Victoria","Peninsula Health (Vic)","South Eastern Melbourne"
+"H0358","The Alfred","Hospital",-37.846087,144.981937,"Public","Open","Victoria","Alfred Health (Vic)","North Western Melbourne"
+"H0359","Austin Hospital [Heidelberg]","Hospital",-37.756355,145.060236,"Public","Open","Victoria","Austin Health (Vic)","Eastern Melbourne"
+"H0360","Heidelberg Repatriation Hospital [Heidelberg West]","Hospital",-37.755973,145.04749,"Public","Open","Victoria","Austin Health (Vic)","Eastern Melbourne"
+"H0361","Bundoora Extended Care Centre","Hospital",-37.701124,145.055569,"Public","Open","Victoria","Northern Health (Vic)","North Western Melbourne"
+"H0362","Mercy Hospital for Women","Hospital",-37.756075,145.061008,"Public","Open","Victoria","Mercy Public Hospital Inc. (Vic)","Eastern Melbourne"
+"H0363","Western Hospital [Footscray]","Hospital",-37.792298,144.887191,"Public","Open","Victoria","Western Health (Vic)","North Western Melbourne"
+"H0364","Royal Children's Hospital [Parkville]","Hospital",-37.794997,144.950859,"Public","Open","Victoria","Royal Children's Hospital (Melbourne)","North Western Melbourne"
+"H0365","Royal Children's Hospital [Travancore Psych]","Hospital",,,"Public","Closed","Victoria",,"North Western Melbourne"
+"H0366","Royal Women's Hospital [Parkville]","Hospital",-37.798772,144.954825,"Public","Open","Victoria","Royal Women's Hospital (Melbourne)","North Western Melbourne"
+"H0367","The Royal Victorian Eye & Ear Hospital","Hospital",-37.808978,144.976245,"Public","Open","Victoria","Royal Victorian Eye and Ear Hospital","North Western Melbourne"
+"H0368","The Northern Hospital [Epping]","Hospital",-37.653417,145.014381,"Public","Open","Victoria","Northern Health (Vic)","Eastern Melbourne"
+"H0369","Werribee Mercy Hospital","Hospital",-37.886587,144.698621,"Public","Open","Victoria","Mercy Public Hospital Inc. (Vic)","North Western Melbourne"
+"H0370","Orygen Inpatient Unit","Hospital",-37.791926,144.886617,"Public","Open","Victoria","Melbourne Health","North Western Melbourne"
+"H0371","Royal Melbourne Hospital [City Campus]","Hospital",-37.799259,144.956864,"Public","Open","Victoria","Melbourne Health","North Western Melbourne"
+"H0372","Royal Melbourne Hospital [Royal Park Campus]","Hospital",-37.778813,144.948049,"Public","Open","Victoria","Melbourne Health","North Western Melbourne"
+"H0373","Sunshine Hospital","Hospital",-37.759179,144.816477,"Public","Open","Victoria","Western Health (Vic)","North Western Melbourne"
+"H0374","St Vincent's Hospital [Melbourne]","Hospital",-37.806545,144.975231,"Public","Open","Victoria","St Vincent's Hospital (Melbourne) Limited","North Western Melbourne"
+"H0375","Williamstown Hospital","Hospital",-37.863576,144.892339,"Public","Open","Victoria","Western Health (Vic)","North Western Melbourne"
+"H0376","Peter MacCallum Cancer Centre","Hospital",-37.80001,144.956607,"Public","Open","Victoria","Peter MacCallum Cancer Institute (Vic)","North Western Melbourne"
+"H0377","Tweddle Child & Family Health Centre [Footscray]","Hospital",-37.797407,144.887421,"Public","Open","Victoria","Tweddle Child and Family Health Service","North Western Melbourne"
+"H0378","Sunbury Day Hospital","Hospital",-37.576998,144.732674,"Public","Open","Victoria","Western Health (Vic)","North Western Melbourne"
+"H0379","Broadmeadows Health Service","Hospital",-37.684321,144.913106,"Public","Open","Victoria","Northern Health (Vic)","North Western Melbourne"
+"H0380","Craigieburn Health Service","Hospital",-37.596015,144.91928,"Public","Open","Victoria","Northern Health (Vic)","North Western Melbourne"
+"H0381","The Royal Dental Hospital of Melbourne","Hospital",-37.799299,144.964529,"Public","Open","Victoria","Unknown","North Western Melbourne"
+"H0382","Albury Wodonga Health [Albury Campus]","Hospital",-36.078401,146.939146,"Public","Open","New South Wales","Albury Wodonga Health","Murray"
+"H0383","Victorian Institute of Forensic Mental Health","Hospital",-37.78931,145.012975,"Public","Open","Victoria","Victorian Institute of Forensic Mental Health","North Western Melbourne"
+"H0384","Victorian Institute of Forensic Mental Health Prison Health Service","Hospital",-37.812763,144.950757,"Public","Open","Victoria","Victorian Institute of Forensic Mental Health","North Western Melbourne"
+"H0385","Mater Adult Hospital","Hospital",-27.485488,153.028103,"Public","Open","Queensland","Not applicable","Brisbane South"
+"H0386","Mater Children's Hospital","Hospital",,,"Public","Closed","Queensland",,"Brisbane South"
+"H0387","Mater Mothers' Hospital","Hospital",-27.485436,153.027001,"Public","Open","Queensland","Not applicable","Brisbane South"
+"H0388","The Prince Charles Hospital","Hospital",-27.390497,153.021955,"Public","Open","Queensland","Metro North (Qld)","Brisbane North"
+"H0389","Royal Children's Hospital [Queensland]","Hospital",,,"Public","Closed","Queensland",,"Brisbane North"
+"H0390","Princess Alexandra Hospital","Hospital",-27.499402,153.033542,"Public","Open","Queensland","Metro South (Qld)","Brisbane South"
+"H0391","Ipswich Hospital","Hospital",-27.619465,152.759313,"Public","Open","Queensland","West Moreton","Darling Downs and West Moreton"
+"H0392","Redcliffe Hospital","Hospital",-27.228269,153.105245,"Public","Open","Queensland","Metro North (Qld)","Brisbane North"
+"H0393","Ellen Barron Family Centre","Hospital",-27.385905,153.025152,"Public","Open","Queensland","Children's Health Queensland","Brisbane North"
+"H0394","Queen Elizabeth II Jubilee Hospital","Hospital",-27.559673,153.048852,"Public","Open","Queensland","Metro South (Qld)","Brisbane South"
+"H0395","Wynnum Health Service","Hospital",,,"Public","Closed","Queensland",,"Brisbane South"
+"H0397","Redland Hospital","Hospital",-27.539992,153.251379,"Public","Open","Queensland","Metro South (Qld)","Brisbane South"
+"H0398","Logan Hospital","Hospital",-27.670169,153.141732,"Public","Open","Queensland","Metro South (Qld)","Brisbane South"
+"H0399","Caboolture Hospital","Hospital",-27.080776,152.963623,"Public","Open","Queensland","Metro North (Qld)","Brisbane North"
+"H0400","Beaudesert Hospital","Hospital",-27.984869,153.002536,"Public","Open","Queensland","Metro South (Qld)","Brisbane South"
+"H0401","Boonah Hospital","Hospital",-27.999128,152.678943,"Public","Open","Queensland","West Moreton","Darling Downs and West Moreton"
+"H0402","Caloundra Hospital","Hospital",-26.800582,153.119759,"Public","Open","Queensland","Sunshine Coast","Central Queensland, Wide Bay and Sunshine Coast"
+"H0403","Esk Hospital","Hospital",-27.240398,152.418179,"Public","Open","Queensland","West Moreton","Darling Downs and West Moreton"
+"H0404","Gatton Hospital","Hospital",-27.566778,152.276269,"Public","Open","Queensland","West Moreton","Darling Downs and West Moreton"
+"H0405","Kilcoy Hospital","Hospital",-26.941009,152.561495,"Public","Open","Queensland","Metro North (Qld)","Brisbane North"
+"H0406","Laidley Hospital","Hospital",-27.632725,152.400015,"Public","Open","Queensland","West Moreton","Darling Downs and West Moreton"
+"H0407","Maleny Hospital","Hospital",-26.754893,152.844972,"Public","Open","Queensland","Sunshine Coast","Central Queensland, Wide Bay and Sunshine Coast"
+"H0408","Nambour General Hospital","Hospital",-26.621659,152.952249,"Public","Open","Queensland","Sunshine Coast","Central Queensland, Wide Bay and Sunshine Coast"
+"H0409","Gold Coast University Hospital","Hospital",-27.958896,153.381173,"Public","Open","Queensland","Gold Coast","Gold Coast"
+"H0410","Biggenden Hospital","Hospital",-25.506406,152.051099,"Public","Open","Queensland","Wide Bay","Central Queensland, Wide Bay and Sunshine Coast"
+"H0411","Bundaberg Base Hospital","Hospital",-24.868877,152.336157,"Public","Open","Queensland","Wide Bay","Central Queensland, Wide Bay and Sunshine Coast"
+"H0412","Cherbourg Hospital","Hospital",-26.291519,151.956324,"Public","Open","Queensland","Darling Downs","Darling Downs and West Moreton"
+"H0413","Childers Hospital","Hospital",-25.239416,152.273286,"Public","Open","Queensland","Wide Bay","Central Queensland, Wide Bay and Sunshine Coast"
+"H0414","Eidsvold Hospital","Hospital",-25.382639,151.125494,"Public","Open","Queensland","Wide Bay","Central Queensland, Wide Bay and Sunshine Coast"
+"H0415","Gayndah Hospital","Hospital",-25.631384,151.604531,"Public","Open","Queensland","Wide Bay","Central Queensland, Wide Bay and Sunshine Coast"
+"H0416","Gin Gin Hospital","Hospital",-24.985707,151.953449,"Public","Open","Queensland","Wide Bay","Central Queensland, Wide Bay and Sunshine Coast"
+"H0417","Gympie Hospital","Hospital",-26.184353,152.658258,"Public","Open","Queensland","Sunshine Coast","Central Queensland, Wide Bay and Sunshine Coast"
+"H0418","Hervey Bay Hospital","Hospital",-25.298697,152.820639,"Public","Open","Queensland","Wide Bay","Central Queensland, Wide Bay and Sunshine Coast"
+"H0419","Kingaroy Hospital","Hospital",-26.532454,151.838307,"Public","Open","Queensland","Darling Downs","Darling Downs and West Moreton"
+"H0420","Maryborough Hospital","Hospital",-25.522131,152.689855,"Public","Open","Queensland","Wide Bay","Central Queensland, Wide Bay and Sunshine Coast"
+"H0421","Monto Hospital","Hospital",-24.866424,151.112501,"Public","Open","Queensland","Wide Bay","Central Queensland, Wide Bay and Sunshine Coast"
+"H0423","Mundubbera Hospital","Hospital",-25.587619,151.293282,"Public","Open","Queensland","Wide Bay","Central Queensland, Wide Bay and Sunshine Coast"
+"H0424","Murgon Hospital","Hospital",-26.239075,151.950702,"Public","Open","Queensland","Darling Downs","Darling Downs and West Moreton"
+"H0425","Nanango Hospital","Hospital",-26.666405,152.007833,"Public","Open","Queensland","Darling Downs","Darling Downs and West Moreton"
+"H0426","Wondai Hospital","Hospital",-26.323335,151.878658,"Public","Open","Queensland","Darling Downs","Darling Downs and West Moreton"
+"H0427","Chinchilla Hospital","Hospital",-26.741337,150.634939,"Public","Open","Queensland","Darling Downs","Darling Downs and West Moreton"
+"H0428","Dalby Hospital","Hospital",-27.167153,151.278905,"Public","Open","Queensland","Darling Downs","Darling Downs and West Moreton"
+"H0429","Goondiwindi Hospital","Hospital",-28.547951,150.302302,"Public","Open","Queensland","Darling Downs","Darling Downs and West Moreton"
+"H0430","Inglewood Hospital","Hospital",-28.417647,151.061856,"Public","Open","Queensland","Darling Downs","Darling Downs and West Moreton"
+"H0431","Jandowae Hospital","Hospital",-26.781016,151.105313,"Public","Open","Queensland","Darling Downs","Darling Downs and West Moreton"
+"H0432","Miles Hospital","Hospital",-26.658236,150.191023,"Public","Open","Queensland","Darling Downs","Darling Downs and West Moreton"
+"H0433","Millmerran Hospital","Hospital",-27.878928,151.26267,"Public","Open","Queensland","Darling Downs","Darling Downs and West Moreton"
+"H0434","Oakey Hospital","Hospital",-27.424079,151.719088,"Public","Open","Queensland","Darling Downs","Darling Downs and West Moreton"
+"H0435","Stanthorpe Hospital","Hospital",-28.660927,151.928397,"Public","Open","Queensland","Darling Downs","Darling Downs and West Moreton"
+"H0436","Tara Hospital","Hospital",-27.273674,150.456368,"Public","Open","Queensland","Darling Downs","Darling Downs and West Moreton"
+"H0437","Taroom Hospital","Hospital",-25.638818,149.798669,"Public","Open","Queensland","Darling Downs","Darling Downs and West Moreton"
+"H0438","Texas Hospital","Hospital",-28.855978,151.179481,"Public","Open","Queensland","Darling Downs","Darling Downs and West Moreton"
+"H0439","Toowoomba Hospital","Hospital",-27.569872,151.944433,"Public","Open","Queensland","Darling Downs","Darling Downs and West Moreton"
+"H0440","Warwick Hospital","Hospital",-28.224275,152.017983,"Public","Open","Queensland","Darling Downs","Darling Downs and West Moreton"
+"H0441","Augathella Hospital","Hospital",-25.796104,146.590919,"Public","Open","Queensland","South West (Qld)","Western Queensland"
+"H0442","Charleville Hospital","Hospital",-26.410455,146.239228,"Public","Open","Queensland","South West (Qld)","Western Queensland"
+"H0443","Cunnamulla Hospital","Hospital",-28.071658,145.690405,"Public","Open","Queensland","South West (Qld)","Western Queensland"
+"H0444","Dirranbandi Hospital","Hospital",-28.579349,148.229159,"Public","Open","Queensland","South West (Qld)","Western Queensland"
+"H0445","Injune Hospital","Hospital",-25.847096,148.562471,"Public","Open","Queensland","South West (Qld)","Western Queensland"
+"H0446","Mitchell Hospital","Hospital",-26.489913,147.972493,"Public","Open","Queensland","South West (Qld)","Western Queensland"
+"H0447","Mungindi Hospital","Hospital",-28.972817,148.989061,"Public","Open","Queensland","South West (Qld)","Western Queensland"
+"H0448","Quilpie Hospital","Hospital",-26.616519,144.274617,"Public","Open","Queensland","South West (Qld)","Western Queensland"
+"H0449","Roma Hospital","Hospital",-26.568828,148.775846,"Public","Open","Queensland","South West (Qld)","Western Queensland"
+"H0450","St George Hospital Qld","Hospital",-28.0272,148.592683,"Public","Open","Queensland","South West (Qld)","Western Queensland"
+"H0451","Surat Hospital","Hospital",-27.156595,149.063787,"Public","Open","Queensland","South West (Qld)","Western Queensland"
+"H0452","Alpha Hospital","Hospital",-23.649039,146.632962,"Public","Open","Queensland","Central West (Qld)","Western Queensland"
+"H0453","Baralaba Hospital","Hospital",-24.184268,149.809586,"Public","Open","Queensland","Central Queensland","Central Queensland, Wide Bay and Sunshine Coast"
+"H0454","Biloela Hospital","Hospital",-24.395813,150.517491,"Public","Open","Queensland","Central Queensland","Central Queensland, Wide Bay and Sunshine Coast"
+"H0455","Blackwater Hospital","Hospital",-23.571873,148.878219,"Public","Open","Queensland","Central Queensland","Central Queensland, Wide Bay and Sunshine Coast"
+"H0456","Emerald Hospital","Hospital",-23.514826,148.154989,"Public","Open","Queensland","Central Queensland","Central Queensland, Wide Bay and Sunshine Coast"
+"H0457","Gladstone Hospital","Hospital",-23.850654,151.248532,"Public","Open","Queensland","Central Queensland","Central Queensland, Wide Bay and Sunshine Coast"
+"H0458","Mount Morgan Hospital","Hospital",-23.645094,150.392639,"Public","Open","Queensland","Central Queensland","Central Queensland, Wide Bay and Sunshine Coast"
+"H0459","Moura Hospital","Hospital",-24.575948,149.975999,"Public","Open","Queensland","Central Queensland","Central Queensland, Wide Bay and Sunshine Coast"
+"H0460","Rockhampton Hospital","Hospital",-23.379525,150.494542,"Public","Open","Queensland","Central Queensland","Central Queensland, Wide Bay and Sunshine Coast"
+"H0461","Springsure Hospital","Hospital",-24.120122,148.084762,"Public","Open","Queensland","Central Queensland","Central Queensland, Wide Bay and Sunshine Coast"
+"H0462","Theodore Hospital","Hospital",-24.943109,150.075277,"Public","Open","Queensland","Central Queensland","Central Queensland, Wide Bay and Sunshine Coast"
+"H0463","Capricorn Coast Hospital","Hospital",-23.143888,150.734519,"Public","Open","Queensland","Central Queensland","Central Queensland, Wide Bay and Sunshine Coast"
+"H0464","Woorabinda Hospital","Hospital",-24.131492,149.455983,"Public","Open","Queensland","Central Queensland","Central Queensland, Wide Bay and Sunshine Coast"
+"H0466","Barcaldine Hospital","Hospital",-23.553316,145.293674,"Public","Open","Queensland","Central West (Qld)","Western Queensland"
+"H0467","Blackall Hospital","Hospital",-24.422705,145.449349,"Public","Open","Queensland","Central West (Qld)","Western Queensland"
+"H0470","Longreach Hospital","Hospital",-23.439033,144.260873,"Public","Open","Queensland","Central West (Qld)","Western Queensland"
+"H0473","Winton Hospital","Hospital",-22.381189,143.040672,"Public","Open","Queensland","Central West (Qld)","Western Queensland"
+"H0476","Clermont Hospital","Hospital",-22.826219,147.632174,"Public","Open","Queensland","Mackay","Northern Queensland"
+"H0477","Mackay Base Hospital","Hospital",-21.145792,149.155325,"Public","Open","Queensland","Mackay","Northern Queensland"
+"H0478","Moranbah Hospital","Hospital",-22.002125,148.055287,"Public","Open","Queensland","Mackay","Northern Queensland"
+"H0479","Proserpine Hospital","Hospital",-20.400017,148.584976,"Public","Open","Queensland","Mackay","Northern Queensland"
+"H0480","Sarina Hospital","Hospital",-21.421151,149.210268,"Public","Open","Queensland","Mackay","Northern Queensland"
+"H0481","Dysart Hospital","Hospital",-22.582729,148.353044,"Public","Open","Queensland","Mackay","Northern Queensland"
+"H0482","Ayr Hospital","Hospital",-19.564066,147.408821,"Public","Open","Queensland","Townsville","Northern Queensland"
+"H0483","Bowen Hospital","Hospital",-20.007104,148.240327,"Public","Open","Queensland","Mackay","Northern Queensland"
+"H0484","Charters Towers Hospital","Hospital",-20.076167,146.264097,"Public","Open","Queensland","Townsville","Northern Queensland"
+"H0485","Collinsville Hospital","Hospital",-20.546108,147.838146,"Public","Open","Queensland","Mackay","Northern Queensland"
+"H0486","Home Hill Hospital","Hospital",-19.661764,147.416759,"Public","Open","Queensland","Townsville","Northern Queensland"
+"H0487","Ingham Hospital","Hospital",-18.652293,146.164222,"Public","Open","Queensland","Townsville","Northern Queensland"
+"H0488","Joyce Palmer Health Service","Hospital",-18.732733,146.578731,"Public","Open","Queensland","Townsville","Northern Queensland"
+"H0489","Townsville University Hospital","Hospital",-19.320683,146.762092,"Public","Open","Queensland","Townsville","Northern Queensland"
+"H0490","Royal Brisbane & Women's Hospital","Hospital",-27.446972,153.027888,"Public","Open","Queensland","Metro North (Qld)","Brisbane North"
+"H0491","Atherton Hospital","Hospital",-17.266635,145.483177,"Public","Open","Queensland","Cairns and Hinterland","Northern Queensland"
+"H0492","Babinda Hospital","Hospital",-17.343079,145.918908,"Public","Open","Queensland","Cairns and Hinterland","Northern Queensland"
+"H0493","Bamaga Hospital","Hospital",-10.893996,142.385131,"Public","Open","Queensland","Torres and Cape","Northern Queensland"
+"H0494","Cairns Hospital","Hospital",-16.912537,145.768522,"Public","Open","Queensland","Cairns and Hinterland","Northern Queensland"
+"H0496","Cooktown Hospital","Hospital",-15.478067,145.249616,"Public","Open","Queensland","Torres and Cape","Northern Queensland"
+"H0500","Gordonvale Hospital","Hospital",-17.087337,145.786159,"Public","Open","Queensland","Cairns and Hinterland","Northern Queensland"
+"H0501","Herberton Hospital","Hospital",-17.379371,145.38175,"Public","Open","Queensland","Cairns and Hinterland","Northern Queensland"
+"H0502","Innisfail Hospital","Hospital",-17.518939,146.030049,"Public","Open","Queensland","Cairns and Hinterland","Northern Queensland"
+"H0503","Mareeba Hospital","Hospital",-16.987117,145.424468,"Public","Open","Queensland","Cairns and Hinterland","Northern Queensland"
+"H0504","Mossman Hospital","Hospital",-16.464031,145.368025,"Public","Open","Queensland","Cairns and Hinterland","Northern Queensland"
+"H0506","Thursday Island Hospital","Hospital",-10.588,142.21156,"Public","Open","Queensland","Torres and Cape","Northern Queensland"
+"H0507","Tully Hospital","Hospital",-17.927624,145.924146,"Public","Open","Queensland","Cairns and Hinterland","Northern Queensland"
+"H0508","Weipa Hospital","Hospital",-12.623419,141.881179,"Public","Open","Queensland","Torres and Cape","Northern Queensland"
+"H0516","Cloncurry Hospital","Hospital",-20.704166,140.527571,"Public","Open","Queensland","North West (Qld)","Western Queensland"
+"H0517","Hughenden Hospital","Hospital",-20.8424,144.1892,"Public","Open","Queensland","Townsville","Northern Queensland"
+"H0518","Julia Creek Hospital","Hospital",-20.656096,141.749875,"Public","Open","Queensland","North West (Qld)","Western Queensland"
+"H0519","Mount Isa Base Hospital","Hospital",-20.730919,139.493815,"Public","Open","Queensland","North West (Qld)","Western Queensland"
+"H0520","Normanton Hospital","Hospital",-17.678739,141.086425,"Public","Open","Queensland","North West (Qld)","Western Queensland"
+"H0521","Richmond Hospital","Hospital",-20.738726,143.150471,"Public","Open","Queensland","Townsville","Northern Queensland"
+"H0522","Mornington Island Hospital","Hospital",-16.665534,139.178559,"Public","Open","Queensland","North West (Qld)","Western Queensland"
+"H0525","Doomadgee Hospital","Hospital",-17.942527,138.825267,"Public","Open","Queensland","North West (Qld)","Western Queensland"
+"H0534","Baillie Henderson Hospital","Hospital",-27.524371,151.936283,"Public","Open","Queensland","Darling Downs","Darling Downs and West Moreton"
+"H0535","Charters Towers Rehabilitation Unit","Hospital",-20.076801,146.280459,"Public","Open","Queensland","Townsville","Northern Queensland"
+"H0536","Kirwan Rehabilitation Unit","Hospital",-19.303796,146.731627,"Public","Open","Queensland","Townsville","Northern Queensland"
+"H0537","The Park Centre For Mental Health","Hospital",-27.600413,152.910246,"Public","Open","Queensland","West Moreton","Brisbane South"
+"H0538","Hampstead Rehabilitation Centre","Hospital",-34.860704,138.620381,"Public","Open","South Australia","Central Adelaide","Adelaide"
+"H0539","The Queen Elizabeth Hospital","Hospital",-34.884179,138.534039,"Public","Open","South Australia","Central Adelaide","Adelaide"
+"H0540","Royal Adelaide Hospital","Hospital",-34.920973,138.587393,"Public","Open","South Australia","Central Adelaide","Adelaide"
+"H0541","Lyell McEwin Hospital","Hospital",-34.747607,138.664798,"Public","Open","South Australia","Northern Adelaide","Adelaide"
+"H0542","Modbury Hospital","Hospital",-34.834166,138.690505,"Public","Open","South Australia","Northern Adelaide","Adelaide"
+"H0543","Pregnancy Advisory Centre","Hospital",-34.87999,138.542962,"Public","Open","South Australia","Central Adelaide","Adelaide"
+"H0544","St Margaret's Hospital","Hospital",-34.846418,138.480466,"Public","Open","South Australia","Central Adelaide","Adelaide"
+"H0545","Women's and Children's Hospital","Hospital",-34.911444,138.599631,"Public","Open","South Australia","Women's and Children's Health Network (SA)","Adelaide"
+"H0546","Wudinna Hospital","Hospital",-33.050274,135.466983,"Public","Open","South Australia","Eyre and Far North","Country SA"
+"H0547","Cleve District Hospital and Aged Care","Hospital",-33.697779,136.494162,"Public","Open","South Australia","Eyre and Far North","Country SA"
+"H0548","Cowell District Hospital and Aged Care","Hospital",-33.685299,136.921405,"Public","Open","South Australia","Eyre and Far North","Country SA"
+"H0549","Cummins and District Memorial Hospital","Hospital",-34.264155,135.73316,"Public","Open","South Australia","Eyre and Far North","Country SA"
+"H0550","Elliston Hospital","Hospital",-33.647912,134.892443,"Public","Open","South Australia","Eyre and Far North","Country SA"
+"H0551","Kimba District Hospital and Aged Care","Hospital",-33.143552,136.416013,"Public","Open","South Australia","Eyre and Far North","Country SA"
+"H0552","Ceduna District Health Service","Hospital",-32.119099,133.672317,"Public","Open","South Australia","Eyre and Far North","Country SA"
+"H0553","Port Lincoln Health Service","Hospital",-34.72408,135.850201,"Public","Open","South Australia","Eyre and Far North","Country SA"
+"H0554","Streaky Bay Hospital","Hospital",-32.792776,134.217524,"Public","Open","South Australia","Eyre and Far North","Country SA"
+"H0555","Tumby Bay Hospital and Health Services","Hospital",-34.372292,136.103932,"Public","Open","South Australia","Eyre and Far North","Country SA"
+"H0556","Gumeracha District Soldiers' Memorial Hospital","Hospital",-34.826269,138.881575,"Public","Open","South Australia","Barossa Hills Fleurieu","Country SA"
+"H0557","Kangaroo Island Health Service","Hospital",-35.652693,137.641289,"Public","Open","South Australia","Barossa Hills Fleurieu","Country SA"
+"H0558","Karoonda and District Soldiers' Memorial Hospital","Hospital",-35.094226,139.889429,"Public","Open","South Australia","Riverland Mallee Coorong","Country SA"
+"H0559","Lameroo District Health Service","Hospital",-35.328203,140.514643,"Public","Open","South Australia","Riverland Mallee Coorong","Country SA"
+"H0560","Tailem Bend District Hospital","Hospital",-35.254803,139.452692,"Public","Open","South Australia","Riverland Mallee Coorong","Country SA"
+"H0561","Mannum District Hospital","Hospital",-34.916481,139.308614,"Public","Open","South Australia","Riverland Mallee Coorong","Country SA"
+"H0562","Meningie and Districts Memorial Hospital and Health Services","Hospital",-35.693212,139.335565,"Public","Open","South Australia","Riverland Mallee Coorong","Country SA"
+"H0563","Mount Barker District Soldiers' Memorial Hospital","Hospital",-35.081813,138.870277,"Public","Open","South Australia","Barossa Hills Fleurieu","Country SA"
+"H0564","Mount Pleasant District Hospital","Hospital",-34.773855,139.054212,"Public","Open","South Australia","Barossa Hills Fleurieu","Country SA"
+"H0565","Murray Bridge Soldiers' Memorial Hospital","Hospital",-35.128911,139.280462,"Public","Open","South Australia","Riverland Mallee Coorong","Country SA"
+"H0566","Pinnaroo Soldiers' Memorial Hospital","Hospital",-35.257499,140.902447,"Public","Open","South Australia","Riverland Mallee Coorong","Country SA"
+"H0567","South Coast District Hospital","Hospital",-35.561171,138.606447,"Public","Open","South Australia","Barossa Hills Fleurieu","Country SA"
+"H0568","Strathalbyn and District Health Service","Hospital",-35.257674,138.893558,"Public","Open","South Australia","Barossa Hills Fleurieu","Country SA"
+"H0569","Booleroo Centre District Hospital and Health Services","Hospital",-32.877911,138.350958,"Public","Open","South Australia","Yorke and Northern","Country SA"
+"H0570","Crystal Brook and District Hospital","Hospital",-33.354297,138.213243,"Public","Open","South Australia","Yorke and Northern","Country SA"
+"H0571","Jamestown Hospital and Health Service","Hospital",-33.212265,138.616249,"Public","Open","South Australia","Yorke and Northern","Country SA"
+"H0572","Laura and District Hospital","Hospital",-33.174925,138.298687,"Public","Open","South Australia","Yorke and Northern","Country SA"
+"H0573","Orroroo and District Health Service","Hospital",-32.738519,138.607206,"Public","Open","South Australia","Yorke and Northern","Country SA"
+"H0574","Peterborough Soldiers' Memorial Hospital","Hospital",-32.980786,138.830344,"Public","Open","South Australia","Yorke and Northern","Country SA"
+"H0575","Port Broughton and District Hospital and Health Service","Hospital",-33.601287,137.934379,"Public","Open","South Australia","Yorke and Northern","Country SA"
+"H0576","Port Pirie Regional Health Service","Hospital",-33.177339,138.005533,"Public","Open","South Australia","Yorke and Northern","Country SA"
+"H0577","McLaren Vale & Districts War Memorial Hospital Inc","Hospital",-35.221405,138.544962,"Public","Open","South Australia","Southern Adelaide","Adelaide"
+"H0578","Coober Pedy Hospital and Health Service","Hospital",-29.004893,134.762066,"Public","Open","South Australia","Eyre and Far North","Country SA"
+"H0579","Hawker Memorial Hospital","Hospital",-31.893389,138.427841,"Public","Open","South Australia","Flinders and Upper North","Country SA"
+"H0580","Leigh Creek Health Service","Hospital",,,"Public","Closed","South Australia",,"Country SA"
+"H0583","Port Augusta Hospital and Regional Health Services","Hospital",-32.509417,137.776279,"Public","Open","South Australia","Flinders and Upper North","Country SA"
+"H0584","Quorn Health Service","Hospital",-32.350917,138.038138,"Public","Open","South Australia","Flinders and Upper North","Country SA"
+"H0585","Roxby Downs Health Service","Hospital",-30.562778,136.894261,"Public","Open","South Australia","Flinders and Upper North","Country SA"
+"H0587","Whyalla Hospital and Health Services","Hospital",-33.033977,137.577559,"Public","Open","South Australia","Flinders and Upper North","Country SA"
+"H0588","Barmera Health Service","Hospital",-34.249146,140.471706,"Public","Open","South Australia","Riverland Mallee Coorong","Country SA"
+"H0589","Riverland General Hospital","Hospital",-34.276054,140.600984,"Public","Open","South Australia","Riverland Mallee Coorong","Country SA"
+"H0590","Loxton Hospital Complex","Hospital",-34.454695,140.564296,"Public","Open","South Australia","Riverland Mallee Coorong","Country SA"
+"H0591","Renmark Paringa District Hospital","Hospital",-34.164836,140.745205,"Public","Open","South Australia","Riverland Mallee Coorong","Country SA"
+"H0592","Waikerie Health Service","Hospital",-34.182447,139.984917,"Public","Open","South Australia","Riverland Mallee Coorong","Country SA"
+"H0593","Bordertown Memorial Hospital","Hospital",-36.312133,140.766438,"Public","Open","South Australia","Limestone Coast","Country SA"
+"H0594","Kingston Soldiers' Memorial Hospital","Hospital",-36.835501,139.848763,"Public","Open","South Australia","Limestone Coast","Country SA"
+"H0595","Millicent and District Hospital and Health Service","Hospital",-37.598354,140.358924,"Public","Open","South Australia","Limestone Coast","Country SA"
+"H0596","Mount Gambier and Districts Health Service","Hospital",-37.805003,140.786662,"Public","Open","South Australia","Limestone Coast","Country SA"
+"H0597","Naracoorte Health Service","Hospital",-36.966849,140.743693,"Public","Open","South Australia","Limestone Coast","Country SA"
+"H0598","Penola War Memorial Hospital","Hospital",-37.382873,140.836465,"Public","Open","South Australia","Limestone Coast","Country SA"
+"H0600","Flinders Medical Centre","Hospital",-35.022229,138.569439,"Public","Open","South Australia","Southern Adelaide","Adelaide"
+"H0601","Repatriation General Hospital","Hospital",,,"Public","Closed","South Australia",,"Adelaide"
+"H0602","Noarlunga Hospital","Hospital",-35.139879,138.500218,"Public","Open","South Australia","Southern Adelaide","Adelaide"
+"H0603","Gawler Health Service","Hospital",-34.593743,138.755044,"Public","Open","South Australia","Barossa Hills Fleurieu","Country SA"
+"H0604","Angaston District Hospital","Hospital",-34.503549,139.054715,"Public","Open","South Australia","Barossa Hills Fleurieu","Country SA"
+"H0605","Balaklava Soldiers' Memorial District Hospital","Hospital",-34.139594,138.419596,"Public","Open","South Australia","Yorke and Northern","Country SA"
+"H0606","Burra Hospital","Hospital",-33.685486,138.934577,"Public","Open","South Australia","Yorke and Northern","Country SA"
+"H0607","Clare Hospital","Hospital",-33.829588,138.614416,"Public","Open","South Australia","Yorke and Northern","Country SA"
+"H0608","Eudunda Hospital","Hospital",-34.175482,139.090586,"Public","Open","South Australia","Barossa Hills Fleurieu","Country SA"
+"H0609","Kapunda Hospital","Hospital",-34.330289,138.921679,"Public","Open","South Australia","Barossa Hills Fleurieu","Country SA"
+"H0610","Central Yorke Peninsula Hospital (Maitland)","Hospital",-34.370494,137.673947,"Public","Open","South Australia","Yorke and Northern","Country SA"
+"H0611","Riverton District Soldiers' Memorial Hospital","Hospital",-34.160353,138.742657,"Public","Open","South Australia","Yorke and Northern","Country SA"
+"H0612","Snowtown Hospital and Health Service","Hospital",-33.786936,138.212768,"Public","Open","South Australia","Yorke and Northern","Country SA"
+"H0613","Southern Yorke Peninsula Health Service (Yorketown)","Hospital",-35.020989,137.604939,"Public","Open","South Australia","Yorke and Northern","Country SA"
+"H0614","Tanunda War Memorial Hospital","Hospital",-34.528082,138.960859,"Public","Open","South Australia","Barossa Hills Fleurieu","Country SA"
+"H0615","Northern Yorke Peninsula Health Service (Wallaroo)","Hospital",-33.927738,137.636783,"Public","Open","South Australia","Yorke and Northern","Country SA"
+"H0617","Oakden Hospital","Hospital",,,"Public","Closed","South Australia",,"Adelaide"
+"H0618","Glenside Health Services","Hospital",-34.943429,138.627714,"Public","Open","South Australia","Central Adelaide","Adelaide"
+"H0619","Princess Margaret Hospital for Children","Hospital",,,"Public","Closed","Western Australia",,"Perth North"
+"H0620","King Edward Memorial Hospital","Hospital",-31.950093,115.818576,"Public","Open","Western Australia","North Metropolitan Health Service (WA)","Perth North"
+"H0621","Sir Charles Gairdner Hospital","Hospital",-31.968291,115.815467,"Public","Open","Western Australia","North Metropolitan Health Service (WA)","Perth North"
+"H0623","Selby Authorised Lodge","Hospital",-31.958204,115.80199,"Public","Open","Western Australia","North Metropolitan Health Service (WA)","Perth North"
+"H0624","Osborne Park Hospital","Hospital",-31.885976,115.804717,"Public","Open","Western Australia","North Metropolitan Health Service (WA)","Perth North"
+"H0625","Swan District Hospital","Hospital",,,"Public","Closed","Western Australia",,"Perth North"
+"H0626","Kalamunda Hospital","Hospital",-31.966471,116.060267,"Public","Open","Western Australia","East Metropolitan Health Service (WA)","Perth North"
+"H0627","Next Step Drug And Alcohol Services, East Perth","Hospital",-31.953405,115.869171,"Public","Open","Western Australia","East Metropolitan Health Service (WA)","Perth North"
+"H0628","Joondalup Health Campus (Public)","Hospital",-31.738788,115.771737,"Public","Open","Western Australia","North Metropolitan Health Service (WA)","Perth North"
+"H0631","Royal Perth Hospital Shenton Park Campus","Hospital",,,"Public","Closed","Western Australia",,"Perth North"
+"H0632","Royal Perth Hospital Wellington Street Campus","Hospital",-31.954242,115.8663,"Public","Open","Western Australia","East Metropolitan Health Service (WA)","Perth North"
+"H0633","Fremantle Hospital and Health Service","Hospital",-32.058263,115.751448,"Public","Open","Western Australia","South Metropolitan Health Service (WA)","Perth South"
+"H0634","Kaleeya Hospital","Hospital",,,"Public","Closed","Western Australia",,"Perth South"
+"H0635","Armadale-Kelmscott Memorial Hospital","Hospital",-32.133212,116.020023,"Public","Open","Western Australia","East Metropolitan Health Service (WA)","Perth South"
+"H0636","Bentley Health Service","Hospital",-32.005332,115.927922,"Public","Open","Western Australia","East Metropolitan Health Service (WA)","Perth South"
+"H0637","Rockingham General Hospital","Hospital",-32.291359,115.770899,"Public","Open","Western Australia","South Metropolitan Health Service (WA)","Perth South"
+"H0638","Murray District Hospital","Hospital",-32.639709,115.871589,"Public","Open","Western Australia","South Metropolitan Health Service (WA)","Perth South"
+"H0639","Peel Health Campus","Hospital",-32.532573,115.763504,"Public","Open","Western Australia","South Metropolitan Health Service (WA)","Perth South"
+"H0642","Fitzroy Crossing Hospital","Hospital",-18.191439,125.562765,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0643","Halls Creek Hospital","Hospital",-18.226008,127.666046,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0644","Broome Hospital","Hospital",-17.960975,122.236289,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0645","Derby Hospital","Hospital",-17.306339,123.633399,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0646","Wyndham Hospital","Hospital",-15.477793,128.127772,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0647","Kununurra Hospital","Hospital",-15.775404,128.734229,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0648","Hedland Health Campus","Hospital",-20.413541,118.598178,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0649","Onslow Hospital","Hospital",-21.643238,115.115389,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0650","Roebourne Hospital","Hospital",-20.776317,117.143955,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0651","Tom Price Hospital","Hospital",-22.695367,117.790271,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0652","Newman Hospital","Hospital",-23.354824,119.736503,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0653","Paraburdoo Hospital","Hospital",-23.203031,117.670633,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0654","Nickol Bay Hospital","Hospital",,,"Public","Closed","Western Australia",,"Country WA"
+"H0655","Carnarvon Hospital","Hospital",-24.886592,113.658993,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0656","Exmouth Hospital","Hospital",-21.928276,114.119882,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0657","Geraldton Hospital","Hospital",-28.782808,114.610844,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0658","Meekatharra Hospital","Hospital",-26.591366,118.491861,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0659","Morawa Health Service","Hospital",-29.212897,116.002986,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0660","Mullewa Health Service","Hospital",-28.535991,115.510017,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0661","Northampton Kalbarri Health Service","Hospital",-28.351194,114.635119,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0662","North Midlands Health Service","Hospital",-29.534221,115.759184,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0663","Kalbarri Health Centre","Hospital",-27.712843,114.161574,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0664","Dongara Eneabba Mingenew Health Service","Hospital",-29.265173,114.934179,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0665","Lake Grace Hospital","Hospital",-33.102524,118.452658,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0666","Merredin Hospital","Hospital",-31.485204,118.276491,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0667","Narrogin Hospital","Hospital",-32.937341,117.168459,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0668","Northam Hospital","Hospital",-31.649582,116.657681,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0669","Wagin Hospital","Hospital",-33.304662,117.347319,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0670","York Hospital","Hospital",-31.894392,116.757416,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0671","Beverley Hospital","Hospital",-32.102825,116.922962,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0672","Boddington Hospital","Hospital",-32.803715,116.475774,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0673","Bruce Rock Memorial Hospital","Hospital",-31.873038,118.146414,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0674","Corrigin Hospital","Hospital",-32.324419,117.878816,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0675","Cunderdin Hospital","Hospital",,,"Public","Closed","Western Australia",,"Country WA"
+"H0676","Dalwallinu Hospital","Hospital",-30.277229,116.656544,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0677","Dumbleyung Memorial Hospital","Hospital",-33.310409,117.740499,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0678","Kellerberrin Memorial Hospital","Hospital",-31.628902,117.716531,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0679","Goomalling Hospital","Hospital",-31.303928,116.831102,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0680","Kondinin Hospital","Hospital",-32.488949,118.265439,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0681","Kununoppin Health Service","Hospital",-31.109682,117.922889,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0682","Moora Hospital","Hospital",-30.639557,116.001119,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0683","Narembeen Memorial Hospital","Hospital",-32.061618,118.391289,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0684","Pingelly Health Centre","Hospital",-32.533042,117.089789,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0685","Southern Cross Hospital","Hospital",-31.230709,119.337829,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0686","Wongan Hills Hospital","Hospital",-30.894159,116.724843,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0687","Wyalkatchem-Koorda and Districts Hospital","Hospital",-31.176246,117.386212,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0688","Quairading Hospital","Hospital",-32.014481,117.402627,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0689","Esperance Hospital","Hospital",-33.856188,121.892205,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0690","Kalgoorlie Health Campus","Hospital",-30.740839,121.470122,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0691","Laverton Hospital","Hospital",-28.626817,122.399861,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0692","Leonora Hospital","Hospital",-28.894319,121.337492,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0693","Norseman Hospital","Hospital",-32.198566,121.767663,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0694","Albany Hospital","Hospital",-35.003407,117.904468,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0695","Denmark Hospital and Health Service","Hospital",-34.955912,117.357858,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0696","Katanning Hospital","Hospital",-33.683032,117.563409,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0697","Gnowangerup Hospital","Hospital",-33.930469,118.002927,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0698","Plantagenet Hospital","Hospital",-34.626092,117.654561,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0699","Ravensthorpe Health Centre","Hospital",-33.584918,120.045461,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0700","Kojonup Hospital","Hospital",-33.829481,117.152903,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0701","Augusta Hospital","Hospital",-34.305814,115.157983,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0702","Bunbury Hospital","Hospital",-33.366986,115.648183,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0703","Busselton Health Campus","Hospital",-33.654351,115.319581,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0704","Collie Hospital","Hospital",-33.351403,116.162223,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0705","Margaret River Hospital","Hospital",-33.952162,115.071229,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0706","Donnybrook Hospital","Hospital",-33.576942,115.816547,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0707","Harvey Hospital","Hospital",-33.077554,115.896749,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0708","Nannup Hospital","Hospital",-33.982797,115.76723,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0709","Pemberton Hospital","Hospital",-34.444875,116.031954,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0710","Boyup Brook Soldiers Memorial Hospital","Hospital",-33.839231,116.390639,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0711","Warren Hospital","Hospital",-34.240969,116.154112,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0712","Bridgetown Hospital","Hospital",-33.951681,116.132183,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0713","Graylands Selby-Lemnos and Special Care Health Service","Hospital",-31.961447,115.790855,"Public","Open","Western Australia","North Metropolitan Health Service (WA)","Perth North"
+"H0714","Royal Hobart Hospital","Hospital",-42.880028,147.330136,"Public","Open","Tasmania","Tasmanian Health Service","Tasmania"
+"H0721","Launceston General Hospital","Hospital",-41.446634,147.142059,"Public","Open","Tasmania","Tasmanian Health Service","Tasmania"
+"H0731","North West Regional Hospital","Hospital",-41.048385,145.880842,"Public","Open","Tasmania","Tasmanian Health Service","Tasmania"
+"H0735","Mersey Community Hospital","Hospital",-41.229052,146.422445,"Public","Open","Tasmania","Tasmanian Health Service","Tasmania"
+"H0737","Royal Darwin Hospital","Hospital",-12.355806,130.881789,"Public","Open","Northern Territory","NT Regional Health Services (NTRHS)","Northern Territory"
+"H0738","Alice Springs Hospital","Hospital",-23.705758,133.878064,"Public","Open","Northern Territory","NT Regional Health Services (NTRHS)","Northern Territory"
+"H0739","Tennant Creek Hospital","Hospital",-19.647791,134.186893,"Public","Open","Northern Territory","NT Regional Health Services (NTRHS)","Northern Territory"
+"H0740","Katherine Hospital","Hospital",-14.439002,132.272129,"Public","Open","Northern Territory","NT Regional Health Services (NTRHS)","Northern Territory"
+"H0741","Gove Hospital","Hospital",-12.18602,136.777874,"Public","Open","Northern Territory","NT Regional Health Services (NTRHS)","Northern Territory"
+"H0742","The Canberra Hospital","Hospital",-35.345777,149.100898,"Public","Open","Australian Capital Territory","Australian Capital Territory","Australian Capital Territory"
+"H0743","North Canberra Hospital (previously known as Calvary Public Hospital Bruce)","Hospital",-35.253321,149.089654,"Public","Open","Australian Capital Territory","Australian Capital Territory","Australian Capital Territory"
+"H0744","Robina Hospital","Hospital",-28.072198,153.377284,"Public","Open","Queensland","Gold Coast","Gold Coast"
+"H0745","Queensland Children's Hospital","Hospital",-27.484305,153.026717,"Public","Open","Queensland","Children's Health Queensland","Brisbane South"
+"H0746","Fiona Stanley Hospital","Hospital",-32.07012,115.846909,"Public","Open","Western Australia","South Metropolitan Health Service (WA)","Perth South"
+"H0747","St John of God Midland Public Hospital","Hospital",-31.894832,116.008852,"Public","Open","Western Australia","East Metropolitan Health Service (WA)","Perth North"
+"H0748","Byron Central Hospital","Hospital",-28.637365,153.555898,"Public","Open","New South Wales","Northern NSW","North Coast"
+"H0749","Women's at Sandringham","Hospital",-37.961049,145.018157,"Public","Open","Victoria","Royal Women's Hospital (Melbourne)","South Eastern Melbourne"
+"H0750","Sunshine Coast University Hospital","Hospital",-26.74681,153.113812,"Public","Open","Queensland","Sunshine Coast","Central Queensland, Wide Bay and Sunshine Coast"
+"H0751","Perth Children's Hospital","Hospital",-31.969503,115.817165,"Public","Open","Western Australia","Child Adolescent Health Service (WA)","Perth North"
+"H0752","Karratha Health Campus","Hospital",-20.732208,116.839511,"Public","Open","Western Australia","WA Country Health Service","Country WA"
+"H0753","Northern Beaches Hospital","Hospital",-33.750646,151.23377,"Public","Open","New South Wales","Northern Sydney","Northern Sydney"
+"H0754","Palmerston Regional Hospital","Hospital",-12.475079,131.004464,"Public","Open","Northern Territory","NT Regional Health Services (NTRHS)","Northern Territory"
+"H1005","Careplans Assessment Victoria","Hospital",,,"Public","Closed","Victoria",,"North Western Melbourne"
+"H1008","Cudal Health Service","Hospital",,,"Public","Closed","New South Wales",,"Western NSW"
+"H1009","Dame Phyllis Frost Centre - Marmak unit","Hospital",-37.781307,144.742309,"Public","Open","Victoria","Unknown","North Western Melbourne"
+"H1016","Goodooga Health Service","Hospital",-29.110249,147.456114,"Public","Open","New South Wales","Western NSW","Western NSW"
+"H1018","Ivanhoe Hospital","Hospital",-32.898193,144.298904,"Public","Open","New South Wales","Far West","Western NSW"
+"H1024","Menindee Health Service","Hospital",-32.390335,142.414869,"Public","Open","New South Wales","Far West","Western NSW"
+"H1028","QEII Family Centre","Hospital",-35.323284,149.079172,"Public","Open","Australian Capital Territory","Australian Capital Territory","Australian Capital Territory"
+"H1034","Sydney Dental Hospital","Hospital",-33.884469,151.207811,"Public","Open","New South Wales","Sydney","Central and Eastern Sydney"
+"H1035","Sydney Road Clinic","Hospital",,,"Public","Closed","Victoria",,"North Western Melbourne"
+"H1038","Tibooburra Health Service","Hospital",-29.433211,142.012817,"Public","Open","New South Wales","Far West","Western NSW"
+"H1046","Mallee Track Health & Community Service [Sea Lake]","Hospital",-35.500395,142.858003,"Public","Open","Victoria","Mallee Track Health and Community Service","Murray"
+"H1047","Ursula Frayne Centre","Hospital",-37.791148,144.886747,"Public","Open","Victoria","Mercy Public Hospital Inc. (Vic)","North Western Melbourne"
+"H1048","Surgical Treatment and Rehabilitation Service","Hospital",-27.44926,153.02611,"Public","Open","Queensland","Metro North (Qld)","Brisbane North"
+"H1049","St Vincent's On the Park","Hospital",-37.81115,144.97784,"Public","Open","Victoria","St Vincent's Hospital (Melbourne) Limited","North Western Melbourne"
+"H1050","Jacaranda Place Queensland Adolescent Extended Treatment Centre","Hospital",-27.38765,153.02656,"Public","Open","Queensland","Children's Health Queensland","Brisbane North"
+"H1051","James Nash House","Hospital",-34.849781,138.637283,"Public","Open","South Australia","Northern Adelaide","Adelaide"
+"H1052","University of Canberra Hospital","Hospital",-35.232925,149.081879,"Public","Open","Australian Capital Territory","Australian Capital Territory","Australian Capital Territory"
+"H1053","Glenside Rural & Remote","Hospital",-34.943985,138.628775,"Public","Open","South Australia","Barossa Hills Fleurieu","Adelaide"
+"H1054","Victorian Heart Hospital","Hospital",-37.91254,145.13984,"Public","Open","Victoria","Monash Health","Eastern Melbourne"
+"H1055","Blackburn Public Surgical Centre","Hospital",-37.83332,145.15611,"Public","Open","Victoria","Eastern Health (Vic)","Eastern Melbourne"
+"H1056","Frankston Public Surgical Centre","Hospital",-38.1544,145.13313,"Public","Open","Victoria","Peninsula Health (Vic)","South Eastern Melbourne"
+"H1057","Sandringham Monash","Hospital",-37.961049,145.018157,"Public","Open","Victoria","Monash Health","South Eastern Melbourne"
+"H1058","Adolescent and Young Adult Hospice Manly","Hospital",-33.807218,151.295552,"Public","Open","New South Wales","Northern Sydney","Northern Sydney"
+"H1059","North Canberra Hospital","Hospital",-35.253321,149.089654,"Public","Open","Australian Capital Territory","Australian Capital Territory","Australian Capital Territory"
+"H1060","Casey Early Parenting Centre","Hospital",-38.09401,145.343446,"Public","Open","Victoria","Monash Health","South Eastern Melbourne"
+"H1061","Wyndham Early Parenting Centre","Hospital",-37.887658,144.692356,"Public","Open","Victoria","Not stated/inadequately described","North Western Melbourne"
+"H1062","Whittlesea Early Parenting Centre","Hospital",-37.648953,145.077691,"Public","Open","Victoria","Mercy Public Hospital Inc. (Vic)","Eastern Melbourne"
+"H1063","St James Transitional Care Unit","Hospital",-31.995986,115.910104,"Public","Open","Western Australia","East Metropolitan Health Service (WA)","Perth South"
+"H1064","White Cliffs Health Service","Hospital",-30.850682,143.089582,"Public","Open","New South Wales","Far West","Western NSW"
+"H1065","Barwon Health North","Hospital",,,"Public","Open","Victoria","Barwon Health","Western Victoria"
+"H1066","Wayipunga Early Parenting Centre","Hospital",-36.765509,144.290993,"Public","Open","Victoria","Bendigo Health Care Group","Murray"
+"H1067","Goulburn Valley Health [Euroa]","Hospital",-36.759125,145.570303,"Public","Open","Victoria","Goulburn Valley Health","Murray"
+"H1068","Mater Hospital Springfield","Hospital",-27.685838,152.908926,"Public","Open","Queensland","Not stated/inadequately described","Darling Downs and West Moreton"
+"H5002","Adelaide Day Surgery Pty Ltd","Hospital",-34.922409,138.588817,"Private","Open","South Australia",,
+"H5003","Adelaide Eye & Laser Centre","Hospital",-34.94042,138.6215,"Private","Open","South Australia",,
+"H5004","Aesthetic Day Surgery","Hospital",-33.964843,151.135032,"Private","Open","New South Wales",,
+"H5005","Albert Road Clinic","Hospital",-37.834246,144.972151,"Private","Open","Victoria",,
+"H5006","Albury Wodonga Private Hospital","Hospital",-36.075621,146.883177,"Private","Open","New South Wales",,
+"H5009","Armidale Private Hospital","Hospital",-30.512719,151.654565,"Private","Open","New South Wales",,
+"H5010","Ashford Hospital","Hospital",-34.948142,138.576725,"Private","Open","South Australia",,
+"H5011","Attadale Rehabilitation Hospital","Hospital",-32.029729,115.810669,"Private","Open","Western Australia",,
+"H5013","Ballina Day Surgery","Hospital",-28.870711,153.563241,"Private","Open","New South Wales",,
+"H5014","Baringa Private Hospital","Hospital",-30.278813,153.102893,"Private","Open","New South Wales",,
+"H5015","Bathurst Private Hospital","Hospital",-33.435215,149.589242,"Private","Open","New South Wales",,
+"H5017","Beleura Private Hospital","Hospital",-38.225484,145.049136,"Private","Open","Victoria",,
+"H5018","Bellbird Private Hospital","Hospital",,,"Private","Closed","Victoria",,
+"H5019","Berkeley Vale Private Hospital","Hospital",-33.337061,151.432784,"Private","Open","New South Wales",,
+"H5021","Bethesda Hospital","Hospital",-31.986967,115.778484,"Private","Open","Western Australia",,
+"H5024","Brisbane Private Hospital","Hospital",-27.464756,153.022642,"Private","Open","Queensland",,
+"H5025","Brisbane Waters Private Hospital","Hospital",-33.495233,151.321708,"Private","Open","New South Wales",,
+"H5026","Caboolture Private Hospital","Hospital",-27.080318,152.963628,"Private","Open","Queensland",,
+"H5027","Cabrini Brighton","Hospital",-37.91165,144.991572,"Private","Open","Victoria",,
+"H5028","Cabrini Health Elsternwick Rehabilitation - Glenhuntly Rd","Hospital",-37.88543,145.009328,"Private","Open","Victoria",,
+"H5029","Cabrini Health Elsternwick Rehabilitation - Hopetoun","Hospital",-37.884778,145.01039,"Private","Open","Victoria",,
+"H5030","Cabrini Malvern","Hospital",-37.861641,145.0335,"Private","Open","Victoria",,
+"H5031","Cabrini Prahran","Hospital",-37.854034,145.009017,"Private","Open","Victoria",,
+"H5032","Ramsay Surgical Centre Cairns","Hospital",-16.918973,145.771955,"Private","Open","Queensland",,
+"H5033","Cairns Private Hospital","Hospital",-16.918854,145.772282,"Private","Open","Queensland",,
+"H5034","Ramsay Clinic Caloundra","Hospital",-26.782379,153.125534,"Private","Open","Queensland",,
+"H5035","Calvary Central Districts Hospital","Hospital",-34.75542,138.656221,"Private","Open","South Australia",,
+"H5036","Calvary Health Care Riverina","Hospital",-35.118702,147.352811,"Private","Open","New South Wales",,
+"H5037","Calvary - Lenah Valley Hospital","Hospital",-42.866099,147.303614,"Private","Open","Tasmania",,
+"H5038","Calvary - St John's Hospital","Hospital",-42.895314,147.305975,"Private","Open","Tasmania",,
+"H5039","Calvary - St Luke's Hospital","Hospital",-41.433895,147.149521,"Private","Open","Tasmania",,
+"H5040","Calvary - St Vincent's Hospital","Hospital",-41.441013,147.141308,"Private","Open","Tasmania",,
+"H5041","Calvary John James Hospital","Hospital",-35.319869,149.095662,"Private","Open","Australian Capital Territory",,
+"H5042","Calvary North Adelaide Hospital","Hospital",-34.910003,138.589095,"Private","Open","South Australia",,
+"H5043","Calvary Bruce Private Hospital","Hospital",-35.252882,149.088646,"Private","Open","Australian Capital Territory",,
+"H5044","Calvary Rehabilitation Hospital","Hospital",,,"Private","Closed","South Australia",,
+"H5046","Campbelltown Private Hospital","Hospital",-34.075607,150.804948,"Private","Open","New South Wales",,
+"H5047","Canberra Imaging Group Angiography/Interventional Suite","Hospital",-35.318557,149.096004,"Private","Open","Australian Capital Territory",,
+"H5050","Castlecrag Private Hospital","Hospital",-33.801822,151.217045,"Private","Open","New South Wales",,
+"H5051","Central Coast Day Hospital","Hospital",-33.439692,151.384354,"Private","Open","New South Wales",,
+"H5055","Colin Street Day Hospital","Hospital",-31.949358,115.841569,"Private","Open","Western Australia",,
+"H5057","Coolenberg Day Surgery","Hospital",-31.439829,152.909473,"Private","Open","New South Wales",,
+"H5058","Cotham Private Hospital","Hospital",,,"Private","Closed","Victoria",,
+"H5059","Dalcross Adventist Hospital","Hospital",,,"Private","Closed","New South Wales",,
+"H5060","Darwin Private Hospital","Hospital",-12.357357,130.881789,"Private","Open","Northern Territory",,
+"H5062","Diagnostic Endoscopy Centre","Hospital",-33.879519,151.220852,"Private","Open","New South Wales",,
+"H5063","Donvale Rehabilitation Hospital","Hospital",-37.789836,145.171655,"Private","Open","Victoria",,
+"H5064","Dorset Rehabilitation Centre","Hospital",-37.723402,144.947436,"Private","Open","Victoria",,
+"H5065","Dudley Private Hospital","Hospital",-33.282219,149.121236,"Private","Open","New South Wales",,
+"H5067","Epping Surgery Centre","Hospital",-33.771132,151.083676,"Private","Open","New South Wales",,
+"H5068","Epworth Cliveden","Hospital",,,"Private","Closed","Victoria",,
+"H5069","Epworth Eastern","Hospital",-37.814678,145.119368,"Private","Open","Victoria",,
+"H5070","Epworth Freemasons [Albert Street]","Hospital",-37.810694,144.984107,"Private","Open","Victoria",,
+"H5071","Epworth Freemasons [Victoria Parade]","Hospital",-37.809284,144.98212,"Private","Open","Victoria",,
+"H5072","Epworth Rehabilitation Brighton","Hospital",-37.913689,145.002815,"Private","Open","Victoria",,
+"H5073","Epworth Camberwell","Hospital",-37.846223,145.054689,"Private","Open","Victoria",,
+"H5074","Epworth Richmond Rehabilitation","Hospital",-37.817419,144.993503,"Private","Open","Victoria",,
+"H5075","Epworth Richmond","Hospital",-37.817433,144.993029,"Private","Open","Victoria",,
+"H5076","Eye-Tech Day Surgeries","Hospital",-27.461026,153.021898,"Private","Open","Queensland",,
+"H5077","Eye-Tech Day Surgeries Southside","Hospital",-27.557642,153.082042,"Private","Open","Queensland",,
+"H5078","Figtree Private Hospital","Hospital",-34.440199,150.851024,"Private","Open","New South Wales",,
+"H5079","Flinders Private Hospital","Hospital",-35.020629,138.568089,"Private","Open","South Australia",,
+"H5080","Forster Private Hospital","Hospital",-32.188561,152.514079,"Private","Open","New South Wales",,
+"H5081","Frances Perry House","Hospital",-37.798758,144.955135,"Private","Open","Victoria",,
+"H5083","Geelong Private Hospital","Hospital",,,"Private","Closed","Victoria",,
+"H5084","Ramsay Surgical Centre Glenferrie","Hospital",-37.819459,145.031544,"Private","Open","Victoria",,
+"H5085","Glengarry Private Hospital","Hospital",-31.834253,115.784826,"Private","Open","Western Australia",,
+"H5086","Greenslopes Private Hospital","Hospital",-27.513052,153.046942,"Private","Open","Queensland",,
+"H5087","Griffith Rehabilitation Hospital","Hospital",-35.010285,138.523859,"Private","Open","South Australia",,
+"H5088","Gympie Private Hospital","Hospital",,,"Private","Closed","Queensland",,
+"H5091","Hervey Bay Surgical Hospital","Hospital",-25.287202,152.834651,"Private","Open","Queensland",,
+"H5092","Hillcrest Rockhampton Private Hospital","Hospital",-23.377595,150.496076,"Private","Open","Queensland",,
+"H5093","Hobart Private Hospital","Hospital",-42.880752,147.329886,"Private","Open","Tasmania",,
+"H5094","Hollywood Private Hospital","Hospital",-31.969693,115.809148,"Private","Open","Western Australia",,
+"H5095","St Vincent's Private Hospital [Northside]","Hospital",-27.390688,153.022728,"Private","Open","Queensland",,
+"H5097","Hunter Valley Private Hospital","Hospital",-32.883085,151.695054,"Private","Open","New South Wales",,
+"H5098","Hunters Hill Private Hospital","Hospital",-33.835273,151.150172,"Private","Open","New South Wales",,
+"H5099","Hurstville Private","Hospital",-33.962333,151.095989,"Private","Open","New South Wales",,
+"H5100","Ipswich Day Hospital","Hospital",-27.6184,152.7608,"Private","Open","Queensland",,
+"H5101","John Fawkner Private Hospital","Hospital",-37.754369,144.958398,"Private","Open","Victoria",,
+"H5102","John Flynn Private Hospital","Hospital",-28.153911,153.488616,"Private","Open","Queensland",,
+"H5103","Joondalup Health Campus (Private)","Hospital",-31.738788,115.77034,"Private","Open","Western Australia",,
+"H5105","Kareena Private Hospital","Hospital",-34.034986,151.114186,"Private","Open","New South Wales",,
+"H5106","Kawana Private Hospital","Hospital",-26.733825,153.122164,"Private","Open","Queensland",,
+"H5107","Knox Private Hospital","Hospital",-37.849645,145.228035,"Private","Open","Victoria",,
+"H5108","Lady Davidson Private Hospital","Hospital",-33.726718,151.139119,"Private","Open","New South Wales",,
+"H5109","Lake Macquarie Private Hospital","Hospital",-32.981232,151.691719,"Private","Open","New South Wales",,
+"H5110","Lawrence Hargrave Private Hospital","Hospital",,,"Private","Closed","New South Wales",,
+"H5111","Linacre Private Hospital","Hospital",-37.942699,145.003259,"Private","Open","Victoria",,
+"H5113","Macquarie University Hospital","Hospital",-33.773484,151.117877,"Private","Open","New South Wales",,
+"H5114","Maryvale Private Hospital","Hospital",-38.215028,146.418561,"Private","Open","Victoria",,
+"H5115","Masada Private Hospital","Hospital",-37.869799,145.003096,"Private","Open","Victoria",,
+"H5116","Mater Children's Private Brisbane","Hospital",-27.48485,153.027436,"Private","Open","Queensland",,
+"H5117","Mater Private Hospital Townsville","Hospital",-19.288482,146.786528,"Private","Open","Queensland",,
+"H5118","Mater Misericordiae Day Unit","Hospital",-21.139073,149.181984,"Private","Open","Queensland",,
+"H5119","Mater Misericordiae Hospital Bundaberg","Hospital",-24.870766,152.330412,"Private","Open","Queensland",,
+"H5120","Mater Misericordiae Hospital Gladstone","Hospital",,,"Private","Closed","Queensland",,
+"H5121","Mater Misericordiae Hospital Mackay","Hospital",-21.129416,149.166033,"Private","Open","Queensland",,
+"H5122","Mater Misericordiae Hospital Rockhampton","Hospital",-23.398033,150.497444,"Private","Open","Queensland",,
+"H5124","Mater Mothers' Private Brisbane","Hospital",-27.485992,153.027747,"Private","Open","Queensland",,
+"H5125","Mater Private Hospital Redland","Hospital",-27.540811,153.25043,"Private","Open","Queensland",,
+"H5126","Mater Private Hospital Brisbane","Hospital",-27.483975,153.028777,"Private","Open","Queensland",,
+"H5130","Melbourne Private Hospital","Hospital",-37.798272,144.957025,"Private","Open","Victoria",,
+"H5131","St John of God Mt Lawley Hospital","Hospital",-31.936721,115.884926,"Private","Open","Western Australia",,
+"H5132","St Vincent's Private Hospital [East Melbourne]","Hospital",-37.811733,144.984164,"Private","Open","Victoria",,
+"H5133","Metwest Eye Centre","Hospital",-33.774236,150.912421,"Private","Open","New South Wales",,
+"H5135","Mildura Health Private Hospital","Hospital",-34.18479,142.145705,"Private","Open","Victoria",,
+"H5136","Mitcham Private Hospital","Hospital",-37.810436,145.194808,"Private","Open","Victoria",,
+"H5138","Montserrat Day Hospital Indooroopilly","Hospital",,,"Private","Closed","Queensland",,
+"H5140","Mosman Private Hospital","Hospital",,,"Private","Closed","New South Wales",,
+"H5141","Mount Gambier Private Hospital","Hospital",,,"Private","Closed","South Australia",,
+"H5142","Mount Hospital","Hospital",-31.958534,115.845401,"Private","Open","Western Australia",,
+"H5143","Mount Wilga Private Hospital","Hospital",-33.692829,151.092939,"Private","Open","New South Wales",,
+"H5144","Murray Valley Private Hospital","Hospital",-36.138419,146.876478,"Private","Open","Victoria",,
+"H5145","Nambour Selangor Private Hospital","Hospital",-26.618265,152.955949,"Private","Open","Queensland",,
+"H5146","National Capital Private Hospital","Hospital",-35.344872,149.101944,"Private","Open","Australian Capital Territory",,
+"H5147","Nepean Private Hospital","Hospital",-33.759775,150.715206,"Private","Open","New South Wales",,
+"H5148","Ramsay Clinic New Farm","Hospital",-27.473623,153.045879,"Private","Open","Queensland",,
+"H5149","Newcastle Private Hospital","Hospital",-32.922537,151.698371,"Private","Open","New South Wales",,
+"H5150","Noosa Hospital","Hospital",-26.403209,153.046309,"Private","Open","Queensland",,
+"H5151","North Eastern Rehabilitation Centre","Hospital",-37.763424,145.031344,"Private","Open","Victoria",,
+"H5152","North Shore Private Hospital","Hospital",-33.820622,151.189159,"Private","Open","New South Wales",,
+"H5153","North West Private Hospital","Hospital",-27.393992,152.992705,"Private","Open","Queensland",,
+"H5154","Northpark Private Hospital","Hospital",-37.691208,145.061631,"Private","Open","Victoria",,
+"H5155","Ramsay Clinic Northside","Hospital",-33.825156,151.188367,"Private","Open","New South Wales",,
+"H5156","Ramsay Clinic Cremorne","Hospital",-33.833425,151.222886,"Private","Open","New South Wales",,
+"H5157","Ramsay Clinic Wentworthville","Hospital",-33.811188,150.974575,"Private","Open","New South Wales",,
+"H5158","Norwest Private Hospital","Hospital",-33.744941,150.953608,"Private","Open","New South Wales",,
+"H5159","Nowra Private Hospital","Hospital",-34.893534,150.606551,"Private","Open","New South Wales",,
+"H5161","Orange Surgery Centre","Hospital",-33.283027,149.102737,"Private","Open","New South Wales",,
+"H5162","Oxford Day Surgery and Dermatology","Hospital",-31.922727,115.841536,"Private","Open","Western Australia",,
+"H5164","Pacific Private Hospital","Hospital",-27.970407,153.407829,"Private","Open","Queensland",,
+"H5165","Parkwynd Private Hospital","Hospital",,,"Private","Closed","South Australia",,
+"H5166","Peninsula Private Hospital Queensland","Hospital",-27.230696,153.093087,"Private","Open","Queensland",,
+"H5167","Peninsula Private Hospital Victoria","Hospital",-38.157557,145.169552,"Private","Open","Victoria",,
+"H5168","Pennant Hills Day Surgery","Hospital",-33.738295,151.074354,"Private","Open","New South Wales",,
+"H5169","Perth Clinic","Hospital",-31.950874,115.843266,"Private","Open","Western Australia",,
+"H5170","Pindara Day Procedure Centre","Hospital",-28.008508,153.39373,"Private","Open","Queensland",,
+"H5171","Pindara Private Hospital","Hospital",-28.007076,153.393569,"Private","Open","Queensland",,
+"H5172","Pine Rivers Private Hospital","Hospital",-27.308361,152.994832,"Private","Open","Queensland",,
+"H5173","Port Macquarie Private Hospital","Hospital",-31.442073,152.909375,"Private","Open","New South Wales",,
+"H5174","Prince of Wales Private Hospital","Hospital",-33.918492,151.238659,"Private","Open","New South Wales",,
+"H5175","Ringwood Private Hospital","Hospital",-37.811523,145.243629,"Private","Open","Victoria",,
+"H5176","Rivercity Private Hospital","Hospital",-27.473491,152.995132,"Private","Open","Queensland",,
+"H5179","Shepparton Private Hospital","Hospital",-36.359183,145.410825,"Private","Open","Victoria",,
+"H5180","Short Street Day Surgery","Hospital",-27.970813,153.416975,"Private","Open","Queensland",,
+"H5181","Lady Bjelke-Petersen Community Hospital","Hospital",-26.543051,151.836891,"Private","Open","Queensland",,
+"H5182","South Eastern Private Hospital","Hospital",-37.966243,145.191922,"Private","Open","Victoria",,
+"H5184","Southern Highlands Private Hospital","Hospital",-34.484223,150.422882,"Private","Open","New South Wales",,
+"H5185","Southside Endoscopy Centre","Hospital",-27.662981,153.17828,"Private","Open","Queensland",,
+"H5186","SPORTSMED SA Hospital & Day Surgery","Hospital",-34.913521,138.624987,"Private","Open","South Australia",,
+"H5187","St Andrew's Hospital","Hospital",-34.934224,138.614963,"Private","Open","South Australia",,
+"H5188","St Andrew's Ipswich Private Hospital","Hospital",-27.618799,152.763079,"Private","Open","Queensland",,
+"H5189","St Andrew's War Memorial Hospital","Hospital",-27.461224,153.021011,"Private","Open","Queensland",,
+"H5190","St George Private Hospital","Hospital",-33.966952,151.136055,"Private","Open","New South Wales",,
+"H5191","St Helen's Private Hospital","Hospital",-42.886839,147.325791,"Private","Open","Tasmania",,
+"H5192","St John of God Ballarat Hospital","Hospital",-37.558544,143.847406,"Private","Open","Victoria",,
+"H5193","St John of God Bendigo Hospital","Hospital",-36.762043,144.263298,"Private","Open","Victoria",,
+"H5194","St John of God Berwick Hospital","Hospital",-38.034499,145.344974,"Private","Open","Victoria",,
+"H5195","St John of God Bunbury Hospital","Hospital",-33.365947,115.648869,"Private","Open","Western Australia",,
+"H5196","St John of God Burwood Hospital","Hospital",-33.869832,151.100538,"Private","Open","New South Wales",,
+"H5197","St John of God Geelong Hospital","Hospital",-38.151567,144.357679,"Private","Open","Victoria",,
+"H5198","St John of God Geraldton Hospital","Hospital",-28.784383,114.616439,"Private","Open","Western Australia",,
+"H5199","St John of God Murdoch Hospital","Hospital",-32.067919,115.844659,"Private","Open","Western Australia",,
+"H5200","St John of God Richmond Hospital","Hospital",-33.591946,150.702473,"Private","Open","New South Wales",,
+"H5201","St John of God Subiaco Hospital","Hospital",-31.941246,115.826282,"Private","Open","Western Australia",,
+"H5202","St John of God Warrnambool Hospital","Hospital",-38.371405,142.478749,"Private","Open","Victoria",,
+"H5203","St John of God Frankston Rehabilitation Hospital","Hospital",-38.153035,145.155926,"Private","Open","Victoria",,
+"H5204","St John of God Pinelodge Clinic","Hospital",,,"Private","Closed","Victoria",,
+"H5205","St Luke's Hospital","Hospital",-33.874188,151.225836,"Private","Open","New South Wales",,
+"H5206","St Stephen's Hospital [Hervey Bay]","Hospital",-25.299851,152.823273,"Private","Open","Queensland",,
+"H5208","St Vincent's Private Hospital [Toowoomba]","Hospital",-27.565675,151.971551,"Private","Open","Queensland",,
+"H5209","St Vincent's Private Hospital Fitzroy","Hospital",-37.807993,144.976029,"Private","Open","Victoria",,
+"H5210","St Vincent's Private Hospital [Sydney]","Hospital",-33.880698,151.219462,"Private","Open","New South Wales",,
+"H5211","St Vincent's Private Hospital [Lismore]","Hospital",-28.819949,153.287381,"Private","Open","New South Wales",,
+"H5212","Stirling Hospital","Hospital",-35.007274,138.714859,"Private","Open","South Australia",,
+"H5213","Strathfield Private Hospital","Hospital",-33.872059,151.097544,"Private","Open","New South Wales",,
+"H5214","Subiaco Private Hospital","Hospital",-31.9434,115.826,"Private","Open","Western Australia",,
+"H5215","Sunnybank Private Hospital","Hospital",-27.572541,153.061051,"Private","Open","Queensland",,
+"H5216","Sunshine Coast Haematology and Oncology Clinic","Hospital",-26.657299,153.094955,"Private","Open","Queensland",,
+"H5218","Sydney Adventist Hospital","Hospital",-33.733379,151.099874,"Private","Open","New South Wales",,
+"H5219","Sydney Day Surgery - Prince Alfred","Hospital",-33.8912,151.1835,"Private","Open","New South Wales",,
+"H5220","Sydney Southwest Private Hospital","Hospital",-33.917876,150.927499,"Private","Open","New South Wales",,
+"H5221","Tamara Private Hospital","Hospital",-31.077535,150.921764,"Private","Open","New South Wales",,
+"H5222","The Avenue Hospital","Hospital",-37.854809,144.998513,"Private","Open","Victoria",,
+"H5223","The Bays Hospital","Hospital",-38.223524,145.040939,"Private","Open","Victoria",,
+"H5225","The Eye Hospital","Hospital",-41.444592,147.141609,"Private","Open","Tasmania",,
+"H5226","The Geelong Clinic","Hospital",-38.182406,144.393267,"Private","Open","Victoria",,
+"H5227","The Hills Clinic Kellyville","Hospital",-33.716759,150.952057,"Private","Open","New South Wales",,
+"H5228","The Hills Private Hospital","Hospital",-33.743476,150.9825,"Private","Open","New South Wales",,
+"H5229","The Hobart Clinic","Hospital",-42.905613,147.435278,"Private","Open","Tasmania",,
+"H5230","Mater Hospital Sydney","Hospital",-33.831152,151.201247,"Private","Open","New South Wales",,
+"H5231","The Melbourne Clinic","Hospital",-37.814361,144.998739,"Private","Open","Victoria",,
+"H5232","The Memorial Hospital","Hospital",-34.912733,138.599385,"Private","Open","South Australia",,
+"H5233","The Skin Hospital [Westmead]","Hospital",-33.8072,150.98879,"Private","Open","New South Wales",,
+"H5234","Buderim Private Hospital","Hospital",-26.683988,153.092895,"Private","Open","Queensland",,
+"H5235","The Sydney Clinic","Hospital",-33.901383,151.260988,"Private","Open","New South Wales",,
+"H5236","Mulgrave Private Hospital","Hospital",-37.938409,145.213122,"Private","Open","Victoria",,
+"H5237","The Victoria Clinic","Hospital",-37.847714,144.997225,"Private","Open","Victoria",,
+"H5238","The Victorian Rehabilitation Centre","Hospital",-37.898227,145.161425,"Private","Open","Victoria",,
+"H5239","The Wesley Hospital","Hospital",-27.478335,152.997971,"Private","Open","Queensland",,
+"H5241","Toowong Private Hospital","Hospital",-27.47736,152.99125,"Private","Open","Queensland",,
+"H5242","Toowoomba Surgicentre","Hospital",-27.566341,151.973785,"Private","Open","Queensland",,
+"H5243","Townsville Day Surgery","Hospital",-19.268889,146.782836,"Private","Open","Queensland",,
+"H5244","Tweed Day Surgery","Hospital",-28.179019,153.539989,"Private","Open","New South Wales",,
+"H5245","Victoria Parade Surgery Centre","Hospital",-37.808521,144.97476,"Private","Open","Victoria",,
+"H5246","St Vincent's Private Hospital [Kew]","Hospital",-37.806567,145.023694,"Private","Open","Victoria",,
+"H5247","Waikiki Private Hospital","Hospital",-32.310552,115.763147,"Private","Open","Western Australia",,
+"H5248","Wangaratta Private Hospital","Hospital",-36.349299,146.312423,"Private","Open","Victoria",,
+"H5249","Warners Bay Private Hospital","Hospital",-32.965262,151.641204,"Private","Open","New South Wales",,
+"H5250","Warringal Private Hospital","Hospital",-37.754419,145.060728,"Private","Open","Victoria",,
+"H5251","Waverley Private Hospital","Hospital",-37.884632,145.145798,"Private","Open","Victoria",,
+"H5252","Wesley Hospital Ashfield","Hospital",-33.8925,151.116666,"Private","Open","New South Wales",,
+"H5253","Wesley Hospital Kogarah","Hospital",-33.968262,151.12896,"Private","Open","New South Wales",,
+"H5254","Western Hospital","Hospital",-34.909971,138.49966,"Private","Open","South Australia",,
+"H5255","Western Private Hospital","Hospital",-37.793045,144.885932,"Private","Open","Victoria",,
+"H5256","Westmead Private Hospital","Hospital",-33.802865,150.982382,"Private","Open","New South Wales",,
+"H5257","Westmead Rehabilitation Hospital","Hospital",-33.819288,150.981059,"Private","Open","New South Wales",,
+"H5258","Westminster Day Surgery","Hospital",-31.862769,115.829163,"Private","Open","Western Australia",,
+"H5259","Wolper Jewish Hospital","Hospital",-33.884118,151.240739,"Private","Open","New South Wales",,
+"H5260","Adelaide Surgicentre","Hospital",-34.917691,138.621022,"Private","Open","South Australia",,
+"H5261","Brisbane Endoscopy Services","Hospital",-27.572418,153.061985,"Private","Open","Queensland",,
+"H5263","Mogo Day Surgery","Hospital",-35.782893,150.14387,"Private","Open","New South Wales",,
+"H5265","St Andrew's Toowoomba Hospital","Hospital",-27.539156,151.933665,"Private","Open","Queensland",,
+"H5266","Greenslopes Day Surgery","Hospital",,,"Private","Closed","Queensland",,
+"H5267","Ulladulla Endoscopy and Medical Centre","Hospital",-35.358764,150.473481,"Private","Open","New South Wales",,
+"H5269","Waratah Private Hospital","Hospital",-33.963651,151.100464,"Private","Open","New South Wales",,
+"H5270","Mackay Specialist Day Hospital","Hospital",-21.129471,149.16544,"Private","Open","Queensland",,
+"H5275","Burnside War Memorial Hospital","Hospital",-34.927126,138.638878,"Private","Open","South Australia",,
+"H5276","Manningham Day Procedure Centre","Hospital",-37.773471,145.115662,"Private","Open","Victoria",,
+"H5277","Glenelg Community Hospital Inc","Hospital",-34.990189,138.512321,"Private","Open","South Australia",,
+"H5278","Chermside Day Hospital","Hospital",-27.381971,153.029423,"Private","Open","Queensland",,
+"H5279","Vision Day Surgery Eastern","Hospital",-37.817591,145.119433,"Private","Open","Victoria",,
+"H5280","Vision Day Surgery Camberwell","Hospital",-37.83252,145.0556,"Private","Open","Victoria",,
+"H5281","Vision Day Surgery Footscray","Hospital",-37.800508,144.895155,"Private","Open","Victoria",,
+"H5282","North Queensland Day Surgical Centre","Hospital",-19.279643,146.791468,"Private","Open","Queensland",,
+"H5283","Vision Day Surgery Hurstville","Hospital",-33.966949,151.100439,"Private","Open","New South Wales",,
+"H5284","Vision Eye Institute Chatswood","Hospital",-33.795181,151.187314,"Private","Open","New South Wales",,
+"H5285","Vision Day Surgery Rivercity","Hospital",-27.473726,152.995579,"Private","Open","Queensland",,
+"H5286","Vision Eye Institute","Hospital",-37.850605,144.980304,"Private","Open","Victoria",,
+"H5287","Brisbane Day Surgery","Hospital",-27.4613,153.024547,"Private","Open","Queensland",,
+"H5288","The Sydney Private Hospital Incorporating the NSW Eye Centre","Hospital",-33.894,151.1299,"Private","Open","New South Wales",,
+"H5289","Epworth Hawthorn","Hospital",-37.821229,145.023405,"Private","Open","Victoria",,
+"H5290","Walcott Street Surgical Centre","Hospital",-31.936554,115.874141,"Private","Open","Western Australia",,
+"H5291","Miranda Eye Surgical Centre","Hospital",-34.03244,151.101631,"Private","Open","New South Wales",,
+"H5292","St Vincent's Private Hospital [Brisbane]","Hospital",-27.473334,153.03542,"Private","Open","Queensland",,
+"H5293","South Perth Hospital","Hospital",-31.988465,115.862816,"Private","Open","Western Australia",,
+"H5294","Ramsay Clinic Macarthur","Hospital",-34.071999,150.816958,"Private","Open","New South Wales",,
+"H5295","Sunshine Coast University Private Hospital","Hospital",-26.74422,153.114563,"Private","Open","Queensland",,
+"H5298","Mackay Private Hospital","Hospital",-21.113723,149.166763,"Private","Open","Queensland",,
+"H5299","Wagga Endoscopy Centre","Hospital",,,"Private","Closed","New South Wales",,
+"H5301","Nambour Day Surgery","Hospital",-26.626321,152.96409,"Private","Open","Queensland",,
+"H5302","San Day Surgery Hornsby","Hospital",-33.701961,151.110612,"Private","Open","New South Wales",,
+"H5306","Wollongong Day Surgery","Hospital",-34.42583,150.881346,"Private","Open","New South Wales",,
+"H5307","Hobsons Bay Endoscopy Centre Werribee","Hospital",-37.890649,144.686494,"Private","Open","Victoria",,
+"H5308","Altona Endoscopy Centre","Hospital",-37.869448,144.828494,"Private","Open","Victoria",,
+"H5309","Hobsons Bay Endoscopy Centre Sydenham","Hospital",-37.693365,144.758677,"Private","Open","Victoria",,
+"H5310","Friendly Society Private Hospital","Hospital",-24.870831,152.3429,"Private","Open","Queensland",,
+"H5314","Ballarat Day Procedure Centre","Hospital",-37.540799,143.83214,"Private","Open","Victoria",,
+"H5315","Buderim Gastroenterology Centre","Hospital",-26.671731,153.084944,"Private","Open","Queensland",,
+"H5317","Ramsay Surgical Centre Miranda","Hospital",-34.034096,151.103827,"Private","Open","New South Wales",,
+"H5323","Logan Endoscopy Services","Hospital",-27.659112,153.038795,"Private","Open","Queensland",,
+"H5324","Chatswood Private Hospital","Hospital",-33.797612,151.185691,"Private","Open","New South Wales",,
+"H5325","Wollongong Private Hospital","Hospital",-34.425814,150.880729,"Private","Open","New South Wales",,
+"H5327","Frankston Private Hospital","Hospital",,,"Private","Closed","Victoria",,
+"H5328","Jessie McPherson Private Hospital","Hospital",-37.9201,145.1225,"Private","Open","Victoria",,
+"H5329","Liverpool Eye Surgery","Hospital",-33.922953,150.926861,"Private","Open","New South Wales",,
+"H5330","Coffs Day Hospital","Hospital",-30.287848,153.12396,"Private","Open","New South Wales",,
+"H5331","Western Sydney Private Oncology and Infusion Centre","Hospital",-33.802024,150.982879,"Private","Open","New South Wales",,
+"H5332","The Border Cancer Hospital","Hospital",-36.078399,146.938123,"Private","Open","New South Wales",,
+"H5333","Sunshine Coast Day Surgery","Hospital",-26.655373,153.096157,"Private","Open","Queensland",,
+"H5334","St John of God Midland Private Hospital","Hospital",-31.894611,116.00748,"Private","Open","Western Australia",,
+"H5336","Gold Coast Private Hospital","Hospital",-27.962084,153.385112,"Private","Open","Queensland",,
+"H5337","La Trobe Private Hospital","Hospital",-37.716679,145.044334,"Private","Open","Victoria",,
+"H5338","Holmesglen Private Hospital","Hospital",-37.935738,145.050581,"Private","Open","Victoria",,
+"H5339","Epworth Geelong","Hospital",-38.193882,144.302472,"Private","Open","Victoria",,
+"H5340","Madison Day Surgery","Hospital",-33.703145,151.100395,"Private","Open","New South Wales",,
+"H5341","Chris O'Brien Lifehouse","Hospital",-33.890577,151.182234,"Private","Open","New South Wales",,
+"H5343","The Southport Private Hospital","Hospital",-27.973078,153.407852,"Private","Open","Queensland",,
+"H5344","Westside Private Hospital","Hospital",-27.491448,152.981745,"Private","Open","Queensland",,
+"H5345","Hirondelle Private Hospital","Hospital",-33.789864,151.178696,"Private","Open","New South Wales",,
+"H5346","Mayo Private Hospital","Hospital",-31.881672,152.430725,"Private","Open","New South Wales",,
+"H5347","Toronto Private Hospital","Hospital",-33.015911,151.592911,"Private","Open","New South Wales",,
+"H5348","Lingard Private Hospital","Hospital",-32.940395,151.755463,"Private","Open","New South Wales",,
+"H5349","Shellharbour Private Hospital","Hospital",-34.55888,150.847733,"Private","Open","New South Wales",,
+"H5350","Gosford Private Hospital","Hospital",-33.41861,151.349518,"Private","Open","New South Wales",,
+"H5351","Dubbo Private Hospital","Hospital",-32.237087,148.621094,"Private","Open","New South Wales",,
+"H5352","Maitland Private Hospital","Hospital",-32.764954,151.597672,"Private","Open","New South Wales",,
+"H5353","St. Vincent Private Community Hospital [Griffith]","Hospital",-34.280708,146.043716,"Private","Open","New South Wales",,
+"H5354","Brunswick Private Hospital","Hospital",-37.756737,144.972183,"Private","Open","Victoria",,
+"H5355","St Vincent's Private Hospital [Werribee]","Hospital",-37.887905,144.701508,"Private","Open","Victoria",,
+"H5357","Eden Private Hospital","Hospital",-26.420078,152.908844,"Private","Open","Queensland",,
+"H5358","Robina Private Hospital","Hospital",-28.071932,153.375778,"Private","Open","Queensland",,
+"H5359","North West Private Hospital (Tas)","Hospital",-41.0453,145.878784,"Private","Open","Tasmania",,
+"H5360","Cairns Haematology and Oncology Clinic","Hospital",-16.91609,145.769684,"Private","Open","Queensland",,
+"H5361","Northern Beaches Hospital - Private","Hospital",-33.751125,151.233017,"Private","Open","New South Wales",,
+"H5364","Calvary Adelaide Hospital","Hospital",-34.9276,138.6113,"Private","Open","South Australia",,
+"H5365","Albany Community Hospice","Hospital",-35.00322,117.904381,"Private","Open","Western Australia",,
+"H5366","Albany Day Hospital","Hospital",-35.016312,117.89196,"Private","Open","Western Australia",,
+"H5367","Albury Day Surgery","Hospital",-36.073689,146.883606,"Private","Open","New South Wales",,
+"H5368","Alwyn Rehabilitation Hospital","Hospital",-33.882797,151.094406,"Private","Open","New South Wales",,
+"H5369","Arcadia Pittwater Private Hospital","Hospital",-33.67746,151.28624,"Private","Open","New South Wales",,
+"H5370","Belmont Private Hospital","Hospital",-27.500755,153.098953,"Private","Open","Queensland",,
+"H5371","Bendigo Day Surgery","Hospital",-36.761902,144.261673,"Private","Open","Victoria",,
+"H5372","Bondi Junction Private Hospital","Hospital",-33.892315,151.24585,"Private","Open","New South Wales",,
+"H5373","Brighton Dialysis Clinic","Hospital",-35.008746,138.52224,"Private","Open","South Australia",,
+"H5374","Brisbane Day Hospital","Hospital",-27.51023,153.0526,"Private","Open","Queensland",,
+"H5375","Cambridge Day Surgery","Hospital",-31.940639,115.824883,"Private","Open","Western Australia",,
+"H5376","Canberra Private Hospital","Hospital",-35.320526,149.097397,"Private","Open","Australian Capital Territory",,
+"H5377","Charlestown Private Hospital","Hospital",-32.960152,151.697571,"Private","Open","New South Wales",,
+"H5378","Churchill Day Surgery","Hospital",-31.94771,115.831169,"Private","Open","Western Australia",,
+"H5379","City West Specialist Day Hospital","Hospital",-33.801174,150.982773,"Private","Open","New South Wales",,
+"H5381","Craigie Day Surgery","Hospital",-31.78446,115.765938,"Private","Open","Western Australia",,
+"H5382","Delmar Private Hospital","Hospital",-33.758137,151.288086,"Private","Open","New South Wales",,
+"H5383","Delmont Private Hospital","Hospital",-37.856853,145.094055,"Private","Open","Victoria",,
+"H5384","Double Bay Day Hospital","Hospital",-33.877689,151.243973,"Private","Open","New South Wales",,
+"H5385","East Sydney Private Hospital","Hospital",-33.873741,151.215942,"Private","Open","New South Wales",,
+"H5386","Eastern Suburbs Private Hospital","Hospital",-33.910378,151.245865,"Private","Open","New South Wales",,
+"H5387","Forest Hill Dialysis Clinic","Hospital",-37.836281,145.166397,"Private","Open","Victoria",,
+"H5388","Gordon Private Hospital","Hospital",-33.7579,151.152664,"Private","Open","New South Wales",,
+"H5389","Healthwoods Endoscopy Centre","Hospital",-33.831451,151.012466,"Private","Open","New South Wales",,
+"H5390","Holroyd Private Hospital","Hospital",-33.846344,150.979233,"Private","Open","New South Wales",,
+"H5391","Hummingbird House","Hospital",-27.38312,153.027527,"Private","Open","Queensland",,
+"H5392","Icon Cancer Centre Canberra","Hospital",-35.23685,149.08676,"Private","Open","Australian Capital Territory",,
+"H5393","Icon Cancer Centre Chermside","Hospital",-27.38133,153.029739,"Private","Open","Queensland",,
+"H5394","Icon Cancer Centre Hobart","Hospital",-42.88067,147.32385,"Private","Open","Tasmania",,
+"H5395","Icon Cancer Centre Midland","Hospital",-31.89424,116.00531,"Private","Open","Western Australia",,
+"H5396","Icon Cancer Centre North Lakes","Hospital",-27.24166,153.02184,"Private","Open","Queensland",,
+"H5397","Icon Cancer Centre Revesby","Hospital",-33.954,151.01528,"Private","Open","New South Wales",,
+"H5398","Icon Cancer Centre Rockingham","Hospital",-32.28745,115.74693,"Private","Open","Western Australia",,
+"H5399","Icon Cancer Centre South Brisbane","Hospital",-27.484,153.02812,"Private","Open","Queensland",,
+"H5400","Icon Cancer Centre Southport","Hospital",-27.97216,153.41107,"Private","Open","Queensland",,
+"H5401","Icon Cancer Centre Townsville","Hospital",-19.2765,146.79909,"Private","Open","Queensland",,
+"H5402","Icon Cancer Centre Wesley","Hospital",-27.47667,152.99734,"Private","Open","Queensland",,
+"H5403","Icon Cancer Centre Windsor Gardens","Hospital",-34.86247,138.64977,"Private","Open","South Australia",,
+"H5404","Kings Park Day Hospital","Hospital",-31.950455,115.836075,"Private","Open","Western Australia",,
+"H5405","Kingsgrove Day Hospital","Hospital",-33.944141,151.10199,"Private","Open","New South Wales",,
+"H5406","Lithgow Community Private Hospital","Hospital",-33.49873,150.127396,"Private","Open","New South Wales",,
+"H5407","Longueville Private Hospital","Hospital",-33.827408,151.169769,"Private","Open","New South Wales",,
+"H5408","Malvern Dialysis Clinic","Hospital",-37.851421,145.030624,"Private","Open","Victoria",,
+"H5409","Manly Waters Private Hospital","Hospital",-33.80521,151.284576,"Private","Open","New South Wales",,
+"H5410","Mater Private Hospital Springfield","Hospital",-27.686211,152.908676,"Private","Open","Queensland",,
+"H5411","McCourt Street Day Surgery","Hospital",-31.94138,115.827957,"Private","Open","Western Australia",,
+"H5412","Miami Private Hospital","Hospital",-28.063068,153.436813,"Private","Open","Queensland",,
+"H5413","Monash House Private Hospital","Hospital",-37.920898,145.120193,"Private","Open","Victoria",,
+"H5414","Moreton Day Hospital","Hospital",-27.24131,153.020294,"Private","Open","Queensland",,
+"H5415","Murdoch Surgicentre","Hospital",-32.067791,115.844986,"Private","Open","Western Australia",,
+"H5416","Neerim District Health Service","Hospital",-38.022629,145.953903,"Private","Open","Victoria",,
+"H5417","Newcastle Endoscopy Centre","Hospital",-32.963131,151.697693,"Private","Open","New South Wales",,
+"H5418","Noosa Surgical and Endoscopy Centre","Hospital",-26.40005,153.06491,"Private","Open","Queensland",,
+"H5419","North Eastern Community Hospital","Hospital",-34.882549,138.661331,"Private","Open","South Australia",,
+"H5420","North Shore Specialist Day Hospital","Hospital",-33.823719,151.187088,"Private","Open","New South Wales",,
+"H5421","GenesisCare North Shore","Hospital",-33.82391,151.192963,"Private","Open","New South Wales",,
+"H5422","Northern Endoscopy Centre","Hospital",-34.78167,138.651093,"Private","Open","South Australia",,
+"H5423","Northside Endoscopy Service","Hospital",-27.082979,152.950165,"Private","Open","Queensland",,
+"H5424","Norwest Day Hospital","Hospital",-33.74477,150.95385,"Private","Open","New South Wales",,
+"H5425","PANCH Day Surgery Centre","Hospital",-37.752338,145.006271,"Private","Open","Victoria",,
+"H5426","Payneham Dialysis Clinic","Hospital",-34.896931,138.639603,"Private","Open","South Australia",,
+"H5427","Perth Day Surgery Centre","Hospital",-31.940439,115.82608,"Private","Open","Western Australia",,
+"H5428","Perth Dermatology Clinic","Hospital",-31.944691,115.863998,"Private","Open","Western Australia",,
+"H5429","Perth Eye Hospital","Hospital",-31.949883,115.83976,"Private","Open","Western Australia",,
+"H5430","President Private Hospital","Hospital",-34.036575,151.079224,"Private","Open","New South Wales",,
+"H5431","Rockingham Dialysis Clinic","Hospital",-32.283241,115.746452,"Private","Open","Western Australia",,
+"H5432","Rosemont Endoscopy Centre","Hospital",-34.42527,150.876984,"Private","Open","New South Wales",,
+"H5433","Salisbury Day Hospital","Hospital",,,"Private","Closed","Queensland",,
+"H5434","Sight Foundation Theatre","Hospital",-33.867722,151.212891,"Private","Open","New South Wales",,
+"H5435","SOLE VITA SURGERY","Hospital",-35.326359,149.094345,"Private","Open","Australian Capital Territory",,
+"H5436","South Bank Day Hospital","Hospital",,,"Private","Closed","Queensland",,
+"H5437","Southern Endoscopy Centre","Hospital",-34.999512,138.521179,"Private","Open","South Australia",,
+"H5438","Southside Cancer Care Centre","Hospital",-34.03405,151.104065,"Private","Open","New South Wales",,
+"H5439","Spring Hill Specialist Day Hospital","Hospital",-27.461082,153.021851,"Private","Open","Queensland",,
+"H5440","Stirling Dialysis Clinic","Hospital",-31.88913,115.808022,"Private","Open","Western Australia",,
+"H5441","Sydney Day Hospital","Hospital",-33.869579,151.212708,"Private","Open","New South Wales",,
+"H5442","Sydney Day Surgery","Hospital",-33.87644,151.22098,"Private","Open","New South Wales",,
+"H5443","Tasman Health Care Day Infusion Unit","Hospital",-27.970409,153.407806,"Private","Open","Queensland",,
+"H5444","The Glen Endoscopy Centre","Hospital",-37.884701,145.165359,"Private","Open","Victoria",,
+"H5445","The Melbourne Eastern Private Hospital","Hospital",-37.855701,145.269073,"Private","Open","Victoria",,
+"H5446","The Park Private Hospital","Hospital",-31.93434,115.874382,"Private","Open","Western Australia",,
+"H5447","The Wesley Centre for Hyperbaric Medicine","Hospital",-27.477161,152.997803,"Private","Open","Queensland",,
+"H5448","Tuggerah Lakes Private Hospital","Hospital",-33.262482,151.48143,"Private","Open","New South Wales",,
+"H5449","Vision Centre Day Surgery","Hospital",-27.96982,153.409225,"Private","Open","Queensland",,
+"H5451","West Leederville Private Hospital","Hospital",-31.94294,115.82798,"Private","Open","Western Australia",,
+"H5453","Windsor Gardens Day Surgery","Hospital",-34.862469,138.649765,"Private","Open","South Australia",,
+"H5454","Artarmon Day Surgery","Hospital",,,"Private","Closed","New South Wales",,
+"H5455","Ballan District Health & Care","Hospital",-37.59919,144.2228,"Private","Open","Victoria",,
+"H5456","Bankstown Day Hospital","Hospital",-33.914394,151.035324,"Private","Open","New South Wales",,
+"H5457","Bayside Endoscopy Day Hospital","Hospital",-37.933098,145.036667,"Private","Open","Victoria",,
+"H5458","Bunbury Day Hospital","Hospital",-33.340477,115.639557,"Private","Open","Western Australia",,
+"H5459","Cannington Dialysis Clinic","Hospital",-32.016842,115.934967,"Private","Open","Western Australia",,
+"H5460","Chermside Dialysis Clinic","Hospital",-27.390966,153.031784,"Private","Open","Queensland",,
+"H5461","Bayside Day Procedure and Specialist Centre","Hospital",-38.148136,145.143524,"Private","Open","Victoria",,
+"H5462","Bayswater Day Procedure and Specialist Centre","Hospital",,,"Private","Closed","Victoria",,
+"H5463","Casey Day Hospital","Hospital",-38.02488,145.31446,"Private","Open","Victoria",,
+"H5464","Dr Daniel Lanzer Dermatology & Cosmetic Surgery Services","Hospital",,,"Private","Closed","Queensland",,
+"H5465","Eastern Endoscopy Centre","Hospital",-27.494314,153.213242,"Private","Open","Queensland",,
+"H5466","Eastside Endoscopy Centre","Hospital",-37.819901,145.228134,"Private","Open","Victoria",,
+"H5467","Euroa Health","Hospital",-36.75922,145.570465,"Private","Open","Victoria",,
+"H5468","Greensborough Day Surgery","Hospital",-37.70393,145.10629,"Private","Open","Victoria",,
+"H5469","Heyfield Hospital","Hospital",-37.97633,146.784012,"Private","Open","Victoria",,
+"H5470","Icon Cancer Centre Adelaide","Hospital",-34.948662,138.570786,"Private","Open","South Australia",,
+"H5471","Insight Private Hospital","Hospital",-36.081795,146.910431,"Private","Open","New South Wales",,
+"H5472","Kew Endoscopy Centre","Hospital",-37.79461,145.06255,"Private","Open","Victoria",,
+"H5473","Lakeview Private Hospital","Hospital",-33.730782,150.963165,"Private","Open","New South Wales",,
+"H5474","Lions Eye Institute Day Surgery Centre","Hospital",-31.96793,115.814934,"Private","Open","Western Australia",,
+"H5475","Melbourne Endoscopy Monash Day Procedure Centre","Hospital",-37.921371,145.120255,"Private","Open","Victoria",,
+"H5476","Melbourne Endoscopy","Hospital",-37.811069,144.984085,"Private","Open","Victoria",,
+"H5477","Midland Dialysis Clinic","Hospital",-31.88781,116.00413,"Private","Open","Western Australia",,
+"H5478","Western Haematology and Oncology Clinics","Hospital",-31.94462,115.84181,"Private","Open","Western Australia",,
+"H5479","Newcastle Dialysis Clinic","Hospital",-32.92661,151.76479,"Private","Open","New South Wales",,
+"H5480","Regional Imaging Cardiovascular Centre","Hospital",-35.119236,147.352814,"Private","Open","New South Wales",,
+"H5481","Southbank Day Surgery","Hospital",-31.975916,115.871857,"Private","Open","Western Australia",,
+"H5482","Spearwood Dialysis Clinic","Hospital",-32.09556,115.78343,"Private","Open","Western Australia",,
+"H5483","Sydney Retina Clinic & Day Surgery","Hospital",-33.866261,151.211792,"Private","Open","New South Wales",,
+"H5484","The Cataract Clinic (Aust)","Hospital",-33.84087,151.209396,"Private","Open","New South Wales",,
+"H5485","The Roseberry Eye Specialist Centre","Hospital",-33.922691,151.207275,"Private","Open","New South Wales",,
+"H5486","The Skin Hospital [Darlinghurst]","Hospital",-33.87913,151.21524,"Private","Open","New South Wales",,
+"H5487","Icon Cancer Centre Mackay","Hospital",-21.12852,149.17295,"Private","Open","Queensland",,
+"H5488","Minchinbury Community Private Hospital","Hospital",-33.781006,150.828522,"Private","Open","New South Wales",,
+"H5489","South Coast Digestive Diseases Centre","Hospital",-28.01032,153.4034,"Private","Open","Queensland",,
+"H5490","Toorak Cosmetic Surgery Day Centre","Hospital",-37.84138,145.00798,"Private","Open","Victoria",,
+"H5491","St John of God Subiaco Eye Hospital","Hospital",-31.94045,115.82416,"Private","Open","Western Australia",,
+"H5492","West Coast Endoscopy Centre","Hospital",-31.73946,115.76764,"Private","Open","Western Australia",,
+"H5493","Clifton Co-Op Hospital Ltd","Hospital",-27.931108,151.91066,"Private","Open","Queensland",,
+"H5494","Cosmos Cosmetic Day Surgery","Hospital",-33.91281,151.23944,"Private","Open","New South Wales",,
+"H5495","Genesis Cancer Care Fiona Stanley","Hospital",-31.941799,115.822639,"Private","Open","Western Australia",,
+"H5496","GI Clinic Perth","Hospital",-32.04477,115.81263,"Private","Open","Western Australia",,
+"H5497","Montserrat Western Haematology and Oncology Clinic","Hospital",-27.49273,152.98146,"Private","Open","Queensland",,
+"H5500","St Stephen's Private Hospital [Maryborough]","Hospital",,,"Private","Closed","Queensland",,
+"H5501","Warringah Day Surgery","Hospital",-33.76499,151.26805,"Private","Open","New South Wales",,
+"H5502","Genesis Cancer Care Shenton House Joondalup","Hospital",-31.74084,115.77066,"Private","Open","Western Australia",,
+"H5503","St John of God Hawkesbury District Health Service (Private)","Hospital",-33.610756,150.820755,"Private","Open","New South Wales",,
+"H5504","Marian Centre","Hospital",-31.9405,115.82337,"Private","Open","Western Australia",,
+"H5505","Townsville Private Clinic","Hospital",-19.25832,146.8142,"Private","Open","Queensland",,
+"H5506","Toowoomba Hospice","Hospital",-27.56745,151.93395,"Private","Open","Queensland",,
+"H5507","Currumbin Clinic","Hospital",-28.1336,153.48643,"Private","Open","Queensland",,
+"H5508","South Coast Private Hospital","Hospital",-34.425977,150.890393,"Private","Open","New South Wales",,
+"H5509","Abbotsford Private Hospital","Hospital",-31.94091,115.83768,"Private","Open","Western Australia",,
+"H5510","Ramsay Clinic Cairns","Hospital",-16.910395,145.762216,"Private","Open","Queensland",,
+"H5511","Ramsay Clinic Adelaide","Hospital",-34.906582,138.613163,"Private","Open","South Australia",,
+"H5512","Ramsay Surgical Centre Coffs Harbour","Hospital",-30.300386,153.115797,"Private","Open","New South Wales",,
+"H5513","Ramsay Clinic Thirroul","Hospital",-34.310519,150.917722,"Private","Open","New South Wales",,
+"H5514","Brindabella Endoscopy Centre","Hospital",-35.349,149.102,"Private","Open","Australian Capital Territory",,
+"H5515","Chesterville Day Hospital","Hospital",-37.96,145.056,"Private","Open","Victoria",,
+"H5516","Dee Why Endoscopy Unit","Hospital",-33.755,151.284,"Private","Open","New South Wales",,
+"H5517","Riverina Day Surgery","Hospital",-35.121,147.354,"Private","Open","New South Wales",,
+"H5518","ACT Endoscopy","Hospital",-35.32,149.097,"Private","Open","Australian Capital Territory",,
+"H5519","Barton Private Hospital","Hospital",-35.312,149.132,"Private","Open","Australian Capital Territory",,
+"H5520","Glen Iris Private","Hospital",-37.858,145.093,"Private","Open","Victoria",,
+"H5521","Glenelg Day Surgery","Hospital",-34.978,138.517,"Private","Open","South Australia",,
+"H5522","Sir John Monash Private Hospital","Hospital",-37.918,145.121,"Private","Open","Victoria",,
+"H5523","Somerset Private Hospital","Hospital",-33.761,150.715,"Private","Open","New South Wales",,
+"H5524","Sydney Surgical Centre","Hospital",-33.916,151.24,"Private","Open","New South Wales",,
+"LHN101","South Eastern Sydney","Local Hospital Network",-33.639868,152.175019,"Public","Open","New South Wales","South Eastern Sydney",
+"LHN102","Sydney","Local Hospital Network",-33.87785,151.133066,"Public","Open","New South Wales","Sydney",
+"LHN103","South Western Sydney","Local Hospital Network",-34.010033,150.830913,"Public","Open","New South Wales","South Western Sydney",
+"LHN104","Western Sydney","Local Hospital Network",-33.80146,150.952689,"Public","Open","New South Wales","Western Sydney",
+"LHN105","Nepean Blue Mountains","Local Hospital Network",-33.626258,150.463507,"Public","Open","New South Wales","Nepean Blue Mountains",
+"LHN106","Northern Sydney","Local Hospital Network",-33.772777,151.158963,"Public","Open","New South Wales","Northern Sydney",
+"LHN107","Central Coast","Local Hospital Network",-33.386573,151.402645,"Public","Open","New South Wales","Central Coast",
+"LHN108","Illawarra Shoalhaven","Local Hospital Network",-34.616147,150.795356,"Public","Open","New South Wales","Illawarra Shoalhaven",
+"LHN109","Hunter New England","Local Hospital Network",-31.39002,151.177573,"Public","Open","New South Wales","Hunter New England",
+"LHN110","Mid North Coast","Local Hospital Network",-30.829514,152.863867,"Public","Open","New South Wales","Mid North Coast",
+"LHN111","Northern NSW","Local Hospital Network",-28.772131,153.17056,"Public","Open","New South Wales","Northern NSW",
+"LHN112","Western NSW","Local Hospital Network",-32.099845,148.375,"Public","Open","New South Wales","Western NSW",
+"LHN113","Southern NSW","Local Hospital Network",-35.696723,149.56412,"Public","Open","New South Wales","Southern NSW",
+"LHN114","Murrumbidgee","Local Hospital Network",-35.002477,146.855841,"Public","Open","New South Wales","Murrumbidgee",
+"LHN115","Far West","Local Hospital Network",-32.425931,142.722503,"Public","Open","New South Wales","Far West",
+"LHN117","Sydney Children's Hospitals Network","Local Hospital Network",-33.859367,151.115047,"Public","Open","New South Wales","Sydney Children's Hospitals Network",
+"LHN118","St Vincent's Health Network","Local Hospital Network",-33.864176,151.124732,"Public","Open","New South Wales","St Vincent's Health Network",
+"LHN119","Justice Health & Forensic Mental Health","Local Hospital Network",-33.96907,151.243206,"Public","Open","New South Wales","Justice Health & Forensic Mental Health",
+"LHN199","New South Wales Virtual Local Hospital Network","Local Hospital Network",,,"Public","Closed","New South Wales","New South Wales Virtual Local Hospital Network",
+"LHN201","Beaufort and Skipton Health Service","Local Hospital Network",-37.557513,143.374916,"Public","Open","Victoria","Beaufort and Skipton Health Service",
+"LHN202","East Grampians Health Service","Local Hospital Network",-37.411807,142.839364,"Public","Open","Victoria","East Grampians Health Service",
+"LHN203","Ballarat Health Services","Local Hospital Network",,,"Public","Closed","Victoria","Ballarat Health Services",
+"LHN204","Stawell Regional Health","Local Hospital Network",,,"Public","Closed","Victoria","Stawell Regional Health",
+"LHN205","East Wimmera Health Service","Local Hospital Network",-36.261164,143.143764,"Public","Open","Victoria","East Wimmera Health Service",
+"LHN206","Hepburn Health Service","Local Hospital Network",,,"Public","Closed","Victoria","Hepburn Health Service",
+"LHN207","Maryborough District Health Service","Local Hospital Network",-36.950025,143.736416,"Public","Open","Victoria","Maryborough District Health Service",
+"LHN208","Djerriwarrh Health Service (Vic)","Local Hospital Network",,,"Public","Closed","Victoria","Djerriwarrh Health Service (Vic)",
+"LHN209","Western Health (Vic)","Local Hospital Network",-37.726128,144.720038,"Public","Open","Victoria","Western Health (Vic)",
+"LHN210","Bendigo Health Care Group","Local Hospital Network",-36.749823,144.281886,"Public","Open","Victoria","Bendigo Health Care Group",
+"LHN211","Heathcote Health","Local Hospital Network",-36.925786,144.709499,"Public","Open","Victoria","Heathcote Health",
+"LHN212","Swan Hill District Health","Local Hospital Network",-35.26332,143.455971,"Public","Open","Victoria","Swan Hill District Health",
+"LHN213","Cohuna District Hospital","Local Hospital Network",-35.800063,144.214911,"Public","Open","Victoria","Cohuna District Hospital",
+"LHN214","Echuca Regional Health","Local Hospital Network",-36.138186,144.748369,"Public","Open","Victoria","Echuca Regional Health",
+"LHN215","Kerang District Health","Local Hospital Network",-35.724287,143.916563,"Public","Open","Victoria","Kerang District Health",
+"LHN216","Maldon Hospital","Local Hospital Network",,,"Public","Closed","Victoria","Maldon Hospital",
+"LHN218","Boort District Health","Local Hospital Network",-36.111703,143.727285,"Public","Open","Victoria","Boort District Health",
+"LHN219","Rochester and Elmore District Health Service","Local Hospital Network",-36.366579,144.697751,"Public","Open","Victoria","Rochester and Elmore District Health Service",
+"LHN220","Inglewood and District Health Service","Local Hospital Network",-36.572147,143.873755,"Public","Open","Victoria","Inglewood and District Health Service",
+"LHN221","Castlemaine Health","Local Hospital Network",,,"Public","Closed","Victoria","Castlemaine Health",
+"LHN222","Kyneton District Health Service","Local Hospital Network",,,"Public","Closed","Victoria","Kyneton District Health Service",
+"LHN223","Royal Children's Hospital (Melbourne)","Local Hospital Network",-37.794997,144.950859,"Public","Open","Victoria","Royal Children's Hospital (Melbourne)",
+"LHN224","Royal Women's Hospital (Melbourne)","Local Hospital Network",-37.879911,144.986491,"Public","Open","Victoria","Royal Women's Hospital (Melbourne)",
+"LHN225","Melbourne Health","Local Hospital Network",-37.789999,144.93051,"Public","Open","Victoria","Melbourne Health",
+"LHN226","Northern Health (Vic)","Local Hospital Network",-37.658719,144.975584,"Public","Open","Victoria","Northern Health (Vic)",
+"LHN227","Victorian Institute of Forensic Mental Health","Local Hospital Network",-37.801037,144.981866,"Public","Open","Victoria","Victorian Institute of Forensic Mental Health",
+"LHN228","Colac Area Health","Local Hospital Network",-38.341201,143.582854,"Public","Open","Victoria","Colac Area Health",
+"LHN229","Hesse Rural Health Service (Winchelsea)","Local Hospital Network",-38.243369,143.985357,"Public","Open","Victoria","Hesse Rural Health Service (Winchelsea)",
+"LHN230","Otway Health and Community Services (Apollo Bay)","Local Hospital Network",,,"Public","Closed","Victoria","Otway Health and Community Services (Apollo Bay)",
+"LHN231","Barwon Health","Local Hospital Network",-38.135164,144.350346,"Public","Open","Victoria","Barwon Health",
+"LHN232","Lorne Community Hospital","Local Hospital Network",,,"Public","Closed","Victoria","Lorne Community Hospital",
+"LHN233","Alexandra District Hospital","Local Hospital Network",-37.195065,145.716143,"Public","Open","Victoria","Alexandra District Hospital",
+"LHN234","Eastern Health (Vic)","Local Hospital Network",-37.807123,145.264323,"Public","Open","Victoria","Eastern Health (Vic)",
+"LHN235","Goulburn Valley Health","Local Hospital Network",-36.463511,145.213013,"Public","Open","Victoria","Goulburn Valley Health",
+"LHN236","Kyabram and District Health Service","Local Hospital Network",-36.315539,145.042705,"Public","Open","Victoria","Kyabram and District Health Service",
+"LHN237","Numurkah and District Health Service","Local Hospital Network",,,"Public","Closed","Victoria","Numurkah and District Health Service",
+"LHN238","Nathalia District Hospital","Local Hospital Network",,,"Public","Closed","Victoria","Nathalia District Hospital",
+"LHN239","Cobram District Health","Local Hospital Network",,,"Public","Closed","Victoria","Cobram District Health",
+"LHN240","Seymour District Memorial Hospital","Local Hospital Network",-37.018384,145.138771,"Public","Open","Victoria","Seymour District Memorial Hospital",
+"LHN241","Kilmore and District Hospital","Local Hospital Network",,,"Public","Closed",,"Kilmore and District Hospital",
+"LHN242","Yea and District Memorial Hospital","Local Hospital Network",-37.213634,145.430724,"Public","Open","Victoria","Yea and District Memorial Hospital",
+"LHN243","Northeast Health Wangaratta","Local Hospital Network",-36.354035,146.313889,"Public","Open","Victoria","Northeast Health Wangaratta",
+"LHN244","Yarrawonga District Health Service","Local Hospital Network",-36.011547,146.006584,"Public","Open","Victoria","Yarrawonga District Health Service",
+"LHN245","Alpine Health (Vic)","Local Hospital Network",-36.67686,146.954693,"Public","Open","Victoria","Alpine Health (Vic)",
+"LHN246","Mansfield District Hospital","Local Hospital Network",-37.057574,146.086149,"Public","Open","Victoria","Mansfield District Hospital",
+"LHN247","Benalla and District Memorial Hospital","Local Hospital Network",,,"Public","Closed","Victoria","Benalla and District Memorial Hospital",
+"LHN248","Tallangatta Health Service","Local Hospital Network",-36.213705,147.183709,"Public","Open","Victoria","Tallangatta Health Service",
+"LHN249","Albury Wodonga Health","Local Hospital Network",-36.105096,146.909282,"Public","Open","Victoria","Albury Wodonga Health",
+"LHN250","Upper Murray Health and Community Services (Corryong)","Local Hospital Network",-36.198711,147.902798,"Public","Open","Victoria","Upper Murray Health and Community Services (Corryong)",
+"LHN251","Beechworth Health Service","Local Hospital Network",-36.349359,146.690739,"Public","Open","Victoria","Beechworth Health Service",
+"LHN252","West Gippsland Healthcare Group","Local Hospital Network",-38.173009,145.926804,"Public","Open","Victoria","West Gippsland Healthcare Group",
+"LHN253","Bass Coast Regional Health","Local Hospital Network",-38.608747,145.580906,"Public","Open","Victoria","Bass Coast Regional Health",
+"LHN254","Gippsland Southern Health Service","Local Hospital Network",-38.45875,145.889296,"Public","Open","Victoria","Gippsland Southern Health Service",
+"LHN255","South Gippsland Hospital (Foster)","Local Hospital Network",-38.658319,146.207031,"Public","Open","Victoria","South Gippsland Hospital (Foster)",
+"LHN256","Bairnsdale Regional Health Service","Local Hospital Network",-37.830814,147.607905,"Public","Open","Victoria","Bairnsdale Regional Health Service",
+"LHN257","Yarram and District Health Service","Local Hospital Network",-38.556975,146.678316,"Public","Open","Victoria","Yarram and District Health Service",
+"LHN258","Omeo District Health","Local Hospital Network",-37.098142,147.597321,"Public","Open","Victoria","Omeo District Health",
+"LHN259","Central Gippsland Health Service","Local Hospital Network",-38.03472,147.032062,"Public","Open","Victoria","Central Gippsland Health Service",
+"LHN260","Latrobe Regional Hospital","Local Hospital Network",-38.218475,146.471335,"Public","Open","Victoria","Latrobe Regional Hospital",
+"LHN261","Orbost Regional Health","Local Hospital Network",-37.701844,148.464957,"Public","Open","Victoria","Orbost Regional Health",
+"LHN262","St Vincent's Hospital (Melbourne) Limited","Local Hospital Network",-37.806779,145.014458,"Public","Open","Victoria","St Vincent's Hospital (Melbourne) Limited",
+"LHN263","Royal Victorian Eye and Ear Hospital","Local Hospital Network",-37.808978,144.976245,"Public","Open","Victoria","Royal Victorian Eye and Ear Hospital",
+"LHN264","Peter MacCallum Cancer Institute (Vic)","Local Hospital Network",-37.80001,144.956607,"Public","Open","Victoria","Peter MacCallum Cancer Institute (Vic)",
+"LHN266","Austin Health (Vic)","Local Hospital Network",-37.767283,145.043814,"Public","Open","Victoria","Austin Health (Vic)",
+"LHN267","Mercy Public Hospital Inc. (Vic)","Local Hospital Network",-37.812625,144.927026,"Public","Open","Victoria","Mercy Public Hospital Inc. (Vic)",
+"LHN268","Alfred Health (Vic)","Local Hospital Network",-37.896614,145.005662,"Public","Open","Victoria","Alfred Health (Vic)",
+"LHN269","Monash Health","Local Hospital Network",-37.97779,145.178811,"Public","Open","Victoria","Monash Health",
+"LHN270","Peninsula Health (Vic)","Local Hospital Network",-38.214196,145.067585,"Public","Open","Victoria","Peninsula Health (Vic)",
+"LHN271","Kooweerup Regional Health Service","Local Hospital Network",-38.200653,145.484433,"Public","Open","Victoria","Kooweerup Regional Health Service",
+"LHN274","Rural Northwest Health (Vic)","Local Hospital Network",-35.992408,142.37401,"Public","Open","Victoria","Rural Northwest Health (Vic)",
+"LHN275","Wimmera Health Care Group","Local Hospital Network",,,"Public","Closed","Victoria","Wimmera Health Care Group",
+"LHN276","Dunmunkle Health Services","Local Hospital Network",-36.579613,142.4335,"Public","Open","Victoria","Dunmunkle Health Services",
+"LHN277","West Wimmera Health Service","Local Hospital Network",-36.279393,141.902646,"Public","Open","Victoria","West Wimmera Health Service",
+"LHN278","Edenhope and District Memorial Hospital","Local Hospital Network",,,"Public","Closed","Victoria","Edenhope and District Memorial Hospital",
+"LHN279","Mildura Base Hospital","Local Hospital Network",-34.185634,142.143348,"Public","Open","Victoria","Mildura Base Hospital",
+"LHN280","Mallee Track Health and Community Service","Local Hospital Network",-35.287372,142.585174,"Public","Open","Victoria","Mallee Track Health and Community Service",
+"LHN281","Robinvale District Health Services","Local Hospital Network",-34.817551,142.83094,"Public","Open","Victoria","Robinvale District Health Services",
+"LHN282","Western District Health Service (Vic)","Local Hospital Network",-37.737894,142.001704,"Public","Open","Victoria","Western District Health Service (Vic)",
+"LHN283","Casterton Memorial Hospital","Local Hospital Network",-37.589989,141.392283,"Public","Open","Victoria","Casterton Memorial Hospital",
+"LHN284","South West Healthcare (Vic)","Local Hospital Network",-38.308593,142.805346,"Public","Open","Victoria","South West Healthcare (Vic)",
+"LHN285","Heywood Rural Health","Local Hospital Network",-38.137788,141.624256,"Public","Open","Victoria","Heywood Rural Health",
+"LHN286","Timboon and District Healthcare Service","Local Hospital Network",-38.486231,142.976717,"Public","Open","Victoria","Timboon and District Healthcare Service",
+"LHN287","Moyne Health Services (Port Fairy)","Local Hospital Network",-38.381599,142.227523,"Public","Open","Victoria","Moyne Health Services (Port Fairy)",
+"LHN288","Portland District Health","Local Hospital Network",-38.340713,141.606087,"Public","Open","Victoria","Portland District Health",
+"LHN289","Terang and Mortlake Health Service (Terang)","Local Hospital Network",-38.239388,142.902119,"Public","Open","Victoria","Terang and Mortlake Health Service (Terang)",
+"LHN290","Calvary Health Care Bethlehem Limited","Local Hospital Network",-37.896962,145.013415,"Public","Open","Victoria","Calvary Health Care Bethlehem Limited",
+"LHN291","NCN Health","Local Hospital Network",-35.998234,145.429456,"Public","Open","Victoria","NCN Health","Murray"
+"LHN292","Great Ocean Road Health","Local Hospital Network",-38.649683,143.822504,"Public","Open","Victoria","Great Ocean Road Health",
+"LHN293","Central Highlands Rural Health","Local Hospital Network",-37.337663,144.169016,"Public","Open","Victoria","Central Highlands Rural Health",
+"LHN294","Grampians Health","Local Hospital Network",-37.063527,142.665591,"Public","Open","Victoria","Grampians Health",
+"LHN295","Dhelkaya Health","Local Hospital Network",-37.022606,144.137996,"Public","Open","Victoria","Dhelkaya Health",
+"LHN298","Tweddle Child and Family Health Service","Local Hospital Network",-37.797265,144.887295,"Public","Open",,"Tweddle Child and Family Health Service",
+"LHN299","Victoria Virtual Local Hospital Network","Local Hospital Network",,,"Public","Closed","Victoria","Victoria Virtual Local Hospital Network",
+"LHN312","Cairns and Hinterland","Local Hospital Network",-17.20963,145.676134,"Public","Open","Queensland","Cairns and Hinterland",
+"LHN313","Townsville","Local Hospital Network",-19.696943,146.094648,"Public","Open","Queensland","Townsville",
+"LHN314","Mackay","Local Hospital Network",-21.366406,148.383693,"Public","Open","Queensland","Mackay",
+"LHN315","North West (Qld)","Local Hospital Network",-19.062997,140.143585,"Public","Open","Queensland","North West (Qld)",
+"LHN316","Central Queensland","Local Hospital Network",-23.954718,149.818545,"Public","Open","Queensland","Central Queensland",
+"LHN317","Central West (Qld)","Local Hospital Network",-23.489056,144.935506,"Public","Open","Queensland","Central West (Qld)",
+"LHN318","Wide Bay","Local Hospital Network",-25.28893,151.926029,"Public","Open","Queensland","Wide Bay",
+"LHN319","Sunshine Coast","Local Hospital Network",-26.621659,152.93781,"Public","Open","Queensland","Sunshine Coast",
+"LHN320","Metro North (Qld)","Local Hospital Network",-27.256131,152.951053,"Public","Open","Queensland","Metro North (Qld)",
+"LHN321","Children's Health Queensland","Local Hospital Network",-27.435105,153.025935,"Public","Open","Queensland","Children's Health Queensland",
+"LHN322","Metro South (Qld)","Local Hospital Network",-27.650821,153.095608,"Public","Open","Queensland","Metro South (Qld)",
+"LHN323","Gold Coast","Local Hospital Network",-28.015547,153.379229,"Public","Open","Queensland","Gold Coast",
+"LHN324","West Moreton","Local Hospital Network",-27.609818,152.573828,"Public","Open","Queensland","West Moreton",
+"LHN325","Darling Downs","Local Hospital Network",-27.270853,151.322477,"Public","Open","Queensland","Darling Downs",
+"LHN326","South West (Qld)","Local Hospital Network",-27.139685,147.543697,"Public","Open","Queensland","South West (Qld)",
+"LHN327","Torres and Cape","Local Hospital Network",-12.395871,142.931872,"Public","Open","Queensland","Torres and Cape",
+"LHN399","Queensland Virtual Local Hospital Network","Local Hospital Network",,,"Public","Closed","Queensland","Queensland Virtual Local Hospital Network",
+"LHN401","Northern Adelaide","Local Hospital Network",-34.810518,138.664195,"Public","Open","South Australia","Northern Adelaide",
+"LHN402","Central Adelaide","Local Hospital Network",-34.889282,138.565493,"Public","Open","South Australia","Central Adelaide",
+"LHN403","Southern Adelaide","Local Hospital Network",-35.127838,138.538206,"Public","Open","South Australia","Southern Adelaide",
+"LHN404","Country Health SA","Local Hospital Network",,,"Public","Closed","South Australia","Country Health SA",
+"LHN405","Women's and Children's Health Network (SA)","Local Hospital Network",-34.911444,138.599631,"Public","Open","South Australia","Women's and Children's Health Network (SA)",
+"LHN406","Barossa Hills Fleurieu","Local Hospital Network",-34.844056,138.793658,"Public","Open","South Australia","Barossa Hills Fleurieu",
+"LHN407","Eyre and Far North","Local Hospital Network",-33.136556,135.502746,"Public","Open","South Australia","Eyre and Far North",
+"LHN408","Flinders and Upper North","Local Hospital Network",-32.070096,137.742816,"Public","Open","South Australia","Flinders and Upper North",
+"LHN409","Riverland Mallee Coorong","Local Hospital Network",-34.833376,140.08758,"Public","Open","South Australia","Riverland Mallee Coorong",
+"LHN410","Limestone Coast","Local Hospital Network",-37.150119,140.556824,"Public","Open","South Australia","Limestone Coast",
+"LHN411","Yorke and Northern","Local Hospital Network",-33.843579,138.414726,"Public","Open","South Australia","Yorke and Northern",
+"LHN499","South Australia Virtual Local Hospital Network","Local Hospital Network",,,"Public","Closed","South Australia","South Australia Virtual Local Hospital Network",
+"LHN501","North Metropolitan Health Service (WA)","Local Hospital Network",-31.917677,115.798825,"Public","Open","Western Australia","North Metropolitan Health Service (WA)",
+"LHN502","South Metropolitan Health Service (WA)","Local Hospital Network",-32.318405,115.80087,"Public","Open","Western Australia","South Metropolitan Health Service (WA)",
+"LHN503","WA Country Health Service","Local Hospital Network",-29.491162,117.948335,"Public","Open","Western Australia","WA Country Health Service",
+"LHN504","East Metropolitan Health Service (WA)","Local Hospital Network",-31.984582,115.958756,"Public","Open","Western Australia","East Metropolitan Health Service (WA)",
+"LHN580","Child Adolescent Health Service (WA)","Local Hospital Network",-31.969503,115.817165,"Public","Open","Western Australia","Child Adolescent Health Service (WA)",
+"LHN590","Notional Local Hospital Network (Royal St.)","Local Hospital Network",-32.031367,115.728401,"Public","Open","Western Australia","Notional Local Hospital Network (Royal St.)",
+"LHN599","Western Australia Virtual Local Hospital Network","Local Hospital Network",,,"Public","Closed","Western Australia","Western Australia Virtual Local Hospital Network",
+"LHN604","Tasmanian Health Service","Local Hospital Network",-41.71304,146.930376,"Public","Open","Tasmania","Tasmanian Health Service",
+"LHN699","Tasmania Virtual Local Hospital Network","Local Hospital Network",,,"Public","Closed","Tasmania","Tasmania Virtual Local Hospital Network",
+"LHN701","Top End (NT)","Local Hospital Network",,,"Public","Closed","Northern Territory","Top End (NT)",
+"LHN702","Central Australia (NT)","Local Hospital Network",,,"Public","Closed","Northern Territory","Central Australia (NT)",
+"LHN703","NT Regional Health Services (NTRHS)","Local Hospital Network",-15.801576,133.02463,"Public","Open","Northern Territory","NT Regional Health Services (NTRHS)",
+"LHN799","Northern Territory Virtual Local Hospital Network","Local Hospital Network",,,"Public","Closed","Northern Territory","Northern Territory Virtual Local Hospital Network",
+"LHN801","Australian Capital Territory","Local Hospital Network",-35.288827,149.087901,"Public","Open","Australian Capital Territory","Australian Capital Territory",
+"LHN899","Australian Capital Territory Virtual Local Hospital Network","Local Hospital Network",,,"Public","Closed","Australian Capital Territory","Australian Capital Territory Virtual Local Hospital Network",
+"LHN900","Virtual Local Hospital Network - Unknown","Local Hospital Network",,,"Public","Closed",,"Virtual Local Hospital Network - Unknown",
+"LHN997","Not applicable","Local Hospital Network",,,"Public","Closed",,"Not applicable",
+"LHN998","Unknown","Local Hospital Network",,,"Public","Closed",,"Unknown",
+"LHN999","Not stated/inadequately described","Local Hospital Network",,,"Public","Closed",,"Not stated/inadequately described",
+"NAT","National","National",,,"Public","Open","National",,
+"ACT","Australian Capital Territory","State",,,"Public","Open","Australian Capital Territory",,
+"NSW","New South Wales","State",,,"Public","Open","New South Wales",,
+"NT","Northern Territory","State",,,"Public","Open","Northern Territory",,
+"Qld","Queensland","State",,,"Public","Open","Queensland",,
+"SA","South Australia","State",,,"Public","Open","South Australia",,
+"Tas","Tasmania","State",,,"Public","Open","Tasmania",,
+"Vic","Victoria","State",,,"Public","Open","Victoria",,
+"WA","Western Australia","State",,,"Public","Open","Western Australia",,
+"PHN101","Central and Eastern Sydney","Primary Health Network",,,"Public","Open","New South Wales",,"Central and Eastern Sydney"
+"PHN102","Northern Sydney","Primary Health Network",,,"Public","Open","New South Wales",,"Northern Sydney"
+"PHN103","Western Sydney","Primary Health Network",,,"Public","Open","New South Wales",,"Western Sydney"
+"PHN104","Nepean Blue Mountains","Primary Health Network",,,"Public","Open","New South Wales",,"Nepean Blue Mountains"
+"PHN105","South Western Sydney","Primary Health Network",,,"Public","Open","New South Wales",,"South Western Sydney"
+"PHN106","South Eastern NSW","Primary Health Network",,,"Public","Open","New South Wales",,"South Eastern NSW"
+"PHN107","Western NSW","Primary Health Network",,,"Public","Open","New South Wales",,"Western NSW"
+"PHN108","Hunter New England and Central Coast","Primary Health Network",,,"Public","Open","New South Wales",,"Hunter New England and Central Coast"
+"PHN109","North Coast","Primary Health Network",,,"Public","Open","New South Wales",,"North Coast"
+"PHN110","Murrumbidgee","Primary Health Network",,,"Public","Open","New South Wales",,"Murrumbidgee"
+"PHN201","North Western Melbourne","Primary Health Network",,,"Public","Open","Victoria",,"North Western Melbourne"
+"PHN202","Eastern Melbourne","Primary Health Network",,,"Public","Open","Victoria",,"Eastern Melbourne"
+"PHN203","South Eastern Melbourne","Primary Health Network",,,"Public","Open","Victoria",,"South Eastern Melbourne"
+"PHN204","Gippsland","Primary Health Network",,,"Public","Open","Victoria",,"Gippsland"
+"PHN205","Murray","Primary Health Network",,,"Public","Open","Victoria",,"Murray"
+"PHN206","Western Victoria","Primary Health Network",,,"Public","Open","Victoria",,"Western Victoria"
+"PHN301","Brisbane North","Primary Health Network",,,"Public","Open","Queensland",,"Brisbane North"
+"PHN302","Brisbane South","Primary Health Network",,,"Public","Open","Queensland",,"Brisbane South"
+"PHN303","Gold Coast","Primary Health Network",,,"Public","Open","Queensland",,"Gold Coast"
+"PHN304","Darling Downs and West Moreton","Primary Health Network",,,"Public","Open","Queensland",,"Darling Downs and West Moreton"
+"PHN305","Western Queensland","Primary Health Network",,,"Public","Open","Queensland",,"Western Queensland"
+"PHN306","Central Queensland, Wide Bay and Sunshine Coast","Primary Health Network",,,"Public","Open","Queensland",,"Central Queensland, Wide Bay and Sunshine Coast"
+"PHN307","Northern Queensland","Primary Health Network",,,"Public","Open","Queensland",,"Northern Queensland"
+"PHN401","Adelaide","Primary Health Network",,,"Public","Open","South Australia",,"Adelaide"
+"PHN402","Country SA","Primary Health Network",,,"Public","Open","South Australia",,"Country SA"
+"PHN501","Perth North","Primary Health Network",,,"Public","Open","Western Australia",,"Perth North"
+"PHN502","Perth South","Primary Health Network",,,"Public","Open","Western Australia",,"Perth South"
+"PHN503","Country WA","Primary Health Network",,,"Public","Open","Western Australia",,"Country WA"
+"PHN601","Tasmania","Primary Health Network",,,"Public","Open","Tasmania",,"Tasmania"
+"PHN701","Northern Territory","Primary Health Network",,,"Public","Open","Northern Territory",,"Northern Territory"
+"PHN801","Australian Capital Territory","Primary Health Network",,,"Public","Open","Australian Capital Territory",,"Australian Capital Territory"

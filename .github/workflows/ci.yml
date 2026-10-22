@@ -85,11 +85,15 @@ jobs:
       - name: Integration tests
         run: |
           set -o pipefail
-          pytest -m integration 2>&1 | tee logs/integration.log
+          pytest -m integration -x 2>&1 | tee logs/integration.log
 
       - name: Surface failure details as annotations
         if: failure()
         run: |
+          python -m edpipe.health > logs/zz-health.log 2>&1 || true
+          if [ -f logs/integration.log ]; then
+            awk '/= FAILURES =/{f=1} f' logs/integration.log | head -n 90 > logs/integration-first-failure.log
+          fi
           for f in logs/*.log; do
             [ -f "$f" ] || continue
             msg=$(tail -n 60 "$f" | sed 's/%/%25/g' | awk '{printf "%s%%0A", $0}')

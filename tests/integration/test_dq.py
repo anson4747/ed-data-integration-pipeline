@@ -37,7 +37,8 @@ def add_stay(wh, n, intime=T0, outtime=T0 + timedelta(hours=2), disposition="HOM
         wh.execute("INSERT INTO ods.emr_ed_triage (stay_id, subject_id, acuity, pain) VALUES (?, ?, ?, '5')",
                    sid(n), subject or sid(n), acuity)
     for i, v in enumerate(vitals):
-        wh.execute("INSERT INTO ods.emr_ed_vitalsign (vitalsign_id, stay_id, subject_id, charttime, o2sat, pain, rhythm) "
+        wh.execute("INSERT INTO ods.emr_ed_vitalsign "
+                   "(vitalsign_id, stay_id, subject_id, charttime, o2sat, pain, rhythm) "
                    "VALUES (?, ?, ?, ?, ?, ?, ?)", sid(n * 10 + i), sid(n), subject or sid(n), *v)
 
 
@@ -47,16 +48,16 @@ def crafted_stays(settings):
 
     with connect(settings, settings.warehouse_db, autocommit=True) as wh:
         _clean(wh)
-        add_stay(wh, 1, vitals=[(T0 + timedelta(minutes=30), 98, "5", "sr")])                      # clean
-        add_stay(wh, 2, outtime=T0 - timedelta(hours=1))                                           # departs before arriving
-        add_stay(wh, 3, subject=sid(34))                                                           # duplicate pair: first
-        add_stay(wh, 4, subject=sid(34))                                                           # duplicate pair: second
-        add_stay(wh, 5, vitals=[(T0 - timedelta(hours=1), 97, "3", "sr")])                         # vitals before arrival
-        add_stay(wh, 6, acuity=6)                                                                  # not an ESI level
-        add_stay(wh, 7, disposition="ADMITTED", hadm=sid(7))                                       # admitted, no admission
-        add_stay(wh, 8, outtime=T0 + timedelta(days=8))                                            # 8 day stay
+        add_stay(wh, 1, vitals=[(T0 + timedelta(minutes=30), 98, "5", "sr")])  # clean
+        add_stay(wh, 2, outtime=T0 - timedelta(hours=1))  # departs before arriving
+        add_stay(wh, 3, subject=sid(34))  # duplicate pair: first
+        add_stay(wh, 4, subject=sid(34))  # duplicate pair: second
+        add_stay(wh, 5, vitals=[(T0 - timedelta(hours=1), 97, "3", "sr")])  # vitals before arrival
+        add_stay(wh, 6, acuity=6)  # not an ESI level
+        add_stay(wh, 7, disposition="ADMITTED", hadm=sid(7))  # admitted, no admission
+        add_stay(wh, 8, outtime=T0 + timedelta(days=8))  # 8 day stay
         add_stay(wh, 9, acuity=None, vitals=[(T0 + timedelta(minutes=20), 10, "banana", "weird")])  # warnings only
-        add_stay(wh, 10, outtime=None)                                                             # still in ED: valid
+        add_stay(wh, 10, outtime=None)  # still in ED: valid
         wh.execute("INSERT INTO ods.emr_ed_triage (stay_id, subject_id, acuity) VALUES (?, ?, 3)", sid(11), sid(11))
     yield
     with connect(settings, settings.warehouse_db, autocommit=True) as wh:
@@ -64,7 +65,8 @@ def crafted_stays(settings):
 
 
 def _open(wh, severity):
-    rows = wh.execute("SELECT x.rule_code, x.stay_id FROM dq.exception AS x JOIN dq.rule AS r ON r.rule_code = x.rule_code "
+    rows = wh.execute("SELECT x.rule_code, x.stay_id FROM dq.exception AS x "
+                      "JOIN dq.rule AS r ON r.rule_code = x.rule_code "
                       "WHERE x.status = 'Open' AND r.severity = ? AND x.stay_id >= ?", severity, BASE).fetchall()
     found: dict[str, set[int]] = {}
     for code, stay in rows:
@@ -89,13 +91,15 @@ def test_warnings_are_recorded_but_do_not_block(warehouse):
     warnings = _open(warehouse, "Warning")
     for rule in ("O2SAT_IMPLAUSIBLE", "TRIAGE_ACUITY_MISSING", "PAIN_UNPARSEABLE", "RHYTHM_NOT_IN_VOCABULARY"):
         assert warnings.get(rule) == {9}, rule
-    row = warehouse.execute("SELECT open_warning_count, esi_level FROM dw.fact_ed_stay WHERE stay_id = ?", sid(9)).fetchone()
+    row = warehouse.execute("SELECT open_warning_count, esi_level FROM dw.fact_ed_stay WHERE stay_id = ?",
+                            sid(9)).fetchone()
     assert row.open_warning_count >= 4 and row.esi_level is None
 
 
 def test_quarantined_stays_are_held_back_and_explained(warehouse):
     assert _fact_ids(warehouse) == {1, 3, 9, 10}
-    reasons = dict(warehouse.execute("SELECT stay_id, reasons FROM rpt.dq_quarantine WHERE stay_id >= ?", BASE).fetchall())
+    reasons = dict(warehouse.execute("SELECT stay_id, reasons FROM rpt.dq_quarantine WHERE stay_id >= ?",
+                                     BASE).fetchall())
     assert "E340_DEPARTURE_NOT_AFTER_ARRIVAL" in reasons[sid(2)]
     assert set(reasons) == {sid(n) for n in (2, 4, 5, 6, 7, 8)}  # the orphan triage has no stay to hold back
 
@@ -124,18 +128,21 @@ def test_rerun_on_unchanged_data_creates_and_resolves_nothing(settings):
 
 
 def test_fixing_the_data_resolves_the_exception_and_releases_the_stay(settings, warehouse):
-    before = warehouse.execute("SELECT exception_id FROM dq.exception WHERE rule_code = 'E340_DEPARTURE_NOT_AFTER_ARRIVAL' "
+    before = warehouse.execute("SELECT exception_id FROM dq.exception "
+                               "WHERE rule_code = 'E340_DEPARTURE_NOT_AFTER_ARRIVAL' "
                                "AND stay_id = ?", sid(2)).fetchone()[0]
     warehouse.execute("UPDATE ods.emr_ed_edstays SET outtime = ? WHERE stay_id = ?", T0 + timedelta(hours=3), sid(2))
     result = dq.run(settings, triggered_by="pytest")
-    row = warehouse.execute("SELECT status, resolved_run_id FROM dq.exception WHERE exception_id = ?", before).fetchone()
+    row = warehouse.execute("SELECT status, resolved_run_id FROM dq.exception WHERE exception_id = ?",
+                            before).fetchone()
     assert row.status == "Resolved" and row.resolved_run_id is not None
     assert sum(r.resolved for r in result.rules) == 1
     assert 2 in _fact_ids(warehouse)
 
 
 def test_a_defect_that_returns_reopens_the_same_exception(settings, warehouse):
-    before = warehouse.execute("SELECT exception_id FROM dq.exception WHERE rule_code = 'E340_DEPARTURE_NOT_AFTER_ARRIVAL' "
+    before = warehouse.execute("SELECT exception_id FROM dq.exception "
+                               "WHERE rule_code = 'E340_DEPARTURE_NOT_AFTER_ARRIVAL' "
                                "AND stay_id = ?", sid(2)).fetchone()[0]
     warehouse.execute("UPDATE ods.emr_ed_edstays SET outtime = ? WHERE stay_id = ?", T0 - timedelta(hours=1), sid(2))
     result = dq.run(settings, triggered_by="pytest")

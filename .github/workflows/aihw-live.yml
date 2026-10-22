@@ -47,6 +47,8 @@ jobs:
           mkdir -p logs
           set -o pipefail
           python -m edpipe.aihw_ingest 2>&1 | tee logs/live-load.log
+      - name: Build dimension and fact
+        run: python -m edpipe.dw_build 2>&1 | tee logs/live-dw.log
       - name: Second run must find nothing new
         run: python -m edpipe.aihw_ingest 2>&1 | tee logs/live-rerun.log
       - name: Summary
@@ -60,6 +62,12 @@ jobs:
               for q in ("SELECT run_id, status, DATEDIFF(second, started_at_utc, ended_at_utc) AS secs FROM etl.pipeline_run",
                         "SELECT step_name, status, rows_read, rows_inserted, LEFT(detail, 200) FROM etl.step_run",
                         "SELECT result_status, COUNT(*) FROM ods.aihw_measurement GROUP BY result_status",
+                        "SELECT network_name, financial_year, hospitals, presentations, four_hour_percent FROM "
+                        "rpt.network_ed_four_hour_current_definition WHERE network_code = 'BAYSIDE' ORDER BY financial_year DESC",
+                        "SELECT COUNT(*) AS units, SUM(CASE WHEN v > 1 THEN 1 ELSE 0 END) AS units_with_history FROM "
+                        "(SELECT COUNT(*) AS v FROM dw.dim_reporting_unit GROUP BY reporting_unit_code) AS x",
+                        "SELECT reporting_unit_code, unit_name, network_name, valid_from, valid_to FROM dw.dim_reporting_unit "
+                        "WHERE reporting_unit_code IN ('H0358', 'H0350') ORDER BY reporting_unit_code, valid_from",
                         "SELECT TOP 5 u.reporting_unit_name, m.measure_code, m.reporting_end_date, m.value, m.result_status "
                         "FROM ods.aihw_measurement m JOIN ods.aihw_reporting_unit u ON u.reporting_unit_code = m.reporting_unit_code "
                         "WHERE m.reporting_unit_code = 'H0358' AND m.measure_code = 'MYH0005' AND m.reported_measure_name = 'All patients' "

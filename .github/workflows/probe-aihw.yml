@@ -22,20 +22,22 @@ jobs:
             code=$(curl -sS -m 60 --retry 3 -H 'Accept: application/json' -o "$out" -w '%{http_code}' "$@" || echo curlfail)
             echo "$out -> $code ($(wc -c < "$out" 2>/dev/null || echo 0) bytes)" | tee -a probe/_status.txt
           }
-          get measure_categories "$base/measure-categories"
-          get suppressions "$base/suppressions"
-          get caveats "$base/caveats"
-          get reporting_unit_types "$base/reporting-unit-types"
-          get flat_ed_time_p1 "$base/flat-data-extract/MYH-ED-TIME?skip=0&top=5"
-          get flat_ed_time_p2 "$base/flat-data-extract/MYH-ED-TIME?skip=5&top=5"
-          get flat_ed_time_alfred "$base/flat-data-extract/MYH-ED-TIME?reporting_unit_code=H0358&top=1000"
-          get flat_ed_time_all "$base/flat-data-extract/MYH-ED-TIME?top=1000"
-          get flat_ed_time_big "$base/flat-data-extract/MYH-ED-TIME?top=5000"
-          get flat_ed_time_cat "$base/flat-data-extract/MYH-ED-TIME?measure_code=MYH0005&reporting_unit_code=H0358"
-          get flat_formatted "$base/flat-formatted-data-extract/MYH-ED-TIME?top=5"
-          get measure_downloads "$base/measure-downloads/measure-download-codes"
-          get ed_measures "$base/measure-categories/MYH-ED-TIME/measures"
-          get flat_ed_wait "$base/flat-data-extract/MYH-ED-WAIT?top=3"
+          for cat in MYH-ED-TIME MYH-ED MYH-ED-WAITS; do
+            n=0; skip=0
+            while :; do
+              get "page_${cat}_${skip}" "$base/flat-data-extract/$cat?skip=$skip&top=1000"
+              c=$(python3 -c "import json;print(len(json.load(open('probe/page_${cat}_${skip}.json'))['result']['data']))" 2>/dev/null || echo 0)
+              n=$((n+c)); echo "$cat skip=$skip rows=$c" | tee -a probe/_status.txt
+              [ "$c" -lt 1000 ] && break
+              skip=$((skip+1000))
+            done
+            echo "TOTAL $cat $n" | tee -a probe/_status.txt
+          done
+          get alfred_ed_time "$base/flat-data-extract/MYH-ED-TIME?skip=0&top=1000&reporting_unit_code=H0358"
+          get alfred_ed "$base/flat-data-extract/MYH-ED?skip=0&top=1000&reporting_unit_code=H0358"
+          get alfred_ed_waits "$base/flat-data-extract/MYH-ED-WAITS?skip=0&top=1000&reporting_unit_code=H0358"
+          get beyond_end "$base/flat-data-extract/MYH-ED-TIME?skip=9999999&top=10"
+          get bad_category "$base/flat-data-extract/NOPE?skip=0&top=10"
       - name: Publish
         run: |
           git config user.name "github-actions[bot]"

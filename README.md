@@ -1,7 +1,7 @@
 # ED Data Integration Pipeline
 
-[![CI](https://github.com/anson4747/ed-data-integration-pipeline/actions/workflows/ci.yml/badge.svg)](https://github.com/anson4747/ed-data-integration-pipeline/actions/workflows/ci.yml)
-[![AIHW live load](https://github.com/anson4747/ed-data-integration-pipeline/actions/workflows/aihw-live.yml/badge.svg)](https://github.com/anson4747/ed-data-integration-pipeline/actions/workflows/aihw-live.yml)
+[![CI](https://github.com/anson4747/ed-data-integration-pipeline/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/anson4747/ed-data-integration-pipeline/actions/workflows/ci.yml)
+[![AIHW live load](https://github.com/anson4747/ed-data-integration-pipeline/actions/workflows/aihw-live.yml/badge.svg?branch=main)](https://github.com/anson4747/ed-data-integration-pipeline/actions/workflows/aihw-live.yml)
 ![SQL Server 2022](https://img.shields.io/badge/SQL%20Server-2022%20%7C%20Express-CC2927?logo=microsoftsqlserver&logoColor=white)
 ![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)
 ![PowerShell](https://img.shields.io/badge/PowerShell-5.1%20%7C%207-5391FE?logo=powershell&logoColor=white)
@@ -17,13 +17,11 @@ the whole system to a clean SQL Server on every push.
 
 ### At a glance
 
-| | |
-|---|---|
-| **Sources** | Mock hospital EMR loaded with real, de-identified MIMIC-IV-ED demo data, and the live AIHW MyHospitals REST API |
-| **Techniques** | Change Tracking replication, release-aware API ingestion, SCD Type 2 dimension, rules-as-data quality framework, quarantine, run logging and alerting |
-| **Stack** | SQL Server 2022 / Express, T-SQL, Python 3.12, PowerShell, GitHub Actions, pytest |
-| **Scale on the included data** | 28,353 API rows per live load, 222 ED stays, 18 quality rules, 14 warehouse migrations, 98 automated tests |
-| **Real-world twist** | Models the **Bayside Health merger** (Alfred Health and four other services, 1 January 2026) so reports stay correct before and after it |
+* **Sources**: Mock hospital EMR loaded with real, de-identified MIMIC-IV-ED demo data, and the live AIHW MyHospitals REST API
+* **Techniques**: Change Tracking replication, release-aware API ingestion, SCD Type 2 dimension, rules-as-data quality framework, quarantine, run logging and alerting
+* **Stack**: SQL Server 2022 / Express, T-SQL, Python 3.12, PowerShell, GitHub Actions, pytest
+* **Scale on the included data**: 28,353 API rows per live load, 222 ED stays, 18 quality rules, 14 warehouse migrations, 98 automated tests
+* **Real-world twist**: Models the **Bayside Health merger** (Alfred Health and four other services, 1 January 2026) so reports stay correct before and after it
 
 ---
 

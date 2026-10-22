@@ -1,0 +1,80 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    name: Lint and unit tests
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install
+        run: pip install -e ".[dev]"
+      - name: Lint
+        run: ruff check src tests
+      - name: Unit tests
+        run: pytest -m "not integration"
+
+  integration:
+    name: Deploy and pipeline on SQL Server 2022
+    needs: quality
+    runs-on: ubuntu-24.04
+    env:
+      EDP_ENV: ci
+    services:
+      mssql:
+        image: mcr.microsoft.com/mssql/server:2022-latest
+        env:
+          ACCEPT_EULA: "Y"
+          MSSQL_PID: Developer
+          # Matches config/ci.env. Throwaway container, lives for one run only.
+          MSSQL_SA_PASSWORD: CiOnly!Throwaway_2026
+        ports:
+          - 1433:1433
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install Microsoft ODBC Driver 18
+        run: |
+          if odbcinst -q -d 2>/dev/null | grep -q "ODBC Driver 18 for SQL Server"; then
+            echo "ODBC Driver 18 already installed"
+          else
+            curl -sSL -o /tmp/packages-microsoft-prod.deb \
+              "https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/packages-microsoft-prod.deb"
+            sudo dpkg -i /tmp/packages-microsoft-prod.deb
+            sudo apt-get update -q
+            sudo ACCEPT_EULA=Y apt-get install -y -q msodbcsql18 unixodbc-dev
+          fi
+
+      - name: Install package
+        run: pip install -e ".[dev]"
+
+      - name: Wait for SQL Server
+        run: python -m edpipe.db
+
+      - name: Deploy (PowerShell, as an operator would)
+        shell: pwsh
+        run: ./scripts/deploy.ps1 -Environment ci
+
+      - name: Redeploy is a no-op (idempotency check)
+        shell: pwsh
+        run: ./scripts/deploy.ps1 -Environment ci
+
+      - name: Integration tests
+        run: pytest -m integration

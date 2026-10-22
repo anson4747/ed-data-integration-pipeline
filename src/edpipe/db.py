@@ -1,0 +1,45 @@
+"""Thin connection helpers around pyodbc."""
+
+from __future__ import annotations
+
+import time
+from collections.abc import Iterator
+from contextlib import contextmanager
+
+from edpipe.config import Settings
+
+
+def _pyodbc():
+    # Imported lazily so unit tests run on machines without an ODBC driver.
+    import pyodbc
+
+    return pyodbc
+
+
+@contextmanager
+def connect(settings: Settings, database: str = "master", autocommit: bool = False) -> Iterator:
+    conn = _pyodbc().connect(settings.connection_string(database), autocommit=autocommit)
+    try:
+        yield conn
+    finally:
+        conn.close()
+
+
+def wait_for_server(settings: Settings, timeout_seconds: int = 120, interval_seconds: float = 3.0) -> None:
+    """Block until SQL Server accepts connections. Used by CI while the container starts."""
+    deadline = time.monotonic() + timeout_seconds
+    last_error: Exception | None = None
+    while time.monotonic() < deadline:
+        try:
+            with connect(settings, "master", autocommit=True) as conn:
+                conn.execute("SELECT 1").fetchone()
+                return
+        except Exception as exc:  # noqa: BLE001 - any failure means "not ready yet"
+            last_error = exc
+            time.sleep(interval_seconds)
+    raise TimeoutError(f"SQL Server not reachable after {timeout_seconds}s: {last_error}")
+
+
+if __name__ == "__main__":
+    wait_for_server(Settings.load())
+    print("SQL Server is accepting connections.")

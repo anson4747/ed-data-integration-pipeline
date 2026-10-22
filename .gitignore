@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+build/
+dist/
+
+# Local configuration and secrets
+config/*.env
+!config/ci.env
+
+# Downloaded source data: never committed, fetched by scripts (see DATA_LICENCES.md)
+data/raw/
+data/cache/
+
+# Logs
+logs/
+*.log
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

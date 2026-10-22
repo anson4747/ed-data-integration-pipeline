@@ -23,6 +23,14 @@ the whole system to a clean SQL Server on every push.
 * **Scale on the included data**: 28,353 API rows per live load, 222 ED stays, 18 quality rules, 14 warehouse migrations, 98 automated tests
 * **Real-world twist**: Models the **Bayside Health merger** (Alfred Health and four other services, 1 January 2026) so reports stay correct before and after it
 
+
+### Start here (two minutes)
+
+1. **[Architecture](#architecture):** the whole system in one picture.
+2. **[Challenges and how they were solved](#challenges-and-how-they-were-solved):** what broke while building it, and the fix for each.
+3. **[What a real run produces](#what-a-real-run-produces):** output copied from the latest CI run, not a mock up.
+4. **Two files worth opening:** the [quality rules stored as data](db/warehouse/migrations/V011__create_data_quality_framework.sql) and the [on call runbook](docs/runbook.md).
+
 ---
 
 ## Contents
@@ -159,6 +167,35 @@ seconds, every extract reconciled to the API's own total, no duplicates.
 | Warning: language unknown | 20 |
 | Warning: no triage category | 15 |
 | Warning: diastolic above systolic, stay over 72 hours, implausible O2 saturation | 2, 2, 1 |
+
+### What a real run produces
+
+Copied from the data quality step of the latest green CI run on `main`, after replaying the demo EMR and replicating it
+into a fresh warehouse. Rules with no findings are left out.
+
+```text
+[dq] 18 rules run; 220 stays published, 2 quarantined
+
+severity rule                              open findings
+Error    E167_VITALS_BEFORE_ARRIVAL        2      <- quarantined, not published
+Warning  TEMPERATURE_IMPLAUSIBLE_F         37
+Warning  PAIN_UNPARSEABLE                  24
+Warning  LANGUAGE_UNKNOWN                  20
+Warning  TRIAGE_ACUITY_MISSING             15
+Warning  DIASTOLIC_ABOVE_SYSTOLIC          2
+Warning  LENGTH_OF_STAY_OVER_72H           2
+Warning  O2SAT_IMPLAUSIBLE                 1
+
+Pain values left for a person to review (not 0 to 10, not in ref.pain_value_map):
+'NAD' 2 | 'Critical' 2 | 'grimace with palpation' 1 | 'laying down' 1 | '0/10' 1 | 'uncooperative' 1 | ...
+
+Open Error exceptions (sample):
+E167_VITALS_BEFORE_ARRIVAL  stay 36185653  1 vital sign reading charted before arrival
+E167_VITALS_BEFORE_ARRIVAL  stay 39346340  1 vital sign reading charted before arrival
+```
+
+Every finding is a row in `dq.exception` with a status. Fix the source record, replicate, and the next run marks it
+Resolved; if it comes back, the same exception is reopened rather than duplicated.
 
 **Bayside Health, from AIHW data:** the combined share of ED patients leaving within four hours fell from **77.6% in
 2018-19 to 60.7% in 2024-25**, weighted by presentations. The report carries a caveat: the hospital count rises from

@@ -70,11 +70,28 @@ jobs:
 
       - name: Deploy (PowerShell, as an operator would)
         shell: pwsh
-        run: ./scripts/deploy.ps1 -Environment ci
+        run: |
+          New-Item -ItemType Directory -Force logs | Out-Null
+          ./scripts/deploy.ps1 -Environment ci *>&1 | Tee-Object logs/deploy.log
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
 
       - name: Redeploy is a no-op (idempotency check)
         shell: pwsh
-        run: ./scripts/deploy.ps1 -Environment ci
+        run: |
+          ./scripts/deploy.ps1 -Environment ci *>&1 | Tee-Object logs/redeploy.log
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          if (-not (Select-String -Path logs/redeploy.log -Pattern 'up to date' -Quiet)) { throw 'Redeploy applied changes' }
 
       - name: Integration tests
-        run: pytest -m integration
+        run: |
+          set -o pipefail
+          pytest -m integration 2>&1 | tee logs/integration.log
+
+      - name: Surface failure details as annotations
+        if: failure()
+        run: |
+          for f in logs/*.log; do
+            [ -f "$f" ] || continue
+            msg=$(tail -n 60 "$f" | sed 's/%/%25/g' | awk '{printf "%s%%0A", $0}')
+            echo "::error title=$(basename "$f")::$msg"
+          done

@@ -151,8 +151,8 @@ def test_duplicate_rows_in_an_extract_fail_the_run_and_leave_the_release_untouch
     assert _count(warehouse, "SELECT CHECKSUM_AGG(CHECKSUM(*)) FROM ods.aihw_measurement") == snapshot
     assert _stored_version(warehouse) == version_before
     assert _last_run(warehouse).status == "Failed"
-    assert warehouse.execute("SELECT TOP (1) severity, alert_type FROM etl.alert ORDER BY alert_id DESC"
-                             ).fetchone()[:2] == ("Critical", "PipelineFailed")
+    alert = warehouse.execute("SELECT TOP (1) severity, alert_type FROM etl.alert ORDER BY alert_id DESC").fetchone()
+    assert tuple(alert) == ("Critical", "PipelineFailed")
 
 
 class _FlakyClient(ReplayClient):

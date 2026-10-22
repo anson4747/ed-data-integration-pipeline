@@ -19,6 +19,7 @@ SQL Server 2022 on every push.
 | Model | Hospitals are loaded as a Type 2 dimension so history survives reorganisations such as the Bayside Health merger (1 January 2026). Measures go to a fact table. | `src/edpipe/dw_build.py` |
 | Validate | 18 data quality rules run against ED stays. Failing records are quarantined, never published, and each problem is tracked until fixed. | `src/edpipe/dq.py` |
 | Report | Reporting views expose clean stays, network level results, and the quality state of the pipeline. | `rpt` schema |
+| Operate | One command runs every step in order and stops at the first failure. A health view and a runbook cover what to check when something breaks. | `scripts/run-pipeline.ps1`, `rpt.pipeline_health`, [docs/runbook.md](docs/runbook.md) |
 
 ## Architecture
 
@@ -105,25 +106,25 @@ Copy-Item config\dev.env.example config\dev.env   # Windows authentication by de
 pytest -m "not integration"                       # unit tests, no database needed
 ```
 
-Run the pipeline after deploying:
+Run the whole pipeline, then check its health:
 
 ```powershell
-python -m edpipe.sources.emr_sim reset            # prepare the mock EMR
-python -m edpipe.sources.emr_sim replay --all     # replay the demo data into it
-python -m edpipe.replicate                        # copy changes to the warehouse
-python -m edpipe.aihw_ingest                      # ingest AIHW data (add --force to reload)
-python -m edpipe.dw_build                         # build dimension and facts
-python -m edpipe.dq                               # run the data quality rules
-python -m edpipe.health                           # row counts, runs, failures, open alerts
+.\scripts\run-pipeline.ps1 -Environment dev     # replicate, ingest, build, validate, health report
+python -m edpipe.health                          # or: SELECT * FROM rpt.pipeline_health
 ```
+
+The runner stops at the first failing step, exits non-zero so a scheduler notices, and writes a log to `logs\`.
+Each step can also be run alone, for example `python -m edpipe.dq`. To feed the mock EMR first, use
+`python -m edpipe.sources.emr_sim reset` and `... replay --all`. See the [runbook](docs/runbook.md) for options,
+scheduling with Task Scheduler, and what each alert means.
 
 `deploy.ps1 -DryRun` shows pending migrations without applying them.
 
 ## Continuous integration
 
 On every push GitHub Actions lints, runs the unit tests, then deploys to a fresh SQL Server 2022 container,
-checks that a second deploy changes nothing, runs the integration tests, and runs the data quality rules on the
-replicated demo data. A weekly workflow runs the real AIHW API into a throwaway database.
+checks that a second deploy changes nothing, runs the integration tests, runs the data quality rules on the
+replicated demo data, runs the PowerShell runner end to end, and proves the runner stops at the first failure. A weekly workflow runs the real AIHW API into a throwaway database.
 
 ## Data and licences
 

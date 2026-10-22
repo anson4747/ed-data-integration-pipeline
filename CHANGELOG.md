@@ -28,3 +28,7 @@ migration; an applied migration is never edited.
   rhythm via reference maps, and a CI step that prints the quality report (warehouse V011 to V013).
 - Design decisions and known limits in `docs/design-decisions.md`; API behaviour notes in
   `docs/aihw-api-notes.md`.
+- Operations: `scripts/run-pipeline.ps1` runs every step in order, stops at the first failure and exits
+  non-zero; `rpt.pipeline_health` (warehouse V014) gives one row per pipeline with a Healthy, Attention,
+  Failing or Running status; `docs/runbook.md` covers alerts, common failures and acknowledging alerts.
+  CI runs the runner end to end and checks that it fails fast.

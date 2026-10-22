@@ -127,6 +127,37 @@ jobs:
             echo "::notice title=$(basename "$f")::$msg"
           done
 
+      - name: Pipeline runner, end to end
+        shell: pwsh
+        run: |
+          ./scripts/run-pipeline.ps1 -Environment ci -AihwFixture tests/fixtures/aihw/myhospitals-sample.json.gz *>&1 | Tee-Object logs/runner.log
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+
+      - name: Health view reports no failing pipeline
+        run: |
+          python - <<'PY'
+          from edpipe.config import Settings
+          from edpipe.db import connect
+          s = Settings.load()
+          with connect(s, s.warehouse_db, autocommit=True) as c:
+              rows = c.execute("SELECT pipeline_name, health_status FROM rpt.pipeline_health "
+                               "ORDER BY pipeline_name").fetchall()
+          for r in rows:
+              print(f"{r.pipeline_name:<24} {r.health_status}")
+          failing = [r.pipeline_name for r in rows if r.health_status == "Failing"]
+          assert len(rows) >= 4, f"expected the four pipelines, found {len(rows)}"
+          assert not failing, f"failing pipelines: {failing}"
+          PY
+
+      - name: Runner stops at the first failure
+        shell: pwsh
+        run: |
+          $out = ./scripts/run-pipeline.ps1 -Environment ci -AihwFixture does-not-exist.json.gz *>&1 | Out-String
+          Write-Host $out
+          if ($LASTEXITCODE -ne 1) { throw "Expected exit code 1, got $LASTEXITCODE" }
+          if ($out -notmatch 'FAILED Ingest AIHW') { throw 'The failing step was not reported' }
+          if ($out -match 'START  Build dimension') { throw 'A later step ran after a failure' }
+
       - name: Surface failure details as annotations
         if: failure()
         run: |
